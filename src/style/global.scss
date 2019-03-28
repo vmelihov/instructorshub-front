@@ -1,0 +1,121 @@
+@import "parts/_fonts.scss";
+@import "parts/_vars.scss";
+
+body {
+    color: #404040;
+    font: 14px $g;
+}
+
+h1 {
+    font: normal 26px $gm;
+}
+
+h2 {
+    font: normal 22px $gm;
+}
+
+h3 {
+    font: normal 18px $gm;
+}
+
+h4 {
+    font: normal 16px $gm;
+}
+
+h5 {
+    font: 12px $g;
+}
+
+.g- {
+    &header {
+        height: 60px;
+
+        &-fly {
+            background: #F0F0F0;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+
+            &.affix{
+                position: fixed;
+            }
+
+            &__content {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                height: 60px;
+
+                &-logo {
+                    &-link {
+                        display: block;
+                        font: 22px/22px $gm;
+                        color: #2C3C53;
+
+                        span {
+                            display: block;
+                            letter-spacing: 2.5px;
+                        }
+
+                        &:hover {
+                            text-decoration: none;
+                            color: #000;
+                        }
+                    }
+                }
+
+                &-menu {
+                    width: 60%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: 0px;
+                    padding: 0px;
+
+                    &-item {
+                        display: inline-block;
+
+                        &-link {
+                            display: inline-block;
+                            position: relative;
+                            overflow: hidden;
+                            font: 16px/60px $g;
+                            color: #2C3C53;
+
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                left: -100%;
+                                bottom: 0px;
+                                border-bottom: 3px solid #025BE1;
+                                width: 100%;
+                                transition: .3s;
+                            }
+
+                            &:hover,
+                            &.active {
+                                &:before {
+                                    left: 0px;
+                                }
+                            }
+
+                            &:hover {
+                                text-decoration: none;
+                                color: #2C3C53;
+                            }
+                        }
+                    }
+                }
+
+                &-controls {
+                    &-one {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}
