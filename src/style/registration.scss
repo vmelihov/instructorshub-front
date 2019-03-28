@@ -1,0 +1,85 @@
+@import "parts/_fonts.scss";
+@import "parts/_vars.scss";
+
+.p-reg {
+    max-width: 400px;
+    margin: auto;
+
+    &__title {
+        font: 32px $gm;
+        margin-bottom: 25px;
+    }
+
+    label {
+        font: 14px $gm;
+    }
+
+    .form {
+        &-group {
+            margin-bottom: 2rem;
+        }
+
+        &-control {
+            border-color: #2C3C53;
+        }
+    }
+
+    &__form {
+        &-line {
+            position: relative;
+
+            &-icon {
+                color: rgba(44, 60, 83, .5);
+                position: absolute;
+                right: 0px;
+                top: 50%;
+                font-size: 16px;
+                margin-top: -17px;
+                padding: 10px;
+                cursor: pointer;
+                transition: .3s;
+
+                &:hover {
+                    text-decoration: none;
+                    color: #2C3C53;
+                }
+            }
+        }
+
+        &-submit {
+            padding: 10px 0px 40px;
+            max-width: 200px;
+
+            .btn {
+                font: 18px/2 $gb;
+            }
+        }
+
+        &-read {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 15px;
+
+            &-check {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+            }
+
+            &-text {
+                font-size: 12px;
+            }
+        }
+
+        &-sometext{
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: $screen-xs) {
+    .p-reg{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

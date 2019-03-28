@@ -1,6 +1,11 @@
 @import "parts/_fonts.scss";
 @import "parts/_vars.scss";
 
+body,
+html {
+    height: 100%;
+}
+
 body {
     color: #404040;
     font: 14px $g;
@@ -26,96 +31,255 @@ h5 {
     font: 12px $g;
 }
 
-.g- {
-    &header {
-        height: 60px;
+.g {
+    &-header {
+        background: #F0F0F0;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0px;
 
-        &-fly {
-            background: #F0F0F0;
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            width: 100%;
+        &__content {
+            height: 60px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
 
-            &.affix{
-                position: fixed;
+            &-logo {
+                width: 20%;
+
+                &-link {
+                    display: block;
+                    font: 22px/22px $gm;
+                    color: #2C3C53;
+
+                    span {
+                        display: block;
+                        letter-spacing: 2.5px;
+                    }
+
+                    &:hover {
+                        text-decoration: none;
+                        color: #000;
+                    }
+                }
             }
 
-            &__content {
+            &-mobi {
+                width: 80%;
+
+                &-link {
+                    font-size: 18px;
+                    padding: 5px;
+                    margin-right: -5px;
+                    display: none;
+                }
+
+                &-menu {
+                    display: flex;
+                    flex-direction: row;
+                }
+            }
+
+            &-menu {
+                width: 70%;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
-                height: 60px;
+                margin: 0px;
+                padding: 0px;
 
-                &-logo {
+                &-item {
+                    display: inline-block;
+
                     &-link {
-                        display: block;
-                        font: 22px/22px $gm;
+                        display: inline-block;
+                        position: relative;
+                        overflow: hidden;
+                        font: 16px/60px $g;
                         color: #2C3C53;
 
-                        span {
-                            display: block;
-                            letter-spacing: 2.5px;
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            left: -100%;
+                            bottom: 0px;
+                            border-bottom: 3px solid #025BE1;
+                            width: 100%;
+                            transition: .3s;
+                        }
+
+                        &:hover,
+                        &.active {
+                            &:before {
+                                left: 0px;
+                            }
                         }
 
                         &:hover {
                             text-decoration: none;
-                            color: #000;
-                        }
-                    }
-                }
-
-                &-menu {
-                    width: 60%;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: space-between;
-                    margin: 0px;
-                    padding: 0px;
-
-                    &-item {
-                        display: inline-block;
-
-                        &-link {
-                            display: inline-block;
-                            position: relative;
-                            overflow: hidden;
-                            font: 16px/60px $g;
                             color: #2C3C53;
-
-                            &:before {
-                                content: "";
-                                position: absolute;
-                                left: -100%;
-                                bottom: 0px;
-                                border-bottom: 3px solid #025BE1;
-                                width: 100%;
-                                transition: .3s;
-                            }
-
-                            &:hover,
-                            &.active {
-                                &:before {
-                                    left: 0px;
-                                }
-                            }
-
-                            &:hover {
-                                text-decoration: none;
-                                color: #2C3C53;
-                            }
                         }
                     }
                 }
+            }
 
-                &-controls {
-                    &-one {
-                        display: inline-block;
+            &-controls {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-end;
+                width: 30%;
+                text-align: right;
+
+                &-one {
+                    display: inline-block;
+                    margin-left: 15px;
+
+                    &-link {
+                        color: #2C3C53;
                     }
                 }
             }
         }
+    }
+
+    &-content {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &-footer {
+        background: #2C3C53;
+        color: #fff;
+        font: 16px $g;
+        text-align: center;
+        padding: 20px 15px;
+        height: 75px;
+
+        &__text {
+            display: inline-block;
+            text-align: left;
+        }
+    }
+
+    &-singlepage {
+        height: 100%;
+        width: 100%;
+        display: table;
+
+        &__footer,
+        &__content {
+            display: table-row;
+            vertical-align: middle;
+        }
+
+        &__footer {
+            height: 75px;
+        }
+    }
+}
+
+@media (max-width: $screen-md) {
+    .g {
+        &-header {
+            &__content {
+                &-mobi {
+                    position: relative;
+                    width: auto;
+
+                    &-link {
+                        display: block;
+                    }
+
+                    &-menu {
+                        position: absolute;
+                        right: 0px;
+                        top: 43px;
+                        background: #F0F0F0;
+                        width: 250px;
+                        padding: 10px 15px;
+                        display: none;
+                        box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, .3);
+                    }
+
+                    &.active &-menu {
+                        display: block;
+                    }
+                }
+
+                &-mobi &-menu {
+                    width: auto;
+                    display: block;
+
+                    &-item {
+                        display: block;
+
+                        &-link {
+                            line-height: 40px;
+
+                            &:before {
+                                border-bottom-width: 2px;
+                            }
+                        }
+                    }
+                }
+
+                &-mobi &-controls {
+                    width: 100%;
+                    padding-top: 10px;
+                    margin-top: 10px;
+                    border-top: 1px solid #dedede;
+                    justify-content: space-between;
+
+                    &-one{
+                        margin: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.ui-checkbox {
+    cursor: pointer;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 0px;
+
+    input {
+        display: none;
+    }
+
+    span {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #2C3C53;
+        background: #fff;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            opacity: 0;
+            box-shadow: 0px 0px 0px 15px #fff;
+            transition: .3s;
+        }
+    }
+
+    input:checked+span:before {
+        opacity: 1;
+        background: #126BF1;
+        box-shadow: 0px 0px 0px 1px #126BF1;
     }
 }
