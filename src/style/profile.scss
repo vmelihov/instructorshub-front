@@ -1,0 +1,96 @@
+@import "parts/_fonts.scss";
+@import "parts/_vars.scss";
+
+.p-profile {
+    max-width: 500px;
+
+    &__block {
+        margin-bottom: 60px;
+    }
+
+    &__type {
+        margin-bottom: 15px;
+
+        &-info {
+            font: 12px $g;
+
+            span {
+                font-weight: bold;
+                color: #D2484B;
+            }
+        }
+    }
+
+    &__select2 {
+        &-select {
+            width: 100%;
+            display: block;
+        }
+
+        .select2 {
+            &-selection__choice {
+                background: #4CB651 !important;
+                border-radius: 2.5px !important;
+                color: #fff;
+                font: 10px $g;
+                padding: 5px !important;
+
+                &__remove {
+                    color: #fff !important;
+                }
+
+            }
+
+            &-container .select2-selection--multiple {
+                min-height: 48px;
+            }
+        }
+    }
+
+    &__exp {
+        display: none;
+
+        &-label {
+            font: 14px $gm;
+        }
+
+        &-textarea {
+            width: 100%;
+            display: block;
+            resize: none;
+            height: 100px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    }
+
+    &__submit {
+        max-width: 170px;
+        margin-bottom: 10px;
+
+        .btn{
+            line-height: 55px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+    }
+
+    &__sometext{
+        font-size: 12px;
+    }
+
+    &__read {
+        padding-left: 30px;
+        position: relative;
+
+        &-check {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        &-text {
+            font-size: 12px;
+        }
+    }
+}
