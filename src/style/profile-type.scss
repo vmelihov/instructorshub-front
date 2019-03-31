@@ -4,6 +4,10 @@
 .p-profile {
     max-width: 500px;
 
+    &__hidden {
+        display: none;
+    }
+
     &__block {
         margin-bottom: 60px;
     }
@@ -41,9 +45,22 @@
 
             }
 
-            &-container .select2-selection--multiple {
-                min-height: 48px;
+            &-container .select2-selection {
+
+                &--single,
+                &--multiple {
+                    min-height: 48px;
+                }
+
+                &--single,
+                &__rendered {
+                    line-height: 48px;
+                }
             }
+        }
+
+        .select2-container--default .select2-selection--single .select2-selection__arrow {
+            height: 48px;
         }
     }
 
@@ -68,15 +85,20 @@
         max-width: 170px;
         margin-bottom: 10px;
 
-        .btn{
+        .btn {
             line-height: 55px;
             padding-top: 0px;
             padding-bottom: 0px;
         }
     }
 
-    &__sometext{
+    &__sometext {
         font-size: 12px;
+
+        &-link{
+            color: #025BE1;
+            cursor: pointer;
+        }
     }
 
     &__read {
