@@ -9,4 +9,6 @@ jQuery(function ($) {
     $(".js-hideLink").on("click", function () {
         $("#" + $(this).data("hide")).hide();
     })
+
+    $('[data-toggle="tooltip"]').tooltip();
 });

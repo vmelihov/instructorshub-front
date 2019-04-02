@@ -4,7 +4,7 @@
 .p-profile {
     max-width: 500px;
 
-    &__hidden {
+    &__hidden{
         display: none;
     }
 
@@ -61,6 +61,17 @@
 
         .select2-container--default .select2-selection--single .select2-selection__arrow {
             height: 48px;
+        }
+        
+        .select2-container .select2-search--inline{
+            float: none;
+            display: block;
+
+            &:before{
+                content: " ";
+                display: table;
+                clear: both;
+            }
         }
     }
 

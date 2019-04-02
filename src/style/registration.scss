@@ -25,6 +25,22 @@
     }
 
     &__form {
+        &-acc-info {
+            position: relative;
+            margin-top: 20px;
+            padding-left: 30px;
+            font: 12px $g;
+            max-width: 250px;
+
+            &-icon{
+                color: #D2484B;
+                position: absolute;
+                left: 0px;
+                top: 5px;
+                font-size: 20px;
+            }
+        }
+
         &-line {
             position: relative;
 
@@ -71,14 +87,14 @@
             }
         }
 
-        &-sometext{
+        &-sometext {
             font-size: 12px;
         }
     }
 }
 
 @media (max-width: $screen-xs) {
-    .p-reg{
+    .p-reg {
         padding-left: 15px;
         padding-right: 15px;
     }
