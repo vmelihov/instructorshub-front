@@ -1,5 +1,5 @@
 jQuery(function () {
-    $(".js-headerMenuLink").on("click", function () {
-        $(".js-headerMenu").toggleClass("active");
+    $(".js-activeOnOff").on("click", function () {
+        $("#" + $(this).data("id")).toggleClass("active");
     });
 })

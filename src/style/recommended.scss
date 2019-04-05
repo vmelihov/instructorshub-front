@@ -1,0 +1,172 @@
+@import "parts/_fonts.scss";
+@import "parts/_vars.scss";
+
+.p-recommended {
+    &__list {
+        margin-bottom: 10px;
+
+        &-one {
+            border: 1px solid #F0F0F0;
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 3px;
+            margin-bottom: 20px;
+
+            &-header {
+                position: relative;
+                border-bottom: 1px solid #F0F0F0;
+                margin-bottom: 20px;
+                padding: 15px;
+
+                h4 {
+                    margin: 0px;
+                }
+
+                &-right {
+                    position: absolute;
+                    right: 15px;
+                    top: 15px;
+
+                    &-data,
+                    &-fav {
+                        display: inline-block;
+                    }
+
+                    &-data {
+                        font: 14px $g;
+                    }
+
+                    &-fav {
+                        color: #D2484B;
+                        margin-left: 25px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            &-content {
+                padding: 0px 15px 15px;
+                font: 14px $g;
+
+                &-more {
+                    color: #1E90FF;
+                }
+            }
+
+            &-footer {
+                background: #F0F0F0;
+                padding: 15px;
+                font-size: 0px;
+
+                &-column {
+                    display: inline-block;
+                    width: 50%;
+                }
+
+                &-item {
+                    font: 14px $g;
+                    color: #33465F;
+                    margin-bottom: 2px;
+                    max-width: 100%;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+
+                    &-name {
+                        font-family: $gb;
+                    }
+                }
+            }
+        }
+
+        &-settings {
+            position: relative;
+            font: 14px $gm;
+            color: #33465F;
+
+            &-pp {
+                &-title {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                &-link {
+                    display: inline-block;
+                    vertical-align: middle;
+                    font: 16px $g;
+                    margin-left: 10px;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #000;
+                    }
+                }
+            }
+
+            &-pagination {
+                position: absolute;
+                right: 0px;
+                top: 0px;
+
+                &-link {
+                    color: #33465F;
+                    margin-left: 10px;
+                    font: 16px $g;
+
+                    &-icon {
+                        font-size: 12px;
+                    }
+
+                    &:hover {
+                        color: #000;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: $screen-sm) {
+            &-one {
+                &-footer {
+                    &-item {
+                        max-width: 95%;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: $screen-xs) {
+            &-one {
+                &-header {
+                    h4 {
+                        margin-bottom: 5px;
+                    }
+
+                    &-right {
+                        position: relative;
+                        right: 0px;
+                        text-align: right;
+                        padding-bottom: 5px;
+                    }
+                }
+
+                &-footer {
+                    &-column {
+                        display: block;
+                        width: 100%;
+                    }
+
+                    &-item {
+                        max-width: 100%;
+                        margin-bottom: 5px;
+                        white-space: normal;
+                    }
+                }
+            }
+
+            &-settings-pagination{
+                position: relative;
+                text-align: right;
+                padding-top: 10px;
+            }
+        }
+    }
+}
