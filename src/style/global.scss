@@ -281,6 +281,11 @@ h5 {
             vertical-align: middle;
         }
 
+        &__content.top{
+            vertical-align: top;
+            height: 100%;
+        }
+
         &__footer {
             height: 75px;
         }
