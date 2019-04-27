@@ -112,18 +112,19 @@ h5 {
                             transition: .3s;
                         }
 
-                        &:hover,
-                        &.active {
-                            &:before {
-                                left: 0px;
-                            }
-                        }
-
                         &:hover {
                             text-decoration: none;
                             color: #2C3C53;
                         }
                     }
+
+                    &:hover &-link,
+                    &.active &-link {
+                        &:before {
+                            left: 0px;
+                        }
+                    }
+
                 }
             }
 
@@ -281,7 +282,7 @@ h5 {
             vertical-align: middle;
         }
 
-        &__content.top{
+        &__content.top {
             vertical-align: top;
             height: 100%;
         }
@@ -724,16 +725,16 @@ h5 {
                     }
                 }
 
-                &-mobi &-user{
+                &-mobi &-user {
                     width: 100%;
                     padding-top: 10px;
                     justify-content: space-between;
 
-                    &-link{
+                    &-link {
                         display: none;
                     }
 
-                    &-menu{
+                    &-menu {
                         display: block;
                         position: relative;
                         background: none;
