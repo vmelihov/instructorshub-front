@@ -17,225 +17,273 @@
 </head>
 
 <body>
-    <div class="g-singlepage">
-        //= parts/_header.html
+    //= parts/_header.html
+    <div class="container">
+        <div class="p-profile g-content">
+            <h1 class="g-mb30">
+                Creating User Profile
+            </h1>
 
-        <div class="g-singlepage__content">
-            <div class="container">
-                <div class="p-profile g-content">
-                    <h1 class="g-mb30">
-                        Creating User Profile
-                    </h1>
+            <form>
+                <div class="p-profile__block">
+                    <h2 class="g-mb20">
+                        Choose category faculty
+                        <span class="fa fa-info-circle" data-toggle="tooltip"
+                            title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"></span>
 
-                    <form>
-                        <div class="p-profile__block">
-                            <h2 class="g-mb20">
-                                Choose category faculty
-                                <span class="fa fa-info-circle" data-toggle="tooltip"
-                                    title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"></span>
+                    </h2>
 
-                            </h2>
-                            <div class="p-profile__select2">
-                                <select class="p-profile__select2-select js-select2" name="states[]"
-                                    multiple="multiple">
-                                    <option value="AG">Agriculture - Environmental Science, Ecology, and Forestry
+                    <div class="js-categoryFaculty">
+                        <div class="js-cfBlock g-mb20">
+                            <div class="p-profile__select2 g-mb10">
+                                <select class="p-profile__select2-select js-select2" name="states[]">
+                                    <option value="AG">Agriculture - Environmental Science, Ecology, and
+                                        Forestry
                                     </option>
                                     <option value="AL">Alabama, Auburn-Opelika AL Metro</option>
-                                    <option value="ALF">Alabama, Fort Lauderdale-Pompano Beach-Deerfield Beach FL
+                                    <option value="ALF">Alabama, Fort Lauderdale-Pompano Beach-Deerfield Beach
+                                        FL
+                                        Metro
+                                        Div.
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="p-profile__select2 d-none">
+                                <select class="p-profile__select2-select js-select2" name="states[]">
+                                    <option value="AG">Agriculture - Environmental Science, Ecology, and
+                                        Forestry
+                                    </option>
+                                    <option value="AL">Alabama, Auburn-Opelika AL Metro</option>
+                                    <option value="ALF">Alabama, Fort Lauderdale-Pompano Beach-Deerfield Beach
+                                        FL
                                         Metro
                                         Div.
                                     </option>
                                 </select>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="p-profile__block">
-                            <h2 class="g-mb20">
-                                Do you have teaching experience?
-                                <span class="fa fa-info-circle" data-toggle="tooltip"
-                                    title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"></span>
-                            </h2>
-                            <div class="g-mb15">
-                                <label class="ui-radio g-mr15 js-showLink" data-show="expirienceBlock">
-                                    <input type="radio" name="exp" />
-                                    <span class="ui-radio__decor"></span>
-                                    <span class="ui-radio__text">YES</span>
-                                </label>
-                                <label class="ui-radio js-hideLink" data-hide="expirienceBlock">
-                                    <input type="radio" name="exp" />
-                                    <span class="ui-radio__decor"></span>
-                                    <span class="ui-radio__text">NO</span>
-                                </label>
-                            </div>
-
-                            <div class="p-profile__exp" id="expirienceBlock">
-                                <div class="g-mb20">
-                                    <label class="ui-checkbox g-mr15">
-                                        <input type="checkbox" name="" />
-                                        <span class="ui-checkbox__decor"></span>
-                                        <span class="ui-checkbox__text">Online</span>
-                                    </label>
-
-                                    <label class="ui-checkbox">
-                                        <input type="checkbox" name="" />
-                                        <span class="ui-checkbox__decor"></span>
-                                        <span class="ui-checkbox__text">In Person</span>
-                                    </label>
-                                </div>
-
-                                <div class="p-profile__exp-label g-mb10">
-                                    Please specify *
-                                </div>
-                                <textarea class="p-profile__exp-textarea" placeholder="Please specify"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="p-profile__block">
-                            <h2 class="g-mb20">
-                                Highest education level obtained
-                                <span class="fa fa-info-circle" data-toggle="tooltip"
-                                    title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"></span>
-                            </h2>
-
-                            <select class="form-control form-control-lg">
-                                <option>Some option</option>
-                                <option>Some option</option>
-                                <option>Some option</option>
-                            </select>
-                        </div>
-
-                        <div class="p-profile__block">
-                            <h2 class="g-mb20">
-                                What format are you open to teaching in?
-                                <span class="fa fa-info-circle" data-toggle="tooltip"
-                                    title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"></span>
-                            </h2>
-
-                            <div class="g-mb20">
-                                <label class="ui-checkbox g-mr15">
-                                    <input type="checkbox" name="" />
-                                    <span class="ui-checkbox__decor"></span>
-                                    <span class="ui-checkbox__text">Online</span>
-                                </label>
-
-                                <label class="ui-checkbox js-showLink" data-show="formatToTeaching">
-                                    <input type="checkbox" name="" />
-                                    <span class="ui-checkbox__decor"></span>
-                                    <span class="ui-checkbox__text">In Person</span>
-                                </label>
-                            </div>
-
-                            <div class="p-profile__select2 p-profile__hidden" id="formatToTeaching">
-                                <select class="p-profile__select2-select js-select2" name="states[]"
-                                    multiple="multiple">
-                                    <option value="AG">Agriculture - Environmental Science, Ecology, and Forestry
+                    <div class="js-cfBlockParent d-none">
+                        <div class="js-cfBlock js-select2Added g-mb20">
+                            <div class="p-profile__select2 g-mb10">
+                                <select class="p-profile__select2-select js-select2" name="states[]">
+                                    <option value="AG">Agriculture - Environmental Science, Ecology, and
+                                        Forestry
                                     </option>
                                     <option value="AL">Alabama, Auburn-Opelika AL Metro</option>
-                                    <option value="ALF">Alabama, Fort Lauderdale-Pompano Beach-Deerfield Beach FL
+                                    <option value="ALF">Alabama, Fort Lauderdale-Pompano Beach-Deerfield
+                                        Beach
+                                        FL
+                                        Metro
+                                        Div.
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="p-profile__select2 d-none">
+                                <select class="p-profile__select2-select js-select2" name="states[]">
+                                    <option value="AG">Agriculture - Environmental Science, Ecology, and
+                                        Forestry
+                                    </option>
+                                    <option value="AL">Alabama, Auburn-Opelika AL Metro</option>
+                                    <option value="ALF">Alabama, Fort Lauderdale-Pompano Beach-Deerfield
+                                        Beach
+                                        FL
                                         Metro
                                         Div.
                                     </option>
                                 </select>
                             </div>
                         </div>
+                    </div>
+                    <a class="p-profile__block-link js-cfAddBlock">Add category faculty</a>
+                </div>
 
-                        <div class="p-profile__block">
-                            <h2 class="g-mb20">What type of teaching are you available for? </h2>
+                <div class="p-profile__block">
+                    <h2 class="g-mb20">
+                        Do you have teaching experience?
+                        <span class="fa fa-info-circle" data-toggle="tooltip"
+                            title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"></span>
+                    </h2>
+                    <div class="g-mb15">
+                        <label class="ui-radio g-mr15 js-showLink" data-show="expirienceBlock">
+                            <input type="radio" name="exp" />
+                            <span class="ui-radio__decor"></span>
+                            <span class="ui-radio__text">YES</span>
+                        </label>
+                        <label class="ui-radio js-hideLink" data-hide="expirienceBlock">
+                            <input type="radio" name="exp" />
+                            <span class="ui-radio__decor"></span>
+                            <span class="ui-radio__text">NO</span>
+                        </label>
+                    </div>
 
-                            <div class="g-mb15">
-                                <label class="ui-radio">
-                                    <input type="radio" name="teachingtype" />
-                                    <span class="ui-radio__decor"></span>
-                                    <span class="ui-radio__text">Full Semester</span>
-                                </label>
-                            </div>
-                            <div class="g-mb15">
-                                <label class="ui-radio">
-                                    <input type="radio" name="teachingtype" />
-                                    <span class="ui-radio__decor"></span>
-                                    <span class="ui-radio__text">Occasional Lecturing</span>
-                                </label>
-                            </div>
-                            <label class="ui-radio">
-                                <input type="radio" name="teachingtype" />
-                                <span class="ui-radio__decor"></span>
-                                <span class="ui-radio__text">Either of the two</span>
+                    <div class="p-profile__exp" id="expirienceBlock">
+                        <div class="g-mb20">
+                            <label class="ui-checkbox g-mr15">
+                                <input type="checkbox" name="" />
+                                <span class="ui-checkbox__decor"></span>
+                                <span class="ui-checkbox__text">Online</span>
+                            </label>
+
+                            <label class="ui-checkbox">
+                                <input type="checkbox" name="" />
+                                <span class="ui-checkbox__decor"></span>
+                                <span class="ui-checkbox__text">In Person</span>
                             </label>
                         </div>
 
-                        <div class="g-mb30">
-                            <h2 class="g-mb20">What is your availability?</h2>
-
-                            <div class="g-mb20">
-                                <label class="ui-checkbox">
-                                    <input type="checkbox" name="" />
-                                    <span class="ui-checkbox__decor"></span>
-                                    <span class="ui-checkbox__text">During the day</span>
-                                </label>
-                            </div>
-                            <div class="g-mb20">
-                                <label class="ui-checkbox">
-                                    <input type="checkbox" name="" />
-                                    <span class="ui-checkbox__decor"></span>
-                                    <span class="ui-checkbox__text">Evenings only</span>
-                                </label>
-                            </div>
-                            <div class="g-mb20">
-                                <label class="ui-checkbox">
-                                    <input type="checkbox" name="" />
-                                    <span class="ui-checkbox__decor"></span>
-                                    <span class="ui-checkbox__text">Weekends</span>
-                                </label>
-                            </div>
-                            <div class="g-mb20">
-                                <label class="ui-checkbox">
-                                    <input type="checkbox" name="" />
-                                    <span class="ui-checkbox__decor"></span>
-                                    <span class="ui-checkbox__text">Evenings and Weekends</span>
-                                </label>
-                            </div>
-                            <div class="g-mb20">
-                                <label class="ui-checkbox">
-                                    <input type="checkbox" name="" />
-                                    <span class="ui-checkbox__decor"></span>
-                                    <span class="ui-checkbox__text">Either of the three</span>
-                                </label>
-                            </div>
+                        <div class="p-profile__exp-label g-mb10">
+                            Please specify *
                         </div>
-
-                        <div class="p-profile__submit">
-                            <button class="btn btn-primary btn-lg btn-block" type="submit">APPLY</button>
-                        </div>
-
-                        <div class="p-profile__sometext g-mb15">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut
-                            labore et dolore magna aliqua.
-                        </div>
-
-                        <div class="p-profile__read">
-                            <div class="p-profile__read-check">
-                                <label class="ui-checkbox">
-                                    <input type="checkbox" name="" />
-                                    <span class="ui-checkbox__decor"></span>
-                                </label>
-                            </div>
-
-                            <div class="p-profile__read-text">
-                                I have read and agree to the AdjunktMarket <a href="" target="_blank">Terms and
-                                    Conditions</a>
-                                of Use and <a href="" target="_blank">Privacy Policy</a>.
-                            </div>
-                        </div>
-                    </form>
+                        <textarea class="p-profile__exp-textarea" placeholder="Please specify"></textarea>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="g-singlepage__footer">
-            //= parts/_footer.html
+                <div class="p-profile__block">
+                    <h2 class="g-mb20">
+                        Highest education level obtained
+                        <span class="fa fa-info-circle" data-toggle="tooltip"
+                            title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"></span>
+                    </h2>
+
+                    <select class="form-control form-control-lg">
+                        <option>Some option</option>
+                        <option>Some option</option>
+                        <option>Some option</option>
+                    </select>
+                </div>
+
+                <div class="p-profile__block">
+                    <h2 class="g-mb20">
+                        What format are you open to teaching in?
+                        <span class="fa fa-info-circle" data-toggle="tooltip"
+                            title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"></span>
+                    </h2>
+
+                    <div class="g-mb20">
+                        <label class="ui-checkbox g-mr15">
+                            <input type="checkbox" name="" />
+                            <span class="ui-checkbox__decor"></span>
+                            <span class="ui-checkbox__text">Online</span>
+                        </label>
+
+                        <label class="ui-checkbox js-showLink" data-show="formatToTeaching">
+                            <input type="checkbox" name="" />
+                            <span class="ui-checkbox__decor"></span>
+                            <span class="ui-checkbox__text">In Person</span>
+                        </label>
+                    </div>
+
+                    <div class="p-profile__select2 p-profile__hidden" id="formatToTeaching">
+                        <select class="p-profile__select2-select js-select2" name="states[]" multiple="multiple">
+                            <option value="AG">Agriculture - Environmental Science, Ecology, and Forestry
+                            </option>
+                            <option value="AL">Alabama, Auburn-Opelika AL Metro</option>
+                            <option value="ALF">Alabama, Fort Lauderdale-Pompano Beach-Deerfield Beach FL
+                                Metro
+                                Div.
+                            </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="p-profile__block">
+                    <h2 class="g-mb20">What type of teaching are you available for? </h2>
+
+                    <div class="g-mb15">
+                        <label class="ui-radio">
+                            <input type="radio" name="teachingtype" />
+                            <span class="ui-radio__decor"></span>
+                            <span class="ui-radio__text">Full Semester</span>
+                        </label>
+                    </div>
+                    <div class="g-mb15">
+                        <label class="ui-radio">
+                            <input type="radio" name="teachingtype" />
+                            <span class="ui-radio__decor"></span>
+                            <span class="ui-radio__text">Occasional Lecturing</span>
+                        </label>
+                    </div>
+                    <label class="ui-radio">
+                        <input type="radio" name="teachingtype" />
+                        <span class="ui-radio__decor"></span>
+                        <span class="ui-radio__text">Either of the two</span>
+                    </label>
+                </div>
+
+                <div class="g-mb30">
+                    <h2 class="g-mb20">What is your availability?</h2>
+
+                    <div class="g-mb20">
+                        <label class="ui-checkbox">
+                            <input type="checkbox" name="" />
+                            <span class="ui-checkbox__decor"></span>
+                            <span class="ui-checkbox__text">During the day</span>
+                        </label>
+                    </div>
+                    <div class="g-mb20">
+                        <label class="ui-checkbox">
+                            <input type="checkbox" name="" />
+                            <span class="ui-checkbox__decor"></span>
+                            <span class="ui-checkbox__text">Evenings only</span>
+                        </label>
+                    </div>
+                    <div class="g-mb20">
+                        <label class="ui-checkbox">
+                            <input type="checkbox" name="" />
+                            <span class="ui-checkbox__decor"></span>
+                            <span class="ui-checkbox__text">Weekends</span>
+                        </label>
+                    </div>
+                    <div class="g-mb20">
+                        <label class="ui-checkbox">
+                            <input type="checkbox" name="" />
+                            <span class="ui-checkbox__decor"></span>
+                            <span class="ui-checkbox__text">Evenings and Weekends</span>
+                        </label>
+                    </div>
+                    <div class="g-mb20">
+                        <label class="ui-checkbox">
+                            <input type="checkbox" name="" />
+                            <span class="ui-checkbox__decor"></span>
+                            <span class="ui-checkbox__text">Either of the three</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="p-profile__submit">
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">APPLY</button>
+                </div>
+
+                <div class="p-profile__sometext g-mb15">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut
+                    labore et dolore magna aliqua.
+                </div>
+
+                <div class="p-profile__read">
+                    <div class="p-profile__read-check">
+                        <label class="ui-checkbox">
+                            <input type="checkbox" name="" />
+                            <span class="ui-checkbox__decor"></span>
+                        </label>
+                    </div>
+
+                    <div class="p-profile__read-text">
+                        I have read and agree to the AdjunktMarket <a href="" target="_blank">Terms and
+                            Conditions</a>
+                        of Use and <a href="" target="_blank">Privacy Policy</a>.
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
+    
+    //= parts/_footer.html
+    </div>
+
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="extension/select2/select2.min.js"></script>
     <script src="extension/bootstrap-4.0.0/js/popper.min.js"></script>
