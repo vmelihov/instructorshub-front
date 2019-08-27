@@ -52,18 +52,9 @@ h5 {
 
                 &-link {
                     display: block;
-                    font: 22px/22px $gm;
-                    color: #2C3C53;
-
-                    span {
-                        display: block;
-                        letter-spacing: 2.5px;
-                    }
-
-                    &:hover {
-                        text-decoration: none;
-                        color: #000;
-                    }
+                    background: url("../img/logo.png") 0px 0px no-repeat;
+                    width: 167px;
+                    height: 49px;
                 }
             }
 
