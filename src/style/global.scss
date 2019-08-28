@@ -41,7 +41,7 @@ h5 {
         z-index: 900;
 
         &__content {
-            height: 60px;
+            height: 80px;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -90,7 +90,7 @@ h5 {
                         display: inline-block;
                         position: relative;
                         overflow: hidden;
-                        font: 15px/60px $g;
+                        font: 15px/80px $g;
                         color: #2C3C53;
 
                         &:before {
@@ -132,7 +132,7 @@ h5 {
                     display: inline-block;
                     font: 15px/26px $g;
                     background: url("../img/icon-sign_in.png") 0px center no-repeat;
-                    padding-left: 30px;
+                    padding-left: 33px;
                     margin-left: 15px;
 
                     &-link {
