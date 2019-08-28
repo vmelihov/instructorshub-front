@@ -13,4 +13,15 @@ jQuery(function ($) {
         _this.parents(".js-passParent").find(".js-passLine").removeClass("d-none");
         _this.parents(".js-passLine").addClass("d-none");
     });
+
+    $(".js-profileType").on("click", function () {
+        if (!$(this).hasClass("active")) {
+            $(".js-profileType").toggleClass("active");
+            $(".js-institution").toggleClass("d-none");
+        }
+    });
+    $('.js-selectize').selectize({
+        create: true,
+        sortField: 'text'
+    });
 });

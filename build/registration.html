@@ -11,6 +11,7 @@
     <title>Registration</title>
     <link rel="stylesheet" href="extension/bootstrap-4.0.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="extension/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="extension/selectize/css/selectize.css" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/registration.css" />
 </head>
@@ -30,19 +31,19 @@
                         <div class="g-header__content-mobi-menu">
                             <menu class="g-header__content-menu">
                                 <div class="g-header__content-menu-item active">
-                                    <a href="" class="g-header__content-menu-item-link">Menu page 1</a>
+                                    <a href="" class="g-header__content-menu-item-link">Home</a>
                                 </div>
                                 <div class="g-header__content-menu-item">
-                                    <a href="" class="g-header__content-menu-item-link">Menu page 2</a>
+                                    <a href="" class="g-header__content-menu-item-link">Vacancies</a>
                                 </div>
                                 <div class="g-header__content-menu-item">
-                                    <a href="" class="g-header__content-menu-item-link">Menu page 3</a>
+                                    <a href="" class="g-header__content-menu-item-link">Adjuncts</a>
                                 </div>
                                 <div class="g-header__content-menu-item">
-                                    <a href="" class="g-header__content-menu-item-link">Menu page 4</a>
+                                    <a href="" class="g-header__content-menu-item-link">Chats</a>
                                 </div>
-                            </menu>
-        
+                            </menu>    
+                            
                             <div class="g-header__content-controls">
                                 <div class="g-header__content-controls-one">
                                     <a href="" class="g-header__content-controls-one-link">Sign In</a>
@@ -58,76 +59,119 @@
         </header>
 
         <div class="g-singlepage__content">
-            <div class="p-reg g-content">
+            <div class="p-reg g-content js-regForm">
                 <div class="p-reg__title">Registration</div>
 
-                <form class="needs-validation">
+                <form class="p-reg__form needs-validation">
                     <div class="form-group">
-                        <h2 class="g-mb20">Choose account type</h2>
-                        <label class="ui-radio g-mr20">
-                            <input type="radio" name="profile" />
-                            <span class="ui-radio__decor"></span>
-                            <span class="ui-radio__text">ADJUNCT</span>
-                        </label>
-
-                        <label class="ui-radio">
-                            <input type="radio" name="profile" />
-                            <span class="ui-radio__decor"></span>
-                            <span class="ui-radio__text">EMPLOYER</span>
-                        </label>
+                        <div class="p-reg__form-profile-type">
+                            <div class="p-reg__form-profile-type-one active js-profileType">
+                                Adjunct
+                            </div>
+                            <div class="p-reg__form-profile-type-one js-profileType">
+                                Institution
+                            </div>
+                        </div>
 
                         <div class="p-reg__form-acc-info">
-                            <div class="p-reg__form-acc-info-icon fa fa-exclamation-triangle"></div>
                             After registering, you cannot change the account type!
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="fname">First name</label>
-                        <input type="text" class="form-control form-control-lg" id="fname"
-                            placeholder="Enter your first name" required>
+                        <div class="p-reg__form-linkedin">
+                            <a href="" class="p-reg__form-linkedin-link">
+                                <span class="fab fa-linkedin-in"></span>
+                                Continue with LinkedIn
+                            </a>
+                        </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="lname">Last name</label>
-                        <input type="text" class="form-control form-control-lg" id="lname"
-                            placeholder="Enter your last name" required>
+                        <div class="p-reg__form-or">or</div>
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email adress</label>
-                        <input type="email" class="form-control form-control-lg" id="email"
-                            placeholder="Enter your work email" required>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="p-reg__form-iblock">
+                                    <div class="p-reg__form-iblock-label">First name</div>
+                                    <div class="p-reg__form-iblock-icon fal fa-check"></div>
+
+                                    <input type="text" class="p-reg__form-iblock-input" required />
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="p-reg__form-iblock">
+                                    <div class="p-reg__form-iblock-label">Last name</div>
+
+                                    <input type="text" class="p-reg__form-iblock-input" required />
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="form-group js-passParent">
-                        <div class="js-passLine">
-                            <label for="pass">
-                                Password
-                            </label>
-                            <div class="p-reg__form-line">
-                                <input type="password" class="form-control form-control-lg js-passInput" id="pass"
-                                    placeholder="Password" />
-                                <div class="p-reg__form-line-icon js-passEye fa fa-eye"></div>
-                            </div>
-                        </div>
-                        <div class="js-passLine d-none">
-                            <label class="form__label" for="notPass">
-                                Password
-                            </label>
-                            <div class="p-reg__form-line">
-                                <input type="text" class="form-control form-control-lg js-notPassInput" id="notPass"
-                                    placeholder="Password" />
-                                <div class="p-reg__form-line-icon js-passEye fa fa-eye-slash"></div>
-                            </div>
-                        </div>
+                    <div class="form-group">
+                        <div class="p-reg__form-iblock">
+                            <div class="p-reg__form-iblock-icon fal fa-check"></div>
 
-                        <small id="passHelp" class="form-text text-muted">Make sure it's more than 15
-                            characters.</small>
+                            <input type="email" class="p-reg__form-input" placeholder="Work email address" required />
+                        </div>
+                    </div>
+
+                    <div class="form-group d-none js-institution">
+                        <div class="p-reg__form-iblock">
+                            <div class="p-reg__form-iblock-label">Educational institution</div>
+                            <div class="p-reg__form-iblock-icon fal fa-check"></div>
+
+                            <select class="js-selectize" placeholder="Choose institution">
+                                <option></option>
+                                <option>Wyoming</option>
+                                <option>Al2abama</option>
+                                <option>Wyom3ing</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-lg-6 js-passParent">
+                                <div class="js-passLine">
+                                    <div class="p-reg__form-iblock">
+                                        <div class="p-reg__form-iblock-icon js-passEye fa fa-eye"></div>
+                                        <input placeholder="Password" type="password"
+                                            class="p-reg__form-input js-passInput" required />
+                                    </div>
+                                </div>
+                                <div class="js-passLine d-none">
+                                    <div class="p-reg__form-iblock">
+                                        <div class="p-reg__form-iblock-icon js-passEye fa fa-eye-slash"></div>
+                                        <input placeholder="Password" type="text"
+                                            class="p-reg__form-input js-notPassInput" required />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 js-passParent">
+                                <div class="js-passLine">
+                                    <div class="p-reg__form-iblock">
+                                        <div class="p-reg__form-iblock-icon js-passEye fa fa-eye"></div>
+                                        <input placeholder="Confirm pasword" type="password"
+                                            class="p-reg__form-input js-passInput" required />
+                                    </div>
+                                </div>
+                                <div class="js-passLine d-none">
+                                    <div class="p-reg__form-iblock">
+                                        <div class="p-reg__form-iblock-icon js-passEye fa fa-eye-slash"></div>
+                                        <input placeholder="Confirm pasword" type="text"
+                                            class="p-reg__form-input js-notPassInput" required />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="p-reg__form-submit">
-                        <button class="btn btn-primary btn-lg btn-block" type="submit">SIGN UP</button>
+                        <input class="p-reg__form-submit-input" type="submit" value="Sign up" />
                     </div>
 
                     <div class="p-reg__form-read">
@@ -145,27 +189,46 @@
                         </div>
                     </div>
 
-                    <div class="p-reg__form-sometext">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
+                    <div class="p-reg__form-login">
+                        Already have an account? <a href="">Log in</a>
                     </div>
                 </form>
+            </div>
+
+            <div class="p-reg__mail d-none js-regDone">
+                <div class="p-reg__mail-title">
+                    We have sent an email with a confirmation link to your email address
+                </div>
+                <div class="p-reg__mail-text">
+                    Thank you for choosing our service
+                </div>
             </div>
         </div>
 
         <div class="g-singlepage__footer">
             <footer class="g-footer">
                 <div class="g-footer__text">
-                    &copy; 2019
-                    <br />
-                    adjunctmarket.com
+                    &copy; 2019 instructorshub.com
                 </div>
             </footer>
         </div>
     </div>
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="extension/selectize/js/standalone/selectize.min.js"></script>
     <script src="js/global.js"></script>
     <script src="js/reg.js"></script>
+
+    <script>
+        //Этот код только для вёрстки. Чтоб показать что будет после успешной отправки данных
+        jQuery(function ($) {
+            $(".js-regForm").submit(function (event) {
+                $(this).hide();
+                $(".js-regDone").removeClass("d-none");
+                event.preventDefault();
+            });
+        });
+        //Этот код только для вёрстки. Чтоб показать что будет после успешной отправки данных
+    </script>
 </body>
 
 </html>

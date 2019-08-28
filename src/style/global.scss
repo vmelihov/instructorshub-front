@@ -8,7 +8,8 @@ html {
 
 body {
     color: #404040;
-    font: 14px $g;
+    background: #EDEBF1;
+    font: 15px $g;
     padding: 0px;
 }
 
@@ -34,9 +35,8 @@ h5 {
 
 .g {
     &-header {
-        background: #F0F0F0;
+        background: #fff;
         position: sticky;
-        position: -webkit-sticky;
         top: 0px;
         z-index: 900;
 
@@ -90,7 +90,7 @@ h5 {
                         display: inline-block;
                         position: relative;
                         overflow: hidden;
-                        font: 16px/60px $g;
+                        font: 15px/60px $g;
                         color: #2C3C53;
 
                         &:before {
@@ -98,9 +98,9 @@ h5 {
                             position: absolute;
                             left: -100%;
                             bottom: 0px;
-                            border-bottom: 3px solid #025BE1;
+                            border-bottom: 3px solid #2259B5;
                             width: 100%;
-                            transition: .3s;
+                            transition: .1s;
                         }
 
                         &:hover {
@@ -113,6 +113,7 @@ h5 {
                     &.active &-link {
                         &:before {
                             left: 0px;
+                            transition: .3s;
                         }
                     }
 
@@ -129,10 +130,17 @@ h5 {
 
                 &-one {
                     display: inline-block;
+                    font: 15px/26px $g;
+                    background: url("../img/icon-sign_in.png") 0px center no-repeat;
+                    padding-left: 30px;
                     margin-left: 15px;
 
                     &-link {
                         color: #2C3C53;
+                    }
+
+                    &:last-of-type {
+                        background-image: url("../img/icon-sign_up.png");
                     }
                 }
             }
@@ -249,16 +257,15 @@ h5 {
     }
 
     &-footer {
-        background: #2C3C53;
-        color: #fff;
-        font: 16px $g;
+        background: #E3E0EA;
+        color: #30323D;
+        font-size: 11px;
         text-align: center;
-        padding: 20px 15px;
-        height: 75px;
+        padding: 30px 15px;
+        height: 80px;
 
         &__text {
             display: inline-block;
-            text-align: left;
         }
     }
 
@@ -759,29 +766,48 @@ h5 {
             position: absolute;
             left: 0px;
             top: 0px;
-            width: 20px;
-            height: 20px;
-            border: 2px solid #2C3C53;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #D6D6D8;
             background: #fff;
+            transition: .3s;
 
-            &:before {
+            &:before,
+            &:after {
                 content: "";
                 position: absolute;
-                left: 4px;
-                top: 4px;
-                width: 8px;
-                height: 8px;
                 background: #fff;
+                box-shadow: 0px 0px 0px 5px #fff;
+                -webkit-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
                 opacity: 0;
-                box-shadow: 0px 0px 0px 15px #fff;
                 transition: .3s;
+            }
+
+            &:before {
+                left: 5px;
+                top: 8px;
+                width: 1px;
+                height: 5px;
+            }
+
+            &:after {
+                left: 6px;
+                top: 7px;
+                width: 9px;
+                height: 1px;
             }
         }
 
-        input:checked+&__decor:before {
-            opacity: 1;
-            background: #1a70f1;
-            box-shadow: 0px 0px 0px 1px #1a70f1;
+        input:checked+&__decor {
+            box-shadow: inset 0px 0px 0px 50px #2259B5;
+
+            &:before,
+            &:after {
+                opacity: 1;
+                box-shadow: 0px 0px 1px #fff;
+            }
         }
 
         &__text {

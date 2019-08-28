@@ -2,79 +2,225 @@
 @import "parts/_vars.scss";
 
 .p-reg {
-    max-width: 400px;
-    margin: auto;
+    position: relative;
+    max-width: 730px;
+    padding: 50px 90px 80px;
+    margin: 80px auto;
+    background: #fff;
+    text-align: center;
 
     &__title {
-        font: 32px $gm;
-        margin-bottom: 25px;
-    }
-
-    label {
-        font: 14px $gm;
-    }
-
-    .form {
-        &-group {
-            margin-bottom: 2rem;
-        }
-
-        &-control {
-            border-color: #2C3C53;
-        }
+        font: 28px $g;
+        margin-bottom: 40px;
     }
 
     &__form {
-        &-acc-info {
-            position: relative;
-            margin-top: 20px;
-            padding-left: 30px;
-            font: 12px $g;
-            max-width: 250px;
-
-            &-icon{
-                color: #D2484B;
-                position: absolute;
-                left: 0px;
-                top: 5px;
-                font-size: 20px;
-            }
+        .form-group {
+            margin-bottom: 2rem;
         }
 
-        &-line {
-            position: relative;
+        &-profile-type {
+            min-height: 23px;
+            box-shadow: 0px 2px 0px #D6D6D8;
+            margin-bottom: 15px;
 
-            &-icon {
-                color: rgba(44, 60, 83, .5);
-                position: absolute;
-                right: 0px;
-                top: 50%;
-                font-size: 16px;
-                margin-top: -17px;
-                padding: 10px;
+            &-one {
+                float: left;
+                width: 50%;
                 cursor: pointer;
-                transition: .3s;
+                color: #83848B;
+                line-height: 15px;
+                padding-bottom: 8px;
 
-                &:hover {
-                    text-decoration: none;
-                    color: #2C3C53;
+                &.active {
+                    box-shadow: 0px 2px 0px #2259B5;
+                    color: #2259B5;
+                    font-weight: bold;
                 }
             }
         }
 
-        &-submit {
-            padding: 10px 0px 40px;
-            max-width: 200px;
+        &-acc-info {
+            font-size: 11px;
+            color: #83848B;
+            margin-bottom: 40px;
+        }
 
-            .btn {
-                font: 18px/2 $gb;
+        &-linkedin {
+            max-width: 410px;
+            margin: auto;
+
+            &-link {
+                display: block;
+                background: #0F73B0;
+                color: #fff;
+                font: 15px/48px $g;
+                padding-left: 70px;
+                position: relative;
+
+                span {
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    border-right: 1px solid #0C6398;
+                    width: 70px;
+                    line-height: 48px;
+                    font-size: 26px;
+                }
+
+                &:hover,
+                &:active {
+                    background: #2C89C1;
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &-or {
+            position: relative;
+            overflow: hidden;
+            max-width: 190px;
+            color: #000;
+            margin: auto;
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                border-top: 1px solid #D6D6D8;
+                width: 200%;
+            }
+
+            &:before {
+                left: 60%;
+            }
+
+            &:after {
+                right: 60%;
+            }
+        }
+
+        &-iblock {
+            text-align: left;
+            height: 48px;
+            position: relative;
+
+            &-label {
+                font-size: 12px;
+                position: absolute;
+                left: 15px;
+                top: 5px;
+                color: #83848B;
+                z-index: 2;
+            }
+
+            &-input, .selectize-input {
+                width: 100%;
+                display: block;
+                border: 1px solid #D6D6D8;
+                padding: 22px 50px 7px 15px;
+                color: #30323D;
+                transition: .3s;
+
+                &:active,
+                &:focus,
+                &:hover {
+                    outline: none;
+                }
+
+                &:focus {
+                    border-color: #2259B5;
+                    box-shadow: 0px 0px 0px 1px #2259B5;
+                    border-radius: 3px;
+                }
+            }
+
+            .selectize-input{
+                font: 15px $g;
+
+                &:after{
+                    display: none !important;
+                }
+            }
+
+            &-icon {
+                position: absolute;
+                right: 15px;
+                top: 10px;
+                font-size: 26px;
+                line-height: 26px;
+                transition: .3s;
+                z-index: 3;
+
+                &.fa-check {
+                    color: #2259B5;
+                }
+
+                &.fa-eye,
+                &.fa-eye-slash {
+                    font-size: 18px;
+                    color: #BFC0C5;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #333;
+                    }
+                }
+            }
+        }
+
+        &-input {
+            width: 100%;
+            display: block;
+            border: 1px solid #D6D6D8;
+            padding: 0px 50px 0px 15px;
+            color: #30323D;
+            height: 48px;
+            transition: .3s;
+
+            &:active,
+            &:focus,
+            &:hover {
+                outline: none;
+            }
+
+            &:focus {
+                border-color: #2259B5;
+                box-shadow: 0px 0px 0px 1px #2259B5;
+                border-radius: 3px;
+            }
+        }
+
+        &-submit {
+            padding: 20px 0px 30px;
+            max-width: 140px;
+            margin: auto;
+
+            &-input {
+                display: block;
+                width: 100%;
+                border: 0px;
+                background: #2259B5;
+                color: #fff;
+                text-align: center;
+                line-height: 48px;
+                cursor: pointer;
+
+                &:hover,
+                &:active {
+                    background: #356BC5;
+                }
             }
         }
 
         &-read {
             padding-left: 30px;
             position: relative;
-            margin-bottom: 15px;
+            max-width: 300px;
+            margin: 0px auto 30px;
+            text-align: left;
 
             &-check {
                 position: absolute;
@@ -83,19 +229,82 @@
             }
 
             &-text {
-                font-size: 12px;
+                font-size: 11px;
             }
         }
 
-        &-sometext {
-            font-size: 12px;
+        &-login {
+            background: #F6F6F6;
+            padding: 30px 0px;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            width: 100%;
+        }
+    }
+
+    &__mail {
+        position: relative;
+        max-width: 400px;
+        margin: auto;
+        background: #fff url("../img/icon-mail.png") center 55px no-repeat;
+        padding: 120px 50px 30px;
+        text-align: center;
+
+        &:before {
+            content: "";
+            position: absolute;
+            right: -1px;
+            top: -1px;
+            width: 33px;
+            height: 33px;
+            background: linear-gradient(45deg, #2259B5 0%, #2259B5 50%, #EDEBF1 50%, #EDEBF1 100%);
+        }
+
+        &-title {
+            font: 15px $gm;
+            margin-bottom: 40px;
+        }
+
+        &-text {
+            font-size: 13px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        max-width: 670px;
+        padding: 50px 80px 80px;
+    }
+}
+
+@media (max-width: $screen-sm) {
+    .p-reg {
+        max-width: 510px;
+        padding: 50px 60px 80px;
+
+        &__form {
+            .col-lg-6:first-of-type {
+                margin-bottom: 2rem;
+            }
+
+            &-login {
+                padding: 20px 0px;
+            }
         }
     }
 }
 
 @media (max-width: $screen-xs) {
     .p-reg {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding: 30px 15px;
+        margin: 0px;
+
+        &__form {
+
+            &-linkedin,
+            &-login {
+                display: none;
+            }
+        }
     }
 }
