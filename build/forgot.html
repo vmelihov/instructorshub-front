@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Forgot password?</title>
+    <link rel="stylesheet" href="extension/bootstrap-4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="extension/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/registration.css" />
+</head>
+
+<body>
+    <div class="g-singlepage">
+        <header class="g-header">
+            <div class="container">
+                <div class="fal fa-bars g-header__mobi-link js-activeOnOff" data-id="hMenu"></div>
+                <div class="g-header__content">
+                    <div class="g-header__content-logo">
+                        <a href="/" class="g-header__content-logo-link"></a>
+                    </div>
+        
+                    <div class="g-header__content-menu" id="hMenu">
+                        <div class="g-header__content-menu-item active">
+                            <a href="" class="g-header__content-menu-item-link">Home</a>
+                        </div>
+                        <div class="g-header__content-menu-item">
+                            <a href="" class="g-header__content-menu-item-link">Vacancies</a>
+                        </div>
+                        <div class="g-header__content-menu-item">
+                            <a href="" class="g-header__content-menu-item-link">Adjuncts</a>
+                        </div>
+                        <div class="g-header__content-menu-item">
+                            <a href="" class="g-header__content-menu-item-link">Chats</a>
+                        </div>
+                    </div>
+                    <div class="g-header__content-controls">
+                        <div class="g-header__content-controls-one">
+                            <a href="" class="g-header__content-controls-one-link">Sign In</a>
+                        </div>
+                        <div class="g-header__content-controls-one">
+                            <a href="" class="g-header__content-controls-one-link">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="g-singlepage__content">
+            <div class="p-reg p-login g-content js-regForm">
+                <div class="p-reg__title">Reset your password</div>
+
+                <form class="p-reg__form needs-validation">
+                    <div class="form-group">
+                        <div class="p-reg__form-iblock">
+                            <div class="p-reg__form-iblock-icon fal fa-check"></div>
+
+                            <input type="email" class="p-reg__form-input" placeholder="Work email address" required />
+                        </div>
+                    </div>
+
+                    <div class="p-reg__form-submit">
+                        <input class="p-reg__form-submit-input" type="submit" value="Reset password" />
+                    </div>
+
+                    <div class="p-reg__form-login">
+                        <a href="login.html" class="remembered">I remembered</a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="p-reg__mail d-none js-regDone">
+                <div class="p-reg__mail-title">
+                    We have sent an email with a confirmation link to your email address
+                </div>
+                <div class="p-reg__mail-text">
+                    Thank you for choosing our service
+                </div>
+            </div>
+        </div>
+
+        <div class="g-singlepage__footer">
+            <footer class="g-footer">
+                <div class="g-footer__text">
+                    &copy; 2019 instructorshub.com
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="extension/selectize/js/standalone/selectize.min.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/reg.js"></script>
+
+    <script>
+        //Этот код только для вёрстки.
+        jQuery(function ($) {
+            //Здесь показываем, что будет после успешной отправки данных
+            $(".js-regForm").submit(function (event) {
+                $(this).hide();
+                $(".js-regDone").removeClass("d-none");
+                event.preventDefault();
+            });
+            //Здесь показываем, что будет после успешной отправки данных
+
+            //Это пример вывода своего сообщения в окно об ошибке
+            /*
+            $('input[type=text]').on('change invalid', function () {
+                var textfield = $(this).get(0);
+
+                // 'setCustomValidity not only sets the message, but also marks
+                // the field as invalid. In order to see whether the field really is
+                // invalid, we have to remove the message first
+                textfield.setCustomValidity('');
+
+                if (!textfield.validity.valid) {
+                    textfield.setCustomValidity('Вёрстка - это не просто!!!11');
+                }
+            });
+            */
+            //Это пример вывода своего сообщения в окно об ошибке
+
+        });
+        //Этот код только для вёрстки.
+    </script>
+</body>
+
+</html>

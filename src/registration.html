@@ -152,7 +152,7 @@
                     </div>
 
                     <div class="p-reg__form-login">
-                        Already have an account? <a href="">Log in</a>
+                        Already have an account? <a href="login.html">Log in</a>
                     </div>
                 </form>
             </div>
@@ -177,15 +177,35 @@
     <script src="js/reg.js"></script>
 
     <script>
-        //Этот код только для вёрстки. Чтоб показать что будет после успешной отправки данных
+        //Этот код только для вёрстки.
         jQuery(function ($) {
+            //Здесь показываем, что будет после успешной отправки данных
             $(".js-regForm").submit(function (event) {
                 $(this).hide();
                 $(".js-regDone").removeClass("d-none");
                 event.preventDefault();
             });
+            //Здесь показываем, что будет после успешной отправки данных
+
+            //Это пример вывода своего сообщения в окно об ошибке
+            /*
+            $('input[type=text]').on('change invalid', function () {
+                var textfield = $(this).get(0);
+
+                // 'setCustomValidity not only sets the message, but also marks
+                // the field as invalid. In order to see whether the field really is
+                // invalid, we have to remove the message first
+                textfield.setCustomValidity('');
+
+                if (!textfield.validity.valid) {
+                    textfield.setCustomValidity('Вёрстка - это не просто!!!11');
+                }
+            });
+            */
+            //Это пример вывода своего сообщения в окно об ошибке
+
         });
-        //Этот код только для вёрстки. Чтоб показать что будет после успешной отправки данных
+        //Этот код только для вёрстки.
     </script>
 </body>
 

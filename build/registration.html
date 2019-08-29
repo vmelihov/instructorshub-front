@@ -20,38 +20,32 @@
     <div class="g-singlepage">
         <header class="g-header">
             <div class="container">
+                <div class="fal fa-bars g-header__mobi-link js-activeOnOff" data-id="hMenu"></div>
                 <div class="g-header__content">
                     <div class="g-header__content-logo">
                         <a href="/" class="g-header__content-logo-link"></a>
                     </div>
         
-                    <div class="g-header__content-mobi" id="headerMobi">
-                        <span class="fa fa-bars g-header__content-mobi-link js-activeOnOff" data-id="headerMobi"></span>
-        
-                        <div class="g-header__content-mobi-menu">
-                            <menu class="g-header__content-menu">
-                                <div class="g-header__content-menu-item active">
-                                    <a href="" class="g-header__content-menu-item-link">Home</a>
-                                </div>
-                                <div class="g-header__content-menu-item">
-                                    <a href="" class="g-header__content-menu-item-link">Vacancies</a>
-                                </div>
-                                <div class="g-header__content-menu-item">
-                                    <a href="" class="g-header__content-menu-item-link">Adjuncts</a>
-                                </div>
-                                <div class="g-header__content-menu-item">
-                                    <a href="" class="g-header__content-menu-item-link">Chats</a>
-                                </div>
-                            </menu>    
-                            
-                            <div class="g-header__content-controls">
-                                <div class="g-header__content-controls-one">
-                                    <a href="" class="g-header__content-controls-one-link">Sign In</a>
-                                </div>
-                                <div class="g-header__content-controls-one">
-                                    <a href="" class="g-header__content-controls-one-link">Sign Up</a>
-                                </div>
-                            </div>
+                    <div class="g-header__content-menu" id="hMenu">
+                        <div class="g-header__content-menu-item active">
+                            <a href="" class="g-header__content-menu-item-link">Home</a>
+                        </div>
+                        <div class="g-header__content-menu-item">
+                            <a href="" class="g-header__content-menu-item-link">Vacancies</a>
+                        </div>
+                        <div class="g-header__content-menu-item">
+                            <a href="" class="g-header__content-menu-item-link">Adjuncts</a>
+                        </div>
+                        <div class="g-header__content-menu-item">
+                            <a href="" class="g-header__content-menu-item-link">Chats</a>
+                        </div>
+                    </div>
+                    <div class="g-header__content-controls">
+                        <div class="g-header__content-controls-one">
+                            <a href="" class="g-header__content-controls-one-link">Sign In</a>
+                        </div>
+                        <div class="g-header__content-controls-one">
+                            <a href="" class="g-header__content-controls-one-link">Sign Up</a>
                         </div>
                     </div>
                 </div>
@@ -190,7 +184,7 @@
                     </div>
 
                     <div class="p-reg__form-login">
-                        Already have an account? <a href="">Log in</a>
+                        Already have an account? <a href="login.html">Log in</a>
                     </div>
                 </form>
             </div>
@@ -219,15 +213,35 @@
     <script src="js/reg.js"></script>
 
     <script>
-        //Этот код только для вёрстки. Чтоб показать что будет после успешной отправки данных
+        //Этот код только для вёрстки.
         jQuery(function ($) {
+            //Здесь показываем, что будет после успешной отправки данных
             $(".js-regForm").submit(function (event) {
                 $(this).hide();
                 $(".js-regDone").removeClass("d-none");
                 event.preventDefault();
             });
+            //Здесь показываем, что будет после успешной отправки данных
+
+            //Это пример вывода своего сообщения в окно об ошибке
+            /*
+            $('input[type=text]').on('change invalid', function () {
+                var textfield = $(this).get(0);
+
+                // 'setCustomValidity not only sets the message, but also marks
+                // the field as invalid. In order to see whether the field really is
+                // invalid, we have to remove the message first
+                textfield.setCustomValidity('');
+
+                if (!textfield.validity.valid) {
+                    textfield.setCustomValidity('Вёрстка - это не просто!!!11');
+                }
+            });
+            */
+            //Это пример вывода своего сообщения в окно об ошибке
+
         });
-        //Этот код только для вёрстки. Чтоб показать что будет после успешной отправки данных
+        //Этот код только для вёрстки.
     </script>
 </body>
 

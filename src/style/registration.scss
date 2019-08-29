@@ -9,6 +9,10 @@
     background: #fff;
     text-align: center;
 
+    &.p-login {
+        max-width: 600px;
+    }
+
     &__title {
         font: 28px $g;
         margin-bottom: 40px;
@@ -116,7 +120,8 @@
                 z-index: 2;
             }
 
-            &-input, .selectize-input {
+            &-input,
+            .selectize-input {
                 width: 100%;
                 display: block;
                 border: 1px solid #D6D6D8;
@@ -137,10 +142,10 @@
                 }
             }
 
-            .selectize-input{
+            .selectize-input {
                 font: 15px $g;
 
-                &:after{
+                &:after {
                     display: none !important;
                 }
             }
@@ -277,6 +282,10 @@
     }
 }
 
+.remembered {
+    font-weight: bold;
+}
+
 @media (max-width: $screen-sm) {
     .p-reg {
         max-width: 510px;
@@ -300,8 +309,6 @@
         margin: 0px;
 
         &__form {
-
-            &-linkedin,
             &-login {
                 display: none;
             }
