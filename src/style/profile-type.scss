@@ -2,18 +2,55 @@
 @import "parts/_vars.scss";
 
 .p-profile {
-    max-width: 500px;
+    background: #fff;
+    margin: 80px 0px 100px;
+    padding: 55px 65px;
 
-    &__hidden{
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__hidden {
         display: none;
     }
 
     &__block {
-        margin-bottom: 60px;
+        max-width: 475px;
+        margin-bottom: 30px;
 
-        &-link{
+        &-label {
+            font: 15px $gm;
+            margin-bottom: 15px;
+        }
+
+        &-link {
             color: #126BF1 !important;
             cursor: pointer;
+        }
+
+        &-tooltip {
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 50%;
+            background: #356BC5;
+            color: #fff;
+            width: 24px;
+            height: 24px;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            cursor: help;
+
+            &-line {
+                position: relative;
+            }
+        }
+
+        &-tooltip-line &-tooltip {
+            position: absolute;
+            right: -40px;
+            top: 50%;
+            margin-top: -12px;
         }
     }
 
@@ -26,56 +63,6 @@
             span {
                 font-weight: bold;
                 color: #D2484B;
-            }
-        }
-    }
-
-    &__select2 {
-        &-select {
-            width: 100%;
-            display: block;
-        }
-
-        .select2 {
-            &-selection__choice {
-                background: #4CB651 !important;
-                border-radius: 2.5px !important;
-                color: #fff;
-                font: 10px $g;
-                padding: 5px !important;
-
-                &__remove {
-                    color: #fff !important;
-                }
-
-            }
-
-            &-container .select2-selection {
-
-                &--single,
-                &--multiple {
-                    min-height: 48px;
-                }
-
-                &--single,
-                &__rendered {
-                    line-height: 48px;
-                }
-            }
-        }
-
-        .select2-container--default .select2-selection--single .select2-selection__arrow {
-            height: 48px;
-        }
-        
-        .select2-container .select2-search--inline{
-            float: none;
-            display: block;
-
-            &:before{
-                content: " ";
-                display: table;
-                clear: both;
             }
         }
     }
@@ -111,7 +98,7 @@
     &__sometext {
         font-size: 12px;
 
-        &-link{
+        &-link {
             color: #025BE1;
             cursor: pointer;
         }
@@ -129,6 +116,21 @@
 
         &-text {
             font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: $screen-xs) {
+    .p-profile {
+        padding: 20px 15px;
+        margin: 0px -15px;
+
+        &__block-tooltip-line {
+            padding-right: 40px;
+        }
+
+        &__block-tooltip-line &__block-tooltip {
+            right: 0px;
         }
     }
 }
