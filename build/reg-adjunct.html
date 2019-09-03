@@ -11,7 +11,7 @@
     <title>Adjunct profile</title>
     <link rel="stylesheet" href="extension/bootstrap-4.0.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="extension/font-awesome/css/all.css" />
-    <link rel="stylesheet" href="extension/select2/select2.min.css" />
+    <link rel="stylesheet" href="extension/selectize/css/selectize.css" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/profile-type.css" />
 </head>
@@ -254,11 +254,16 @@
                     </div>
 
                     <div class="p-profile__hidden" id="formatToTeaching">
-                        <select class="form-control form-control-lg">
-                            <option></option>
-                            <option>Some option</option>
-                            <option>Both</option>
-                        </select>
+                        <div class="g-selectize">
+                            <div class="g-selectize-label">Select location</div>
+
+                            <select class="js-selectize" placeholder="Select location">
+                                <option></option>
+                                <option>Alabama, Anniston-Oxford-Jacksonville AL Metro</option>
+                                <option>Alabama, Auburn-Opelika AL Metro</option>
+                                <option>Alabama, Birmingham-Hoover AL Metro</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
@@ -364,7 +369,7 @@
     </div>
 
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="extension/select2/select2.min.js"></script>
+    <script src="extension/selectize/js/standalone/selectize.min.js"></script>
     <script src="extension/bootstrap-4.0.0/js/popper.min.js"></script>
     <script src="extension/bootstrap-4.0.0/js/bootstrap.min.js"></script>
     <script src="js/global.js"></script>

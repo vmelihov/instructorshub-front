@@ -9,6 +9,12 @@ jQuery(function () {
         var i = 0,
             _cat = _parent.find("li[data-name='" + _catName + "']");
 
+        if (_parent.find(".js-hardSelectBody div").length == 0) {
+            _parent.find(".js-hardSelectBody").hide();
+        } else {
+            _parent.find(".js-hardSelectBody").show();
+        }
+
         _cat.removeClass("chosen");
         while (_cat.find("ul li").length > i) {
             if (_cat.find("ul li").eq(i).hasClass("chosen") == true) {
@@ -18,19 +24,21 @@ jQuery(function () {
             i++;
         }
     };
+
     $(".js-hardSelectBtn").on("click", function () {
         $(this).parents(".js-hardSelect").toggleClass("opened");
     });
     $(".js-hardSelect ul li ul li").on("click", function () {
         var _this = $(this),
-            _catName = _this.parents("li").data("name");
+            _catName = _this.parents("li").data("name"),
+            _body = _this.parents(".js-hardSelect").find(".js-hardSelectBody");
 
         if (!_this.hasClass("chosen")) {
             _this.addClass("chosen");
-            checkCat(_this.parents(".js-hardSelect"), _catName);
 
-            _this.parents(".js-hardSelect").find(".js-hardSelectBody").append("<div class='ui-hardselect__body-item'><div class='ui-hardselect__body-item-text'>" + _this.text() + "</div><i class='ui-hardselect__body-item-icon fal fa-times' data-cat='" + _catName + "' data-item='" + _this.data("name") + "'></i></div>");
+            _body.append("<div class='ui-hardselect__body-item'><div class='ui-hardselect__body-item-text'>" + _this.text() + "</div><i class='ui-hardselect__body-item-icon fal fa-times' data-cat='" + _catName + "' data-item='" + _this.data("name") + "'></i></div>");
             _this.parents(".js-hardSelect").removeClass("opened");
+            checkCat(_this.parents(".js-hardSelect"), _catName);
         }
     });
     $(".js-hardSelectBody").on("click", "i", function () {
@@ -38,8 +46,8 @@ jQuery(function () {
             _parent = _this.parents(".js-hardSelect");
 
         _parent.find("li[data-name='" + _this.data("item") + "']").removeClass("chosen");
-        checkCat(_parent, _this.data("cat"));
         _this.parent().remove();
+        checkCat(_parent, _this.data("cat"));
     });
     $(document).on("click", function (event) {
         if (!$(event.target).closest('.js-hardSelectS').length) {
