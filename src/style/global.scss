@@ -300,7 +300,8 @@ h5 {
         &.m-mail {
             background: #fff url("../img/icon-mail.png") center 55px no-repeat;
         }
-        &.m-restore{
+
+        &.m-restore {
             background: #fff url("../img/icon-restore.png") center 55px no-repeat;
         }
 
@@ -760,6 +761,45 @@ h5 {
                     padding: 0px;
                     margin: 0px;
                 }
+            }
+        }
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+
+    .g {
+        &-header__content {
+            &-logo-link {
+                background-image: url("../img/logo@2x.png");
+            }
+
+            &-controls {
+                &-one {
+                    background-image: url("../img/icon-sign_in@2x.png");
+                    background-size: auto 100%;
+
+                    &:last-of-type {
+                        background-image: url("../img/icon-sign_up@2x.png");
+                    }
+                }
+            }
+        }
+
+        &-info-modal {
+            background-size: 48px auto !important;
+
+            &.m-mail {
+                background-image: url("../img/icon-mail@2x.png");
+            }
+
+            &.m-restore {
+                background-image: url("../img/icon-restore@2x.png");
             }
         }
     }
