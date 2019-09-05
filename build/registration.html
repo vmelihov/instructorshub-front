@@ -192,12 +192,18 @@
                 </form>
             </div>
 
-            <div class="p-reg__mail d-none js-regDone">
-                <div class="p-reg__mail-title">
-                    We have sent an email with a confirmation link to your email address
-                </div>
-                <div class="p-reg__mail-text">
-                    Thank you for choosing our service
+            <div class="modal fade" id="mailModal" tabindex="-1" role="dialog" aria-labelledby="mailModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="g-info-modal m-mail">
+                        <div class="g-info-modal__close" data-dismiss="modal" aria-label="Close"></div>
+                        <div class="g-info-modal__title">
+                            We have sent an email with a confirmation link to your email address
+                        </div>
+                        <div class="g-info-modal__text">
+                            Thank you for choosing our service
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -212,6 +218,7 @@
     </div>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="extension/selectize/js/standalone/selectize.min.js"></script>
+    <script src="extension/bootstrap-4.0.0/js/bootstrap.min.js"></script>
     <script src="js/global.js"></script>
     <script src="js/reg.js"></script>
 
@@ -219,9 +226,9 @@
         //Этот код только для вёрстки.
         jQuery(function ($) {
             //Здесь показываем, что будет после успешной отправки данных
+
             $(".js-regForm").submit(function (event) {
-                $(this).hide();
-                $(".js-regDone").removeClass("d-none");
+                $('#mailModal').modal();
                 event.preventDefault();
             });
             //Здесь показываем, что будет после успешной отправки данных

@@ -239,34 +239,6 @@
         }
     }
 
-    &__mail {
-        position: relative;
-        max-width: 400px;
-        margin: auto;
-        background: #fff url("../img/icon-mail.png") center 55px no-repeat;
-        padding: 120px 50px 30px;
-        text-align: center;
-
-        &:before {
-            content: "";
-            position: absolute;
-            right: -1px;
-            top: -1px;
-            width: 33px;
-            height: 33px;
-            background: linear-gradient(45deg, #2259B5 0%, #2259B5 50%, #EDEBF1 50%, #EDEBF1 100%);
-        }
-
-        &-title {
-            font: 15px $gm;
-            margin-bottom: 40px;
-        }
-
-        &-text {
-            font-size: 13px;
-        }
-    }
-
     @media (max-width: 1024px) {
         max-width: 670px;
         padding: 50px 80px 80px;

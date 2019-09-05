@@ -23,7 +23,7 @@
             <div class="p-reg p-login g-content js-regForm">
                 <div class="p-reg__title">Reset your password</div>
 
-                <form class="p-reg__form needs-validation">
+                <form class="p-reg__form needs-validation js-form">
                     <div class="form-group">
                         <div class="p-reg__form-iblock">
                             <div class="p-reg__form-iblock-icon fal fa-check"></div>
@@ -55,9 +55,23 @@
         <div class="g-singlepage__footer">
             //= parts/_footer.html
         </div>
+
+        <div class="modal fade" id="mailModal" tabindex="-1" role="dialog" aria-labelledby="mailModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="g-info-modal m-restore">
+                    <div class="g-info-modal__close" data-dismiss="modal" aria-label="Close"></div>
+                    <div class="g-info-modal__text">
+                        If an account exists for <a href="">v.melihov87@gmail.com</a>, you will get an email with instructions on
+                        resetting your password. If it doesn't arrive, be sure to check your spam folder.
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="extension/selectize/js/standalone/selectize.min.js"></script>
+    <script src="extension/bootstrap-4.0.0/js/bootstrap.min.js"></script>
     <script src="js/global.js"></script>
     <script src="js/reg.js"></script>
 
@@ -65,9 +79,8 @@
         //Этот код только для вёрстки.
         jQuery(function ($) {
             //Здесь показываем, что будет после успешной отправки данных
-            $(".js-regForm").submit(function (event) {
-                $(this).hide();
-                $(".js-regDone").removeClass("d-none");
+            $(".js-form").submit(function (event) {
+                $('#mailModal').modal();
                 event.preventDefault();
             });
             //Здесь показываем, что будет после успешной отправки данных

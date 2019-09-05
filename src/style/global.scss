@@ -287,6 +287,67 @@ h5 {
             height: 75px;
         }
     }
+
+    &-info-modal {
+        position: relative;
+        max-width: 400px;
+        margin: auto;
+        background: #fff;
+        padding: 120px 50px 30px;
+        text-align: center;
+        pointer-events: auto;
+
+        &.m-mail {
+            background: #fff url("../img/icon-mail.png") center 55px no-repeat;
+        }
+        &.m-restore{
+            background: #fff url("../img/icon-restore.png") center 55px no-repeat;
+        }
+
+        &__close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 16px;
+            height: 16px;
+            transform: rotate(45deg);
+            cursor: pointer;
+            opacity: .5;
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+            }
+
+            &:before {
+                width: 100%;
+                border-top: 1px solid #999;
+                left: 0px;
+                top: 50%;
+            }
+
+            &:after {
+                height: 100%;
+                border-right: 1px solid #999;
+                left: 50%;
+                top: 0px;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        &__title {
+            font: 15px $gm;
+            margin-bottom: 40px;
+        }
+
+        &__text {
+            font-size: 13px;
+        }
+    }
 }
 
 .btn {
