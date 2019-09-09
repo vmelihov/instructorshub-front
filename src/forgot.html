@@ -20,20 +20,21 @@
         //= parts/_header.html
 
         <div class="g-singlepage__content">
-            <div class="p-reg p-login g-content js-regForm">
+            <div class="p-reg p-login g-content">
                 <div class="p-reg__title">Reset your password</div>
 
-                <form class="p-reg__form needs-validation js-form">
+                <form class="p-reg__form js-form" data-validate="1">
                     <div class="form-group">
-                        <div class="p-reg__form-iblock">
-                            <div class="p-reg__form-iblock-icon fal fa-check"></div>
+                        <div class="p-reg__form-iblock js-validateblock">
+                            <div class="p-reg__form-iblock-icon fal fa-check js-validateblockOk"></div>
 
-                            <input type="email" class="p-reg__form-input" placeholder="Work email address" required />
+                            <input type="email" class="p-reg__form-input js-mailValidation" placeholder="Work email address" />
+                            <div class="p-reg__form-iblock-error js-validateblockError">Please enter a valid email address</div>
                         </div>
                     </div>
 
                     <div class="p-reg__form-submit">
-                        <input class="p-reg__form-submit-input" type="submit" value="Reset password" />
+                        <input class="p-reg__form-submit-input js-submit" type="submit" value="Reset password" disabled />
                     </div>
 
                     <div class="p-reg__form-login">
@@ -62,7 +63,8 @@
                 <div class="g-info-modal m-restore">
                     <div class="g-info-modal__close" data-dismiss="modal" aria-label="Close"></div>
                     <div class="g-info-modal__text">
-                        If an account exists for <a href="">v.melihov87@gmail.com</a>, you will get an email with instructions on
+                        If an account exists for <a href="">v.melihov87@gmail.com</a>, you will get an email with
+                        instructions on
                         resetting your password. If it doesn't arrive, be sure to check your spam folder.
                     </div>
                 </div>

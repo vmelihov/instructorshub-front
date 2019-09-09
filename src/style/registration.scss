@@ -120,7 +120,7 @@
                 z-index: 2;
             }
 
-            &-input{
+            &-input {
                 width: 100%;
                 display: block;
                 border: 1px solid #D6D6D8;
@@ -152,6 +152,7 @@
 
                 &.fa-check {
                     color: #2259B5;
+                    display: none;
                 }
 
                 &.fa-eye,
@@ -164,6 +165,35 @@
                         color: #333;
                     }
                 }
+            }
+
+            &-error {
+                position: absolute;
+                left: 20px;
+                bottom: -20px;
+                font-size: 15px;
+                color: #EB5757;
+                display: none;
+
+                &:before {
+                    content: "!";
+                    display: inline-block;
+                    background: #EB5757;
+                    color: #fff;
+                    border-radius: 50%;
+                    width: 16px;
+                    line-height: 16px;
+                    text-align: center;
+                    margin-right: 5px;
+                }
+            }
+
+            &.error &-input {
+                border-color: #EB5757;
+            }
+
+            &.error &-error {
+                display: block;
             }
         }
 
@@ -208,6 +238,16 @@
                 &:active {
                     background: #356BC5;
                 }
+
+                &[disabled] {
+                    cursor: not-allowed;
+                    opacity: .3;
+
+                    &:hover,
+                    &:active {
+                        background: #2259B5;
+                    }
+                }
             }
         }
 
@@ -243,6 +283,10 @@
         max-width: 670px;
         padding: 50px 80px 80px;
     }
+}
+
+.checked .p-reg__form-iblock-icon.fa-check{
+    display: block;
 }
 
 .remembered {

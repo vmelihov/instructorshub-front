@@ -21,10 +21,10 @@
         //= parts/_header.html
 
         <div class="g-singlepage__content">
-            <div class="p-reg g-content js-regForm">
+            <div class="p-reg g-content">
                 <div class="p-reg__title">Registration</div>
 
-                <form class="p-reg__form needs-validation">
+                <form class="p-reg__form js-form" data-validate="5">
                     <div class="form-group">
                         <div class="p-reg__form-profile-type">
                             <div class="p-reg__form-profile-type-one active js-profileType">
@@ -56,35 +56,42 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="p-reg__form-iblock">
+                                <div class="p-reg__form-iblock js-validateblock">
                                     <div class="p-reg__form-iblock-label">First name</div>
-                                    <div class="p-reg__form-iblock-icon fal fa-check"></div>
+                                    <div class="p-reg__form-iblock-icon fal fa-check js-validateblockOk"></div>
 
-                                    <input type="text" class="p-reg__form-iblock-input" required />
+                                    <input type="text" class="p-reg__form-iblock-input js-textValidation" />
+                                    <div class="p-reg__form-iblock-error js-validateblockError">Please enter any words
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="p-reg__form-iblock">
+                                <div class="p-reg__form-iblock js-validateblock">
                                     <div class="p-reg__form-iblock-label">Last name</div>
+                                    <div class="p-reg__form-iblock-icon fal fa-check js-validateblockOk"></div>
 
-                                    <input type="text" class="p-reg__form-iblock-input" required />
+                                    <input type="text" class="p-reg__form-iblock-input js-textValidation" />
+                                    <div class="p-reg__form-iblock-error js-validateblockError">Please enter any words
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <div class="p-reg__form-iblock">
-                            <div class="p-reg__form-iblock-icon fal fa-check"></div>
+                        <div class="p-reg__form-iblock js-validateblock">
+                            <div class="p-reg__form-iblock-icon fal fa-check js-validateblockOk"></div>
 
-                            <input type="email" class="p-reg__form-input" placeholder="Work email address" required />
+                            <input type="email" class="p-reg__form-input js-mailValidation"
+                                placeholder="Work email address" required />
+                            <div class="p-reg__form-iblock-error js-validateblockError">Please enter a valid email
+                                address</div>
                         </div>
                     </div>
 
                     <div class="form-group d-none js-institution">
                         <div class="p-reg__form-iblock">
                             <div class="p-reg__form-iblock-label">Educational institution</div>
-                            <div class="p-reg__form-iblock-icon fal fa-check"></div>
 
                             <select class="js-selectize" placeholder="Choose institution">
                                 <option></option>
@@ -97,35 +104,45 @@
 
                     <div class="form-group">
                         <div class="row">
-                            <div class="col-lg-6 js-passParent">
-                                <div class="js-passLine">
-                                    <div class="p-reg__form-iblock">
+                            <div class="col-lg-6">
+                                <div class="p-reg__form-iblock js-validateblock js-passParent">
+                                    <div class="js-passLine">
                                         <div class="p-reg__form-iblock-icon js-passEye fa fa-eye"></div>
                                         <input placeholder="Password" type="password"
-                                            class="p-reg__form-input js-passInput" required />
+                                            class="p-reg__form-input js-passInput js-passValidation js-passValidation1" />
                                     </div>
-                                </div>
-                                <div class="js-passLine d-none">
-                                    <div class="p-reg__form-iblock">
-                                        <div class="p-reg__form-iblock-icon js-passEye fa fa-eye-slash"></div>
-                                        <input placeholder="Password" type="text"
-                                            class="p-reg__form-input js-notPassInput" required />
+                                    <div class="js-passLine d-none">
+                                        <div class="p-reg__form-iblock">
+                                            <div class="p-reg__form-iblock-icon js-passEye fa fa-eye-slash"></div>
+                                            <input placeholder="Password" type="text"
+                                                class="p-reg__form-input js-notPassInput" />
+                                        </div>
+                                    </div>
+
+                                    <div class="p-reg__form-iblock-error js-validateblockError">
+                                        Please enter any words
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 js-passParent">
-                                <div class="js-passLine">
-                                    <div class="p-reg__form-iblock">
-                                        <div class="p-reg__form-iblock-icon js-passEye fa fa-eye"></div>
-                                        <input placeholder="Confirm pasword" type="password"
-                                            class="p-reg__form-input js-passInput" required />
+                            <div class="col-lg-6">
+                                <div class="p-reg__form-iblock js-validateblock js-passParent">
+                                    <div class="js-passLine">
+                                        <div class="p-reg__form-iblock">
+                                            <div class="p-reg__form-iblock-icon js-passEye fa fa-eye"></div>
+                                            <input placeholder="Confirm pasword" type="password"
+                                                class="p-reg__form-input js-passInput js-passValidation js-passValidation2" />
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="js-passLine d-none">
-                                    <div class="p-reg__form-iblock">
-                                        <div class="p-reg__form-iblock-icon js-passEye fa fa-eye-slash"></div>
-                                        <input placeholder="Confirm pasword" type="text"
-                                            class="p-reg__form-input js-notPassInput" required />
+                                    <div class="js-passLine d-none">
+                                        <div class="p-reg__form-iblock">
+                                            <div class="p-reg__form-iblock-icon js-passEye fa fa-eye-slash"></div>
+                                            <input placeholder="Confirm pasword" type="text"
+                                                class="p-reg__form-input js-notPassInput" />
+                                        </div>
+                                    </div>
+
+                                    <div class="p-reg__form-iblock-error js-validateblockError">
+                                        Password dont match
                                     </div>
                                 </div>
                             </div>
@@ -133,7 +150,7 @@
                     </div>
 
                     <div class="p-reg__form-submit">
-                        <input class="p-reg__form-submit-input" type="submit" value="Sign up" />
+                        <input class="p-reg__form-submit-input js-submit" type="submit" value="Sign up" disabled />
                     </div>
 
                     <div class="p-reg__form-read">
@@ -188,29 +205,11 @@
         jQuery(function ($) {
             //Здесь показываем, что будет после успешной отправки данных
 
-            $(".js-regForm").submit(function (event) {
+            $(".js-form").submit(function (event) {
                 $('#mailModal').modal();
                 event.preventDefault();
             });
             //Здесь показываем, что будет после успешной отправки данных
-
-            //Это пример вывода своего сообщения в окно об ошибке
-            /*
-            $('input[type=text]').on('change invalid', function () {
-                var textfield = $(this).get(0);
-
-                // 'setCustomValidity not only sets the message, but also marks
-                // the field as invalid. In order to see whether the field really is
-                // invalid, we have to remove the message first
-                textfield.setCustomValidity('');
-
-                if (!textfield.validity.valid) {
-                    textfield.setCustomValidity('Вёрстка - это не просто!!!11');
-                }
-            });
-            */
-            //Это пример вывода своего сообщения в окно об ошибке
-
         });
         //Этот код только для вёрстки.
     </script>
