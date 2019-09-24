@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Feed</title>
+    <link rel="stylesheet" href="extension/bootstrap-4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="extension/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/feed.css" />
+</head>
+
+<body>
+    <div class="g-singlepage">
+        <header class="g-header" id="header">
+            <div class="container">
+                <div class="g-header__mobi-link js-activeOnOff" data-id="header">
+                    <span class="fal fa-bars"></span>
+                    <span class="fal fa-times"></span>
+                </div>
+                <div class="g-header__content">
+                    <div class="g-header__content-logo">
+                        <a href="/" class="g-header__content-logo-link"></a>
+                    </div>
+        
+                    <div class="g-header__content-menu">
+                        <div class="g-header__content-menu-item active">
+                            <a href="" class="g-header__content-menu-item-link">Home</a>
+                        </div>
+                        <div class="g-header__content-menu-item">
+                            <a href="" class="g-header__content-menu-item-link">Vacancies</a>
+                        </div>
+                        <div class="g-header__content-menu-item">
+                            <a href="" class="g-header__content-menu-item-link">Adjuncts</a>
+                        </div>
+                        <div class="g-header__content-menu-item">
+                            <a href="" class="g-header__content-menu-item-link">Chats</a>
+                        </div>
+                    </div>
+                    <div class="g-header__content-user" id="userMenu">
+                        <a href="" class="g-header__content-user-messages m-no"></a>
+                        <a href="" class="g-header__content-user-messages m-view">
+                            <span>99</span>
+                        </a>
+                        <div class="g-header__content-user-link js-activeOnOff" data-id="userMenu">
+                            <div class="g-header__content-user-link-icon fa fa-chevron-down"></div>
+                            <div class="g-header__content-user-link-ava">
+                                <div class="g-header__content-user-link-ava-nopict fa fa-user"></div>
+                                <img src="https://cdn.technicpack.net/platform2/pack-icons/827089.png?1460226445"
+                                    class="g-header__content-user-link-ava-img" alt="" />
+                            </div>
+                            <div class="g-header__content-user-link-name">
+                                <div>Vladimir M. V. T. </div>
+                                <div>Superstar</div>
+                            </div>
+                        </div>
+        
+                        <div class="g-header__content-user-menu">
+                            <div class="g-header__content-user-menu-item m-notifications">
+                                <a href="" class="g-header__content-user-menu-item-link">Notifications (99)</a>
+                            </div>
+                            <div class="g-header__content-user-menu-item">
+                                <a href="" class="g-header__content-user-menu-item-link">Recommended jobs</a>
+                            </div>
+                            <div class="g-header__content-user-menu-item">
+                                <a href="" class="g-header__content-user-menu-item-link">Home</a>
+                            </div>
+                            <div class="g-header__content-user-menu-item">
+                                <a href="" class="g-header__content-user-menu-item-link">Vacancies</a>
+                            </div>
+                            <div class="g-header__content-user-menu-item">
+                                <a href="" class="g-header__content-user-menu-item-link">Adjuncts</a>
+                            </div>
+                            <div class="g-header__content-user-menu-item">
+                                <a href="" class="g-header__content-user-menu-item-link">Chats</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="g-singlepage__content">
+            <div class="container">
+                <div class="p-feed">
+                    <h1 class="p-feed__title">Vacancies</h1>
+
+                    <div class="p-feed__filter">
+                        <div class="p-feed__filter-vacancies">
+                            <div class="p-feed__filter-vacancies-chosen">
+                                <div class="p-feed__filter-vacancies-chosen-text">
+                                    All Vacancies
+                                </div>
+                                <div class="p-feed__filter-vacancies-chosen-icon fal fa-chevron-down"></div>
+                            </div>
+
+                            <div class="p-feed__filter-vacancies-list">
+                                <div class="p-feed__filter-vacancies-list-one">
+                                    Recomended
+                                </div>
+                                <div class="p-feed__filter-vacancies-list-one">
+                                    Saved
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-feed__filter-sort">
+                            <div class="p-feed__filter-sort-text">Sort:</div>
+                            <div class="p-feed__filter-sort-drop dropdown">
+                                <div class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <div class="p-feed__filter-sort-drop-chosen">
+                                        <div class="p-feed__filter-sort-drop-chosen-text">
+                                            Fewest proposals
+                                        </div>
+                                        <div class="p-feed__filter-sort-drop-chosen-icon fal fa-chevron-down">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item">Newest</div>
+                                    <div class="dropdown-item">Relevance</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-feed__filter-options js-openFilter">
+                            <span class="p-feed__filter-options-text">
+                                Search options
+                            </span>
+                            <span class="p-feed__filter-options-icon far fa-sliders-h"></span>
+                        </div>
+                    </div>
+
+                    <div class="p-feed__filter-content js-filterContent" style="display: none;">
+                        <div class="p-feed__filter-content-header">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="p-feed__filter-content-block">
+                                        <div class="p-feed__filter-content-block-title">
+                                            Select category
+                                        </div>
+                                        <div class="ui-hardselect js-hardSelect">
+                                            <div class="ui-hardselect__select js-hardSelectS">
+                                                <div class="ui-hardselect__select-btn js-hardSelectBtn">
+                                                    <div class="ui-hardselect__select-btn-text">
+                                                        Select category
+                                                    </div>
+                                                    <div class="ui-hardselect__select-btn-icon fa fa-chevron-down">
+                                                    </div>
+                                                </div>
+
+                                                <div class="ui-hardselect__select-drdn">
+                                                    <ul>
+                                                        <li data-name="agr">
+                                                            <div class="ui-hardselect__select-drdn-title">
+                                                                Agriculture
+                                                            </div>
+
+                                                            <ul>
+                                                                <li data-name="aerEng2">
+                                                                    Aerospace Engineering 2
+                                                                </li>
+                                                                <li data-name="agrEng2">
+                                                                    Agricadfsdfultural Enginesering
+                                                                </li>
+                                                                <li data-name="bioEng2">
+                                                                    Biolodsfgical Engineering
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li data-name="bus">
+                                                            <div class="ui-hardselect__select-drdn-title">
+                                                                Business
+                                                            </div>
+                                                        </li>
+                                                        <li data-name="com">
+                                                            <div class="ui-hardselect__select-drdn-title">
+                                                                Communications
+                                                            </div>
+                                                        </li>
+                                                        <li data-name="eng">
+                                                            <div class="ui-hardselect__select-drdn-title">
+                                                                Engineering
+                                                            </div>
+
+                                                            <ul>
+                                                                <li data-name="aerEng">
+                                                                    Aerospace Engineering
+                                                                </li>
+                                                                <li data-name="agrEng">
+                                                                    Agricultural Engineering
+                                                                </li>
+                                                                <li data-name="bioEng">
+                                                                    Biological Engineering
+                                                                </li>
+                                                                <li data-name="cheEng">
+                                                                    Chemical Engineering
+                                                                </li>
+                                                                <li data-name="civEnv">
+                                                                    Civil and Environmental Engineering
+                                                                </li>
+                                                                <li data-name="comEng">
+                                                                    Computer Engineering
+                                                                </li>
+                                                                <li data-name="eleEng">
+                                                                    Electrical Engineering
+                                                                </li>
+                                                                <li data-name="indManEnd">
+                                                                    Industrial and Manufacturing Engineering
+                                                                </li>
+                                                                <li data-name="mecEng">
+                                                                    Mechanical Engineering
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li data-name="finAppArt">
+                                                            <div class="ui-hardselect__select-drdn-title">
+                                                                Fine and Applied Arts
+                                                            </div>
+                                                        </li>
+                                                        <li data-name="hea">
+                                                            <div class="ui-hardselect__select-drdn-title">
+                                                                Health
+                                                            </div>
+                                                        </li>
+                                                        <li data-name="lawLegStu">
+                                                            <div class="ui-hardselect__select-drdn-title">
+                                                                Law and Legal Studies
+                                                            </div>
+                                                        </li>
+                                                        <li data-name="LibArt">
+                                                            <div class="ui-hardselect__select-drdn-title">
+                                                                Liberal Arts
+                                                            </div>
+                                                        </li>
+                                                        <li data-name="lawLegStu">
+                                                            <div class="ui-hardselect__select-drdn-title">
+                                                                Law and Legal Studies
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="ui-hardselect__body js-hardSelectBody"></div>
+                                            <input type="hidden" class="js-hardSelectInput" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-feed__filter-content-block">
+                                        <div class="p-feed__filter-content-block-title">
+                                            Select location
+                                        </div>
+                                        <div class="ui-hardselect js-hardSelect">
+                                            <div class="ui-hardselect__select js-hardSelectS">
+                                                <div class="ui-hardselect__select-btn js-hardSelectBtn">
+                                                    <div class="ui-hardselect__select-btn-text">
+                                                        Select location
+                                                    </div>
+                                                    <div class="ui-hardselect__select-btn-icon fa fa-chevron-down">
+                                                    </div>
+                                                </div>
+
+                                                <div class="ui-hardselect__select-drdn">
+                                                    <ul>
+                                                        <li data-name="agr">
+                                                            <div class="ui-hardselect__select-drdn-title">
+                                                                Agriculture
+                                                            </div>
+
+                                                            <ul>
+                                                                <li data-name="aerEng2">
+                                                                    Aerospace Engineering 2
+                                                                </li>
+                                                                <li data-name="agrEng2">
+                                                                    Agricadfsdfultural Enginesering
+                                                                </li>
+                                                                <li data-name="bioEng2">
+                                                                    Biolodsfgical Engineering
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li data-name="bus">
+                                                            <div class="ui-hardselect__select-drdn-title">
+                                                                Business
+                                                            </div>
+                                                        </li>
+                                                        <li data-name="com">
+                                                            <div class="ui-hardselect__select-drdn-title">
+                                                                Communications
+                                                            </div>
+                                                        </li>
+                                                        <li data-name="eng">
+                                                            <div class="ui-hardselect__select-drdn-title">
+                                                                Engineering
+                                                            </div>
+
+                                                            <ul>
+                                                                <li data-name="aerEng">
+                                                                    Aerospace Engineering
+                                                                </li>
+                                                                <li data-name="agrEng">
+                                                                    Agricultural Engineering
+                                                                </li>
+                                                                <li data-name="bioEng">
+                                                                    Biological Engineering
+                                                                </li>
+                                                                <li data-name="cheEng">
+                                                                    Chemical Engineering
+                                                                </li>
+                                                                <li data-name="civEnv">
+                                                                    Civil and Environmental Engineering
+                                                                </li>
+                                                                <li data-name="comEng">
+                                                                    Computer Engineering
+                                                                </li>
+                                                                <li data-name="eleEng">
+                                                                    Electrical Engineering
+                                                                </li>
+                                                                <li data-name="indManEnd">
+                                                                    Industrial and Manufacturing Engineering
+                                                                </li>
+                                                                <li data-name="mecEng">
+                                                                    Mechanical Engineering
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li data-name="finAppArt">
+                                                            <div class="ui-hardselect__select-drdn-title">
+                                                                Fine and Applied Arts
+                                                            </div>
+                                                        </li>
+                                                        <li data-name="hea">
+                                                            <div class="ui-hardselect__select-drdn-title">
+                                                                Health
+                                                            </div>
+                                                        </li>
+                                                        <li data-name="lawLegStu">
+                                                            <div class="ui-hardselect__select-drdn-title">
+                                                                Law and Legal Studies
+                                                            </div>
+                                                        </li>
+                                                        <li data-name="LibArt">
+                                                            <div class="ui-hardselect__select-drdn-title">
+                                                                Liberal Arts
+                                                            </div>
+                                                        </li>
+                                                        <li data-name="lawLegStu">
+                                                            <div class="ui-hardselect__select-drdn-title">
+                                                                Law and Legal Studies
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="ui-hardselect__body js-hardSelectBody"></div>
+                                            <input type="hidden" class="js-hardSelectInput" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-feed__filter-content-block">
+                                <div class="p-feed__filter-content-block-title">
+                                    Higest education level obtained
+                                </div>
+                                <div class="p-feed__filter-content-block-select">
+                                    <select class="ui-select">
+                                        <option>One or more years of college...</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="p-feed__filter-content-block">
+                                    <div class="p-feed__filter-content-block-title">
+                                        Teaching experience
+                                    </div>
+
+                                    <label class="ui-radio g-mr30">
+                                        <input type="radio" name="yn" />
+                                        <span class="ui-radio__decor"></span>
+                                        <span class="ui-radio__text">Yes</span>
+                                    </label>
+                                    <label class="ui-radio">
+                                        <input type="radio" name="yn" />
+                                        <span class="ui-radio__decor"></span>
+                                        <span class="ui-radio__text">No</span>
+                                    </label>
+                                </div>
+                                <div class="p-feed__filter-content-block">
+                                    <div class="g-mb20">
+                                        <label class="ui-checkbox">
+                                            <input type="checkbox" name="" />
+                                            <span class="ui-checkbox__decor"></span>
+                                            <span class="ui-checkbox__text">Online</span>
+                                        </label>
+                                    </div>
+                                    <label class="ui-checkbox">
+                                        <input type="checkbox" name="" />
+                                        <span class="ui-checkbox__decor"></span>
+                                        <span class="ui-checkbox__text">In Person</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-feed__filter-content-block">
+                                    <div class="p-feed__filter-content-block-title">
+                                        Type of teaching
+                                    </div>
+
+                                    <div class="g-mb20">
+                                        <label class="ui-radio">
+                                            <input type="radio" name="teachingtype" />
+                                            <span class="ui-radio__decor"></span>
+                                            <span class="ui-radio__text">Full Semester</span>
+                                        </label>
+                                    </div>
+                                    <div class="g-mb20">
+                                        <label class="ui-radio">
+                                            <input type="radio" name="teachingtype" />
+                                            <span class="ui-radio__decor"></span>
+                                            <span class="ui-radio__text">Occasional Lecturing</span>
+                                        </label>
+                                    </div>
+                                    <label class="ui-radio">
+                                        <input type="radio" name="teachingtype" />
+                                        <span class="ui-radio__decor"></span>
+                                        <span class="ui-radio__text">Either of the two</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-feed__filter-content-block">
+                                    <div class="p-feed__filter-content-block-title">
+                                        Aviability
+                                    </div>
+
+                                    <div class="g-mb20">
+                                        <label class="ui-checkbox">
+                                            <input type="checkbox" name="" />
+                                            <span class="ui-checkbox__decor"></span>
+                                            <span class="ui-checkbox__text">During the day</span>
+                                        </label>
+                                    </div>
+                                    <div class="g-mb20">
+                                        <label class="ui-checkbox">
+                                            <input type="checkbox" name="" />
+                                            <span class="ui-checkbox__decor"></span>
+                                            <span class="ui-checkbox__text">Evenings only</span>
+                                        </label>
+                                    </div>
+                                    <div class="g-mb20">
+                                        <label class="ui-checkbox">
+                                            <input type="checkbox" name="" />
+                                            <span class="ui-checkbox__decor"></span>
+                                            <span class="ui-checkbox__text">Weekends</span>
+                                        </label>
+                                    </div>
+                                    <div class="g-mb20">
+                                        <label class="ui-checkbox">
+                                            <input type="checkbox" name="" />
+                                            <span class="ui-checkbox__decor"></span>
+                                            <span class="ui-checkbox__text">Evenings and Weekends</span>
+                                        </label>
+                                    </div>
+                                    <div class="g-mb20">
+                                        <label class="ui-checkbox">
+                                            <input type="checkbox" name="" />
+                                            <span class="ui-checkbox__decor"></span>
+                                            <span class="ui-checkbox__text">Either of the three</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-feed__filter-content-btns">
+                            <a class="p-feed__filter-content-btns-reset" href="">Reset filters</a>
+                            <div class="p-feed__filter-content-btns-one">
+                                <div class="btn btn-primary btn-lg btn-block">Search</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-feed__list">
+                        <div class="p-feed__list-one">
+                            <div class="p-feed__list-one-header">
+                                <a href="" class="p-feed__list-one-header-title">
+                                    Web Developer needed to create a wordpress responsive website
+                                </a>
+                                <div class="p-feed__list-one-header-cat">
+                                    Faculty - Business - Management / Wittenberg University
+                                </div>
+
+                                <div class="p-feed__list-one-header-right">
+                                    <div class="p-feed__list-one-header-right-views">
+                                        <div class="p-feed__list-one-header-right-views">
+                                            <span class="p-feed__list-one-header-right-views-icon fal fa-eye"></span>
+                                            <span class="p-feed__list-one-header-right-views-num">310</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-feed__list-one-header-right-fav fal fa-heart js-fav"></div>
+                                </div>
+                            </div>
+
+                            <div class="p-feed__list-one-content js-content">
+                                <div class="p-feed__list-one-content-head">
+                                    <div class="p-feed__list-one-content-head-time">
+                                        Posted 15 minutes ago - Proposals 12
+                                    </div>
+                                    <div class="p-feed__list-one-content-head-control active js-view">
+                                        <div class="p-feed__list-one-content-head-control-text">
+                                            Expanded view
+                                            <br />
+                                            Compact view
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-feed__list-one-content-body js-body">
+                                    We run a network of high traffic websites which use Wordpress as the CMS. These
+                                    sites are built on custom Wordpress templates. We are looking for a long term
+                                    partner to be our Engineering arm. We plan to run a test project starting
+                                    immediately with 5-10 hours a week...
+                                </div>
+                            </div>
+
+                            <div class="p-feed__list-one-footer">
+                                <div class="p-feed__list-one-footer-column">
+                                    <div class="p-feed__list-one-footer-item">
+                                        <span class="p-feed__list-one-footer-item-name">Teaching
+                                            experience:</span> Online and in person
+                                    </div>
+                                    <div class="p-feed__list-one-footer-item">
+                                        <span class="p-feed__list-one-footer-item-name">Education:</span> Some
+                                        college, but less than 1 year and higher
+                                    </div>
+                                </div>
+
+                                <div class="p-feed__list-one-footer-column">
+                                    <div class="p-feed__list-one-footer-item m-none">
+                                        <span class="p-feed__list-one-footer-item-name">Type of teaching:</span>
+                                        Full Semester or Occasional Lecturing
+                                    </div>
+                                    <div class="p-feed__list-one-footer-item">
+                                        <span class="p-feed__list-one-footer-item-name">Location:</span> Alabama,
+                                        Anniston-Oxford-Jacksonville AL Metro
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-feed__list-one">
+                            <div class="p-feed__list-one-header">
+                                <a href="" class="p-feed__list-one-header-title">
+                                    OctoberCMS (Laravel) Backed Dev. Parser Plugin.
+                                </a>
+                                <div class="p-feed__list-one-header-cat">
+                                    Faculty - Business - Management / Wittenberg University
+                                </div>
+
+                                <div class="p-feed__list-one-header-right">
+                                    <div class="p-feed__list-one-header-right-views">
+                                        <div class="p-feed__list-one-header-right-views">
+                                            <span class="p-feed__list-one-header-right-views-icon fal fa-eye"></span>
+                                            <span class="p-feed__list-one-header-right-views-num">310</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-feed__list-one-header-right-fav fal fa-heart js-fav"></div>
+                                </div>
+                            </div>
+
+                            <div class="p-feed__list-one-content js-content">
+                                <div class="p-feed__list-one-content-head">
+                                    <div class="p-feed__list-one-content-head-time">
+                                        Posted 15 minutes ago - Proposals 12
+                                        <a href="" class="p-feed__list-one-content-head-time-my">My Proposal</a>
+                                    </div>
+                                    <div class="p-feed__list-one-content-head-control js-view">
+                                        <div class="p-feed__list-one-content-head-control-text">
+                                            Expanded view
+                                            <br />
+                                            Compact view
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-feed__list-one-content-body js-body" style="display: none;">
+                                    We run a network of high traffic websites which use Wordpress as the CMS. These
+                                    sites are built on custom Wordpress templates. We are looking for a long term
+                                    partner to be our Engineering arm. We plan to run a test project starting
+                                    immediately with 5-10 hours a week...
+                                </div>
+                            </div>
+
+                            <div class="p-feed__list-one-footer">
+                                <div class="p-feed__list-one-footer-column">
+                                    <div class="p-feed__list-one-footer-item">
+                                        <span class="p-feed__list-one-footer-item-name">Teaching
+                                            experience:</span> Online and in person
+                                    </div>
+                                    <div class="p-feed__list-one-footer-item">
+                                        <span class="p-feed__list-one-footer-item-name">Education:</span> Some
+                                        college, but less than 1 year and higher
+                                    </div>
+                                </div>
+
+                                <div class="p-feed__list-one-footer-column">
+                                    <div class="p-feed__list-one-footer-item">
+                                        <span class="p-feed__list-one-footer-item-name">Type of teaching:</span>
+                                        Full Semester or Occasional Lecturing
+                                    </div>
+                                    <div class="p-feed__list-one-footer-item">
+                                        <span class="p-feed__list-one-footer-item-name">Location:</span> Alabama,
+                                        Anniston-Oxford-Jacksonville AL Metro
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-feed__list-one">
+                            <div class="p-feed__list-one-header">
+                                <a href="" class="p-feed__list-one-header-title">
+                                    Web Developer needed to create a wordpress responsive website
+                                </a>
+                                <div class="p-feed__list-one-header-cat">
+                                    Faculty - Business - Management / Wittenberg University
+                                </div>
+
+                                <div class="p-feed__list-one-header-right">
+                                    <div class="p-feed__list-one-header-right-views">
+                                        <div class="p-feed__list-one-header-right-views">
+                                            <span class="p-feed__list-one-header-right-views-icon fal fa-eye"></span>
+                                            <span class="p-feed__list-one-header-right-views-num">310</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-feed__list-one-header-right-icon fal fa-lock"></div>
+                                </div>
+                            </div>
+
+                            <div class="p-feed__list-one-content js-content">
+                                <div class="p-feed__list-one-content-head">
+                                    <div class="p-feed__list-one-content-head-time">
+                                        Posted 15 minutes ago - <a href="">Adjunct already selected</a>
+                                    </div>
+                                    <div class="p-feed__list-one-content-head-control js-view">
+                                        <div class="p-feed__list-one-content-head-control-text">
+                                            Expanded view
+                                            <br />
+                                            Compact view
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-feed__list-one-content-body js-body" style="display: none;">
+                                    We run a network of high traffic websites which use Wordpress as the CMS. These
+                                    sites are built on custom Wordpress templates. We are looking for a long term
+                                    partner to be our Engineering arm. We plan to run a test project starting
+                                    immediately with 5-10 hours a week...
+                                </div>
+                            </div>
+
+                            <div class="p-feed__list-one-footer">
+                                <div class="p-feed__list-one-footer-column">
+                                    <div class="p-feed__list-one-footer-item">
+                                        <span class="p-feed__list-one-footer-item-name">Teaching
+                                            experience:</span> Online and in person
+                                    </div>
+                                    <div class="p-feed__list-one-footer-item">
+                                        <span class="p-feed__list-one-footer-item-name">Education:</span> Some
+                                        college, but less than 1 year and higher
+                                    </div>
+                                </div>
+
+                                <div class="p-feed__list-one-footer-column">
+                                    <div class="p-feed__list-one-footer-item">
+                                        <span class="p-feed__list-one-footer-item-name">Type of teaching:</span>
+                                        Full Semester or Occasional Lecturing
+                                    </div>
+                                    <div class="p-feed__list-one-footer-item">
+                                        <span class="p-feed__list-one-footer-item-name">Location:</span> Alabama,
+                                        Anniston-Oxford-Jacksonville AL Metro
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-feed__list-one">
+                            <div class="p-feed__list-one-header">
+                                <a href="" class="p-feed__list-one-header-title">
+                                    Product Label Design, Brand Logo, Renderings
+                                </a>
+                                <div class="p-feed__list-one-header-cat">
+                                    Faculty - Business - Management / Wittenberg University
+                                </div>
+
+                                <div class="p-feed__list-one-header-right">
+                                    <div class="p-feed__list-one-header-right-views">
+                                        <div class="p-feed__list-one-header-right-views">
+                                            <span class="p-feed__list-one-header-right-views-icon fal fa-eye"></span>
+                                            <span class="p-feed__list-one-header-right-views-num">310</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-feed__list-one-header-right-icon fal fa-graduation-cap"></div>
+                                </div>
+                            </div>
+
+                            <div class="p-feed__list-one-content js-content">
+                                <div class="p-feed__list-one-content-head">
+                                    <div class="p-feed__list-one-content-head-time">
+                                        Posted 15 minutes ago - <span
+                                            class="p-feed__list-one-content-head-approved">Your candidacy is
+                                            approved</span>
+                                    </div>
+                                    <div class="p-feed__list-one-content-head-control js-view">
+                                        <div class="p-feed__list-one-content-head-control-text">
+                                            Expanded view
+                                            <br />
+                                            Compact view
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-feed__list-one-content-body js-body" style="display: none;">
+                                    We run a network of high traffic websites which use Wordpress as the CMS. These
+                                    sites are built on custom Wordpress templates. We are looking for a long term
+                                    partner to be our Engineering arm. We plan to run a test project starting
+                                    immediately with 5-10 hours a week...
+                                </div>
+                            </div>
+
+                            <div class="p-feed__list-one-footer">
+                                <div class="p-feed__list-one-footer-column">
+                                    <div class="p-feed__list-one-footer-item">
+                                        <span class="p-feed__list-one-footer-item-name">Teaching
+                                            experience:</span> Online and in person
+                                    </div>
+                                    <div class="p-feed__list-one-footer-item">
+                                        <span class="p-feed__list-one-footer-item-name">Education:</span> Some
+                                        college, but less than 1 year and higher
+                                    </div>
+                                </div>
+
+                                <div class="p-feed__list-one-footer-column">
+                                    <div class="p-feed__list-one-footer-item">
+                                        <span class="p-feed__list-one-footer-item-name">Type of teaching:</span>
+                                        Full Semester or Occasional Lecturing
+                                    </div>
+                                    <div class="p-feed__list-one-footer-item">
+                                        <span class="p-feed__list-one-footer-item-name">Location:</span> Alabama,
+                                        Anniston-Oxford-Jacksonville AL Metro
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-feed__load">
+                        <div class="p-feed__load-btn">Load More Vacancies</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="g-singlepage__footer">
+            <footer class="g-footer">
+                <div class="g-footer__text">
+                    &copy; 2019 instructorshub.com
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="extension/bootstrap-4.0.0/js/popper.min.js"></script>
+    <script src="extension/bootstrap-4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/feed.js"></script>
+</body>
+
+</html>
