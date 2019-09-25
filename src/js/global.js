@@ -52,7 +52,7 @@ jQuery(function () {
         if (!_this.hasClass("chosen")) {
             _this.addClass("chosen");
 
-            _body.append("<div class='ui-hardselect__body-item'><div class='ui-hardselect__body-item-text'>" + _this.text() + "</div><i class='ui-hardselect__body-item-icon fal fa-times' data-cat='" + _catName + "' data-item='" + _itemId + "'></i></div>");
+            _body.append("<div class='ui-hardselect__body-item'>" + _this.text() + "&nbsp;<i class='ui-hardselect__body-item-icon fal fa-times' data-cat='" + _catName + "' data-item='" + _itemId + "'></i></div>");
             _this.parents(".js-hardSelect").removeClass("opened");
             checkCat(_this.parents(".js-hardSelect"), _catName);
         }

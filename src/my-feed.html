@@ -10,6 +10,7 @@
     <title>Feed</title>
     <link rel="stylesheet" href="extension/bootstrap-4.0.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="extension/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="extension/selectize/css/selectize.css" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/feed.css" />
 </head>
@@ -24,15 +25,18 @@
                     <h1 class="p-feed__title">Vacancies</h1>
 
                     <div class="p-feed__filter">
-                        <div class="p-feed__filter-vacancies">
-                            <div class="p-feed__filter-vacancies-chosen">
-                                <div class="p-feed__filter-vacancies-chosen-text">
+                        <div class="p-feed__filter-vacancies js-vacancies">
+                            <div class="p-feed__filter-vacancies-chosen js-vacanciesBtn">
+                                <div class="p-feed__filter-vacancies-chosen-text js-vacanciesBtnText">
                                     All Vacancies
                                 </div>
                                 <div class="p-feed__filter-vacancies-chosen-icon fal fa-chevron-down"></div>
                             </div>
 
-                            <div class="p-feed__filter-vacancies-list">
+                            <div class="p-feed__filter-vacancies-list js-vacanciesList">
+                                <div class="p-feed__filter-vacancies-list-one">
+                                    All Vacancies
+                                </div>
                                 <div class="p-feed__filter-vacancies-list-one">
                                     Recomended
                                 </div>
@@ -47,14 +51,15 @@
                             <div class="p-feed__filter-sort-drop dropdown">
                                 <div class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <div class="p-feed__filter-sort-drop-chosen">
-                                        <div class="p-feed__filter-sort-drop-chosen-text">
+                                        <div class="p-feed__filter-sort-drop-chosen-text js-sortText">
                                             Fewest proposals
                                         </div>
                                         <div class="p-feed__filter-sort-drop-chosen-icon fal fa-chevron-down">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="dropdown-menu">
+                                <div class="dropdown-menu js-sortItems">
+                                    <div class="dropdown-item">Fewest proposals</div>
                                     <div class="dropdown-item">Newest</div>
                                     <div class="dropdown-item">Relevance</div>
                                 </div>
@@ -83,7 +88,7 @@
                                                     <div class="ui-hardselect__select-btn-text">
                                                         Select category
                                                     </div>
-                                                    <div class="ui-hardselect__select-btn-icon fa fa-chevron-down">
+                                                    <div class="ui-hardselect__select-btn-icon fal fa-chevron-down">
                                                     </div>
                                                 </div>
 
@@ -196,7 +201,7 @@
                                                     <div class="ui-hardselect__select-btn-text">
                                                         Select location
                                                     </div>
-                                                    <div class="ui-hardselect__select-btn-icon fa fa-chevron-down">
+                                                    <div class="ui-hardselect__select-btn-icon fal fa-chevron-down">
                                                     </div>
                                                 </div>
 
@@ -304,13 +309,17 @@
                                 <div class="p-feed__filter-content-block-title">
                                     Higest education level obtained
                                 </div>
-                                <div class="p-feed__filter-content-block-select">
-                                    <select class="ui-select">
-                                        <option>One or more years of college...</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                    </select>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="p-feed__filter-content-block-select">
+                                            <select class="js-selectize">
+                                                <option>One or more years of college...</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -423,13 +432,13 @@
                         <div class="p-feed__filter-content-btns">
                             <a class="p-feed__filter-content-btns-reset" href="">Reset filters</a>
                             <div class="p-feed__filter-content-btns-one">
-                                <div class="btn btn-primary btn-lg btn-block">Search</div>
+                                <div class="p-feed__filter-content-btns-one-btn">Search</div>
                             </div>
                         </div>
                     </div>
 
                     <div class="p-feed__list">
-                        <div class="p-feed__list-one">
+                        <div class="p-feed__list-one js-one">
                             <div class="p-feed__list-one-header">
                                 <a href="" class="p-feed__list-one-header-title">
                                     Web Developer needed to create a wordpress responsive website
@@ -450,7 +459,7 @@
                                 </div>
                             </div>
 
-                            <div class="p-feed__list-one-content js-content">
+                            <div class="p-feed__list-one-content">
                                 <div class="p-feed__list-one-content-head">
                                     <div class="p-feed__list-one-content-head-time">
                                         Posted 15 minutes ago - Proposals 12
@@ -471,7 +480,7 @@
                                 </div>
                             </div>
 
-                            <div class="p-feed__list-one-footer">
+                            <div class="p-feed__list-one-footer js-footer">
                                 <div class="p-feed__list-one-footer-column">
                                     <div class="p-feed__list-one-footer-item">
                                         <span class="p-feed__list-one-footer-item-name">Teaching
@@ -496,7 +505,7 @@
                             </div>
                         </div>
 
-                        <div class="p-feed__list-one">
+                        <div class="p-feed__list-one js-one">
                             <div class="p-feed__list-one-header">
                                 <a href="" class="p-feed__list-one-header-title">
                                     OctoberCMS (Laravel) Backed Dev. Parser Plugin.
@@ -517,7 +526,7 @@
                                 </div>
                             </div>
 
-                            <div class="p-feed__list-one-content js-content">
+                            <div class="p-feed__list-one-content">
                                 <div class="p-feed__list-one-content-head">
                                     <div class="p-feed__list-one-content-head-time">
                                         Posted 15 minutes ago - Proposals 12
@@ -539,7 +548,7 @@
                                 </div>
                             </div>
 
-                            <div class="p-feed__list-one-footer">
+                            <div class="p-feed__list-one-footer js-footer">
                                 <div class="p-feed__list-one-footer-column">
                                     <div class="p-feed__list-one-footer-item">
                                         <span class="p-feed__list-one-footer-item-name">Teaching
@@ -564,7 +573,7 @@
                             </div>
                         </div>
 
-                        <div class="p-feed__list-one">
+                        <div class="p-feed__list-one js-one">
                             <div class="p-feed__list-one-header">
                                 <a href="" class="p-feed__list-one-header-title">
                                     Web Developer needed to create a wordpress responsive website
@@ -585,7 +594,7 @@
                                 </div>
                             </div>
 
-                            <div class="p-feed__list-one-content js-content">
+                            <div class="p-feed__list-one-content">
                                 <div class="p-feed__list-one-content-head">
                                     <div class="p-feed__list-one-content-head-time">
                                         Posted 15 minutes ago - <a href="">Adjunct already selected</a>
@@ -606,7 +615,7 @@
                                 </div>
                             </div>
 
-                            <div class="p-feed__list-one-footer">
+                            <div class="p-feed__list-one-footer js-footer">
                                 <div class="p-feed__list-one-footer-column">
                                     <div class="p-feed__list-one-footer-item">
                                         <span class="p-feed__list-one-footer-item-name">Teaching
@@ -631,7 +640,7 @@
                             </div>
                         </div>
 
-                        <div class="p-feed__list-one">
+                        <div class="p-feed__list-one js-one">
                             <div class="p-feed__list-one-header">
                                 <a href="" class="p-feed__list-one-header-title">
                                     Product Label Design, Brand Logo, Renderings
@@ -652,7 +661,7 @@
                                 </div>
                             </div>
 
-                            <div class="p-feed__list-one-content js-content">
+                            <div class="p-feed__list-one-content">
                                 <div class="p-feed__list-one-content-head">
                                     <div class="p-feed__list-one-content-head-time">
                                         Posted 15 minutes ago - <span
@@ -675,7 +684,7 @@
                                 </div>
                             </div>
 
-                            <div class="p-feed__list-one-footer">
+                            <div class="p-feed__list-one-footer js-footer">
                                 <div class="p-feed__list-one-footer-column">
                                     <div class="p-feed__list-one-footer-item">
                                         <span class="p-feed__list-one-footer-item-name">Teaching
@@ -715,6 +724,7 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="extension/bootstrap-4.0.0/js/popper.min.js"></script>
     <script src="extension/bootstrap-4.0.0/js/bootstrap.min.js"></script>
+    <script src="extension/selectize/js/standalone/selectize.min.js"></script>
     <script src="js/global.js"></script>
     <script src="js/feed.js"></script>
 </body>
