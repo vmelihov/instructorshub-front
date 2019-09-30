@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Profile</title>
+    <link rel="stylesheet" href="extension/bootstrap-4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="extension/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="extension/selectize/css/selectize.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/profile-institution.css" />
+</head>
+
+<body>
+    <div class="g-singlepage">
+        <header class="g-header" id="header">
+            <div class="container">
+                <div class="g-header__mobi-link js-activeOnOff" data-id="header">
+                    <span class="fal fa-bars"></span>
+                    <span class="fal fa-times"></span>
+                </div>
+                <div class="g-header__content">
+                    <div class="g-header__content-logo">
+                        <a href="/" class="g-header__content-logo-link"></a>
+                    </div>
+        
+                    <div class="g-header__content-menu">
+                        <div class="g-header__content-menu-item active">
+                            <a href="" class="g-header__content-menu-item-link">Home</a>
+                        </div>
+                        <div class="g-header__content-menu-item">
+                            <a href="" class="g-header__content-menu-item-link">Vacancies</a>
+                        </div>
+                        <div class="g-header__content-menu-item">
+                            <a href="" class="g-header__content-menu-item-link">Adjuncts</a>
+                        </div>
+                        <div class="g-header__content-menu-item">
+                            <a href="" class="g-header__content-menu-item-link">Chats</a>
+                        </div>
+                    </div>
+                    <div class="g-header__content-user" id="userMenu">
+                        <a href="" class="g-header__content-user-messages m-no"></a>
+                        <a href="" class="g-header__content-user-messages m-view">
+                            <span>99</span>
+                        </a>
+                        <div class="g-header__content-user-link js-activeOnOff" data-id="userMenu">
+                            <div class="g-header__content-user-link-icon fa fa-chevron-down"></div>
+                            <div class="g-header__content-user-link-ava">
+                                <div class="g-header__content-user-link-ava-nopict fa fa-user"></div>
+                                <img src="https://cdn.technicpack.net/platform2/pack-icons/827089.png?1460226445"
+                                    class="g-header__content-user-link-ava-img" alt="" />
+                            </div>
+                            <div class="g-header__content-user-link-name">
+                                <div>Vladimir M. V. T. </div>
+                                <div>Superstar</div>
+                            </div>
+                        </div>
+        
+                        <div class="g-header__content-user-menu">
+                            <div class="g-header__content-user-menu-item m-notifications">
+                                <a href="" class="g-header__content-user-menu-item-link">Notifications (99)</a>
+                            </div>
+                            <div class="g-header__content-user-menu-item">
+                                <a href="" class="g-header__content-user-menu-item-link">Recommended jobs</a>
+                            </div>
+                            <div class="g-header__content-user-menu-item">
+                                <a href="" class="g-header__content-user-menu-item-link">Home</a>
+                            </div>
+                            <div class="g-header__content-user-menu-item">
+                                <a href="" class="g-header__content-user-menu-item-link">Vacancies</a>
+                            </div>
+                            <div class="g-header__content-user-menu-item">
+                                <a href="" class="g-header__content-user-menu-item-link">Adjuncts</a>
+                            </div>
+                            <div class="g-header__content-user-menu-item">
+                                <a href="" class="g-header__content-user-menu-item-link">Chats</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="g-singlepage__content">
+            <div class="container">
+                <div class="p-prflinst">
+                    <div class="p-prflinst__settings">
+                        <div class="p-prflinst__settings-ava">
+                            <img src="https://www.harvard.edu/sites/default/files/user13/harvard_shield_wreath.png"
+                                alt="" class="p-prflinst__settings-ava-img" />
+                            <div class="p-prflinst__settings-ava-status" title="Offline"></div>
+                            <div class="p-prflinst__settings-ava-status m-online" title="Online"></div>
+                        </div>
+
+                        <div class="p-prflinst__settings-name">
+                            Harward University - Boston
+                        </div>
+                        <div class="p-prflinst__settings-status">
+                            George Clooney - Manager
+                        </div>
+
+                        <div class="p-prflinst__settings-right">
+                            <div class="p-prflinst__settings-right-add">
+                                <span class="p-prflinst__settings-right-add-link">Publish a vacancy</span>
+                            </div>
+
+                            <div class="p-prflinst__settings-right-edit">
+                                <div class="p-prflinst__settings-right-edit-link js-settingsOpen">
+                                    <div class="p-prflinst__settings-right-edit-link-icon fas fa-cog"></div>
+                                    <div class="p-prflinst__settings-right-edit-link-title">
+                                        Settings
+                                    </div>
+                                    <div class="p-prflinst__settings-right-edit-link-info">
+                                        Edit your Profile
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-prflinst__settings-content js-settingsContent">
+                        <form class="p-prflinst__sform js-form" data-validate="6">
+                            <div class="p-prflinst__sform-block">
+                                <div class="p-prflinst__sform-block-title">
+                                    Edit Userpic
+                                </div>
+                                <div class="p-prflinst__sform-block-upload">
+                                    Upload a picture
+                                </div>
+                                <div class="p-prflinst__sform-block-tooltip">
+                                    <div class="p-prflinst__sform-block-tooltip-question">?</div>
+                                    <div class="p-prflinst__sform-block-tooltip-popup">
+                                        Upload the symbol of institution to make your profile more recognizable
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-prflinst__sform-block">
+                                <div class="p-prflinst__sform-block-title">
+                                    General Settings
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="p-prflinst__sform-block-iblock js-validateblock">
+                                            <div class="p-prflinst__sform-block-iblock-label">First name
+                                            </div>
+                                            <div
+                                                class="p-prflinst__sform-block-iblock-icon fal fa-check js-validateblockOk">
+                                            </div>
+
+                                            <input type="text"
+                                                class="p-prflinst__sform-block-iblock-input js-textValidation" />
+                                            <div class="p-prflinst__sform-block-iblock-error js-validateblockError">
+                                                Please enter any
+                                                words
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="p-prflinst__sform-block-iblock js-validateblock">
+                                            <div class="p-prflinst__sform-block-iblock-label">Last name
+                                            </div>
+                                            <div
+                                                class="p-prflinst__sform-block-iblock-icon fal fa-check js-validateblockOk">
+                                            </div>
+
+                                            <input type="text"
+                                                class="p-prflinst__sform-block-iblock-input js-textValidation" />
+                                            <div class="p-prflinst__sform-block-iblock-error js-validateblockError">
+                                                Please enter any
+                                                words
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="p-prflinst__sform-block-iblock js-validateblock">
+                                            <div
+                                                class="p-prflinst__sform-block-iblock-icon fal fa-check js-validateblockOk">
+                                            </div>
+
+                                            <input type="email" class="p-prflinst__sform-block-input js-mailValidation"
+                                                placeholder="Work email address" />
+                                            <div class="p-prflinst__sform-block-iblock-error js-validateblockError">
+                                                Please enter any
+                                                words
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="p-prflinst__sform-block-iblock js-validateblock">
+                                    <div class="p-prflinst__sform-block-iblock-label">Educational institution</div>
+                                    <div class="p-prflinst__sform-block-iblock-icon fal fa-check js-validateblockOk">
+                                    </div>
+
+                                    <input type="text" class="p-prflinst__sform-block-iblock-input js-textValidation" />
+                                    <div class="p-prflinst__sform-block-iblock-error js-validateblockError">
+                                        Please enter any
+                                        words
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-prflinst__sform-block">
+                                <div class="p-prflinst__sform-block-title">
+                                    Security
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="p-prflinst__sform-block-iblock js-validateblock js-passParent">
+                                            <div class="js-passLine">
+                                                <div class="p-prflinst__sform-block-iblock-icon js-passEye fa fa-eye">
+                                                </div>
+                                                <input placeholder="Password" type="password"
+                                                    class="p-prflinst__sform-block-input js-passInput js-passValidation js-passValidation1" />
+                                            </div>
+                                            <div class="js-passLine d-none">
+                                                <div class="p-prflinst__sform-block-iblock">
+                                                    <div
+                                                        class="p-prflinst__sform-block-iblock-icon js-passEye fa fa-eye-slash">
+                                                    </div>
+                                                    <input placeholder="Password" type="text"
+                                                        class="p-prflinst__sform-block-input js-notPassInput" />
+                                                </div>
+                                            </div>
+
+                                            <div class="p-prflinst__sform-block-iblock-error js-validateblockError">
+                                                Please enter any words
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="p-prflinst__sform-block-iblock js-validateblock js-passParent">
+                                            <div class="js-passLine">
+                                                <div class="p-prflinst__sform-block-iblock">
+                                                    <div
+                                                        class="p-prflinst__sform-block-iblock-icon js-passEye fa fa-eye">
+                                                    </div>
+                                                    <input placeholder="Confirm pasword" type="password"
+                                                        class="p-prflinst__sform-block-input js-passInput js-passValidation js-passValidation2" />
+                                                </div>
+                                            </div>
+                                            <div class="js-passLine d-none">
+                                                <div class="p-prflinst__sform-block-iblock">
+                                                    <div
+                                                        class="p-prflinst__sform-block-iblock-icon js-passEye fa fa-eye-slash">
+                                                    </div>
+                                                    <input placeholder="Confirm pasword" type="text"
+                                                        class="p-prflinst__sform-block-input js-notPassInput" />
+                                                </div>
+                                            </div>
+
+                                            <div class="p-prflinst__sform-block-iblock-error js-validateblockError">
+                                                Password dont match
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-prflinst__sform-block">
+                                <input type="submit" class="p-prflinst__sform-block-submit js-submit"
+                                    value="Apply changes" disabled />
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="p-prflinst__filter">
+                        <h1 class="p-prflinst__filter-title">My Vacancies</h1>
+                        <div class="p-prflinst__filter-vacancies js-vacancies">
+                            <div class="p-prflinst__filter-vacancies-chosen js-vacanciesBtn">
+                                <div class="p-prflinst__filter-vacancies-chosen-text js-vacanciesBtnText">
+                                    All Vacancies (4)
+                                </div>
+                                <div class="p-prflinst__filter-vacancies-chosen-icon fal fa-chevron-down"></div>
+                            </div>
+
+                            <div class="p-prflinst__filter-vacancies-list js-vacanciesList">
+                                <div class="p-prflinst__filter-vacancies-list-one">
+                                    All Vacancies
+                                </div>
+                                <div class="p-prflinst__filter-vacancies-list-one">
+                                    Actual vacancies
+                                </div>
+                                <div class="p-prflinst__filter-vacancies-list-one">
+                                    Archive
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-prflinst__filter-add">
+                            <span class="p-prflinst__filter-add-link">Publish a vacancy</span>
+                        </div>
+                    </div>
+
+                    <div class="p-prflinst__nov">
+                        You don’t have any created vacancies. <a href="">Create</a> your fist vacancy to start searching
+                        an adjuncts
+                    </div>
+
+                    <div class="g-vlist">
+                        <div class="g-vlist__one js-one">
+                            <div class="g-vlist__one-header">
+                                <a href="old-create-jobs.html" class="g-vlist__one-header-title">
+                                    Web Developer needed to create a wordpress responsive website
+                                </a>
+                                <div class="g-vlist__one-header-cat">
+                                    Faculty - Business - Management / Wittenberg University
+                                </div>
+
+                                <div class="g-vlist__one-header-right">
+                                    <div class="g-vlist__one-header-right-views">
+                                        <div class="g-vlist__one-header-right-views">
+                                            <span class="g-vlist__one-header-right-views-icon fal fa-eye"></span>
+                                            <span class="g-vlist__one-header-right-views-num">310</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="g-vlist__one-header-right-fav fal fa-heart js-fav"></div>
+                                </div>
+                            </div>
+
+                            <div class="g-vlist__one-content">
+                                <div class="g-vlist__one-content-head">
+                                    <div class="g-vlist__one-content-head-time">
+                                        Posted 15 minutes ago - Proposals 12
+                                    </div>
+                                    <div class="g-vlist__one-content-head-control active js-view">
+                                        <div class="g-vlist__one-content-head-control-text">
+                                            Expanded view
+                                            <br />
+                                            Compact view
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="g-vlist__one-content-body js-body">
+                                    We run a network of high traffic websites which use Wordpress as the CMS. These
+                                    sites are built on custom Wordpress templates. We are looking for a long term
+                                    partner to be our Engineering arm. We plan to run a test project starting
+                                    immediately with 5-10 hours a week...
+                                </div>
+                            </div>
+
+                            <div class="g-vlist__one-footer js-footer">
+                                <div class="g-vlist__one-footer-column">
+                                    <div class="g-vlist__one-footer-item">
+                                        <span class="g-vlist__one-footer-item-name">Teaching
+                                            experience:</span> Online and in person
+                                    </div>
+                                    <div class="g-vlist__one-footer-item">
+                                        <span class="g-vlist__one-footer-item-name">Education:</span> Some
+                                        college, but less than 1 year and higher
+                                    </div>
+                                </div>
+
+                                <div class="g-vlist__one-footer-column">
+                                    <div class="g-vlist__one-footer-item m-none">
+                                        <span class="g-vlist__one-footer-item-name">Type of teaching:</span>
+                                        Full Semester or Occasional Lecturing
+                                    </div>
+                                    <div class="g-vlist__one-footer-item">
+                                        <span class="g-vlist__one-footer-item-name">Location:</span> Alabama,
+                                        Anniston-Oxford-Jacksonville AL Metro
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="g-vlist__one-options">
+                                <div class="g-vlist__one-options-content">
+                                    <span class="g-vlist__one-options-content-link">Edit Vacancy</span>
+                                    <span class="g-vlist__one-options-content-link">Publish again</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="g-vlist__one js-one">
+                            <div class="g-vlist__one-header">
+                                <a href="" class="g-vlist__one-header-title">
+                                    OctoberCMS (Laravel) Backed Dev. Parser Plugin.
+                                </a>
+                                <div class="g-vlist__one-header-cat">
+                                    Faculty - Business - Management / Wittenberg University
+                                </div>
+
+                                <div class="g-vlist__one-header-right">
+                                    <div class="g-vlist__one-header-right-views">
+                                        <div class="g-vlist__one-header-right-views">
+                                            <span class="g-vlist__one-header-right-views-icon fal fa-eye"></span>
+                                            <span class="g-vlist__one-header-right-views-num">310</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="g-vlist__one-header-right-fav fal fa-heart js-fav"></div>
+                                </div>
+                            </div>
+
+                            <div class="g-vlist__one-content">
+                                <div class="g-vlist__one-content-head">
+                                    <div class="g-vlist__one-content-head-time">
+                                        Posted 15 minutes ago - Proposals 12
+                                        <a href="" class="g-vlist__one-content-head-time-my">My Proposal</a>
+                                    </div>
+                                    <div class="g-vlist__one-content-head-control js-view">
+                                        <div class="g-vlist__one-content-head-control-text">
+                                            Expanded view
+                                            <br />
+                                            Compact view
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="g-vlist__one-content-body js-body" style="display: none;">
+                                    We run a network of high traffic websites which use Wordpress as the CMS. These
+                                    sites are built on custom Wordpress templates. We are looking for a long term
+                                    partner to be our Engineering arm. We plan to run a test project starting
+                                    immediately with 5-10 hours a week...
+                                </div>
+                            </div>
+
+                            <div class="g-vlist__one-footer js-footer">
+                                <div class="g-vlist__one-footer-column">
+                                    <div class="g-vlist__one-footer-item">
+                                        <span class="g-vlist__one-footer-item-name">Teaching
+                                            experience:</span> Online and in person
+                                    </div>
+                                    <div class="g-vlist__one-footer-item">
+                                        <span class="g-vlist__one-footer-item-name">Education:</span> Some
+                                        college, but less than 1 year and higher
+                                    </div>
+                                </div>
+
+                                <div class="g-vlist__one-footer-column">
+                                    <div class="g-vlist__one-footer-item">
+                                        <span class="g-vlist__one-footer-item-name">Type of teaching:</span>
+                                        Full Semester or Occasional Lecturing
+                                    </div>
+                                    <div class="g-vlist__one-footer-item">
+                                        <span class="g-vlist__one-footer-item-name">Location:</span> Alabama,
+                                        Anniston-Oxford-Jacksonville AL Metro
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="g-vlist__one js-one">
+                            <div class="g-vlist__one-header">
+                                <a href="" class="g-vlist__one-header-title">
+                                    Web Developer needed to create a wordpress responsive website
+                                </a>
+                                <div class="g-vlist__one-header-cat">
+                                    Faculty - Business - Management / Wittenberg University
+                                </div>
+
+                                <div class="g-vlist__one-header-right">
+                                    <div class="g-vlist__one-header-right-views">
+                                        <div class="g-vlist__one-header-right-views">
+                                            <span class="g-vlist__one-header-right-views-icon fal fa-eye"></span>
+                                            <span class="g-vlist__one-header-right-views-num">310</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="g-vlist__one-header-right-icon fal fa-lock"></div>
+                                </div>
+                            </div>
+
+                            <div class="g-vlist__one-content">
+                                <div class="g-vlist__one-content-head">
+                                    <div class="g-vlist__one-content-head-time">
+                                        Posted 15 minutes ago - <a href="">Adjunct already selected</a>
+                                    </div>
+                                    <div class="g-vlist__one-content-head-control js-view">
+                                        <div class="g-vlist__one-content-head-control-text">
+                                            Expanded view
+                                            <br />
+                                            Compact view
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="g-vlist__one-content-body js-body" style="display: none;">
+                                    We run a network of high traffic websites which use Wordpress as the CMS. These
+                                    sites are built on custom Wordpress templates. We are looking for a long term
+                                    partner to be our Engineering arm. We plan to run a test project starting
+                                    immediately with 5-10 hours a week...
+                                </div>
+                            </div>
+
+                            <div class="g-vlist__one-footer js-footer">
+                                <div class="g-vlist__one-footer-column">
+                                    <div class="g-vlist__one-footer-item">
+                                        <span class="g-vlist__one-footer-item-name">Teaching
+                                            experience:</span> Online and in person
+                                    </div>
+                                    <div class="g-vlist__one-footer-item">
+                                        <span class="g-vlist__one-footer-item-name">Education:</span> Some
+                                        college, but less than 1 year and higher
+                                    </div>
+                                </div>
+
+                                <div class="g-vlist__one-footer-column">
+                                    <div class="g-vlist__one-footer-item">
+                                        <span class="g-vlist__one-footer-item-name">Type of teaching:</span>
+                                        Full Semester or Occasional Lecturing
+                                    </div>
+                                    <div class="g-vlist__one-footer-item">
+                                        <span class="g-vlist__one-footer-item-name">Location:</span> Alabama,
+                                        Anniston-Oxford-Jacksonville AL Metro
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="g-vlist__one js-one">
+                            <div class="g-vlist__one-header">
+                                <a href="" class="g-vlist__one-header-title">
+                                    Product Label Design, Brand Logo, Renderings
+                                </a>
+                                <div class="g-vlist__one-header-cat">
+                                    Faculty - Business - Management / Wittenberg University
+                                </div>
+
+                                <div class="g-vlist__one-header-right">
+                                    <div class="g-vlist__one-header-right-views">
+                                        <div class="g-vlist__one-header-right-views">
+                                            <span class="g-vlist__one-header-right-views-icon fal fa-eye"></span>
+                                            <span class="g-vlist__one-header-right-views-num">310</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="g-vlist__one-header-right-icon fal fa-graduation-cap"></div>
+                                </div>
+                            </div>
+
+                            <div class="g-vlist__one-content">
+                                <div class="g-vlist__one-content-head">
+                                    <div class="g-vlist__one-content-head-time">
+                                        Posted 15 minutes ago - <span class="g-vlist__one-content-head-approved">Your
+                                            candidacy is
+                                            approved</span>
+                                    </div>
+                                    <div class="g-vlist__one-content-head-control js-view">
+                                        <div class="g-vlist__one-content-head-control-text">
+                                            Expanded view
+                                            <br />
+                                            Compact view
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="g-vlist__one-content-body js-body" style="display: none;">
+                                    We run a network of high traffic websites which use Wordpress as the CMS. These
+                                    sites are built on custom Wordpress templates. We are looking for a long term
+                                    partner to be our Engineering arm. We plan to run a test project starting
+                                    immediately with 5-10 hours a week...
+                                </div>
+                            </div>
+
+                            <div class="g-vlist__one-footer js-footer">
+                                <div class="g-vlist__one-footer-column">
+                                    <div class="g-vlist__one-footer-item">
+                                        <span class="g-vlist__one-footer-item-name">Teaching
+                                            experience:</span> Online and in person
+                                    </div>
+                                    <div class="g-vlist__one-footer-item">
+                                        <span class="g-vlist__one-footer-item-name">Education:</span> Some
+                                        college, but less than 1 year and higher
+                                    </div>
+                                </div>
+
+                                <div class="g-vlist__one-footer-column">
+                                    <div class="g-vlist__one-footer-item">
+                                        <span class="g-vlist__one-footer-item-name">Type of teaching:</span>
+                                        Full Semester or Occasional Lecturing
+                                    </div>
+                                    <div class="g-vlist__one-footer-item">
+                                        <span class="g-vlist__one-footer-item-name">Location:</span> Alabama,
+                                        Anniston-Oxford-Jacksonville AL Metro
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-prflinst__fav">
+                        <div class="p-prflinst__fav-title">
+                            Favorite adjuncts
+                        </div>
+
+                        <div class="p-prflinst__fav-one">
+                            <img src="https://specials-images.forbesimg.com/imageserve/5d25026d34a5c400084addc9/416x416.jpg?background=000000&cropX1=0&cropX2=3288&cropY1=471&cropY2=3758"
+                                class="p-prflinst__fav-one-ava" alt="" />
+                            <div class="p-prflinst__fav-one-name">
+                                Scarlett
+                            </div>
+                            <div class="p-prflinst__fav-one-name">
+                                Johansson
+                            </div>
+                        </div>
+
+                        <div class="p-prflinst__fav-one">
+                            <img src="https://specials-images.forbesimg.com/imageserve/5d25026d34a5c400084addc9/416x416.jpg?background=000000&cropX1=0&cropX2=3288&cropY1=471&cropY2=3758"
+                                class="p-prflinst__fav-one-ava" alt="" />
+                            <div class="p-prflinst__fav-one-name">
+                                Scarlett
+                            </div>
+                            <div class="p-prflinst__fav-one-name">
+                                Johansson
+                            </div>
+                        </div>
+
+                        <div class="p-prflinst__fav-one">
+                            <img src="https://specials-images.forbesimg.com/imageserve/5d25026d34a5c400084addc9/416x416.jpg?background=000000&cropX1=0&cropX2=3288&cropY1=471&cropY2=3758"
+                                class="p-prflinst__fav-one-ava" alt="" />
+                            <div class="p-prflinst__fav-one-name">
+                                Scarlett
+                            </div>
+                            <div class="p-prflinst__fav-one-name">
+                                Johansson
+                            </div>
+                        </div>
+
+                        <div class="p-prflinst__fav-one">
+                            <img src="https://specials-images.forbesimg.com/imageserve/5d25026d34a5c400084addc9/416x416.jpg?background=000000&cropX1=0&cropX2=3288&cropY1=471&cropY2=3758"
+                                class="p-prflinst__fav-one-ava" alt="" />
+                            <div class="p-prflinst__fav-one-name">
+                                Scarlett
+                            </div>
+                            <div class="p-prflinst__fav-one-name">
+                                Johansson Johansson Johansson
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="g-singlepage__footer">
+            <footer class="g-footer">
+                <div class="g-footer__text">
+                    &copy; 2019 instructorshub.com
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="extension/bootstrap-4.0.0/js/popper.min.js"></script>
+    <script src="extension/bootstrap-4.0.0/js/bootstrap.min.js"></script>
+    <script src="extension/selectize/js/standalone/selectize.min.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/vacancy-card.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/profile-institution.js"></script>
+</body>
+
+</html>
