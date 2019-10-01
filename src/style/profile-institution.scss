@@ -66,6 +66,8 @@
 
                     &:hover {
                         background: lighten(#2259B5, 5%);
+                        color: #fff;
+                        text-decoration: none;
                     }
                 }
             }
@@ -393,6 +395,8 @@
 
                 &:hover {
                     background: lighten(#2259B5, 5%);
+                    color: #fff;
+                    text-decoration: none;
                 }
             }
         }
@@ -434,11 +438,21 @@
                 top: 0px;
             }
 
-            &-name {
-                text-overflow: ellipsis;
-                overflow: hidden;
+            &-link {
+                display: inline-block;
+                color: #404040;
                 max-width: 100%;
-                white-space: nowrap;
+
+                &-name {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    max-width: 100%;
+                    white-space: nowrap;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -498,14 +512,27 @@
 
 @media (max-width: 740px) {
     .p-prflinst {
-        padding: 60px 0px;
+        padding: 0px 0px 60px;
 
         &__settings {
-            padding: 70px 30px 50px 120px;
-            margin-bottom: 25px;
+            padding: 50px 30px;
+            margin: 0px -15px 25px;
+            text-align: center;
 
             &-ava {
-                left: 20px;
+                position: relative;
+                left: 0px;
+                top: 0px;
+                display: inline-block;
+                margin-bottom: 15px;
+            }
+
+            &-name {
+                font-size: 17px;
+            }
+
+            &-info {
+                font-size: 12px;
             }
 
             &-right {
@@ -534,7 +561,7 @@
             }
 
             &-content {
-                margin: -25px 0px 25px;
+                margin: -25px -15px 25px;
                 padding: 30px 15px;
             }
         }
@@ -553,11 +580,30 @@
 
         &__filter {
             padding-top: 90px;
+            text-align: center;
             margin-bottom: 30px;
 
+            &-title {
+                display: block;
+            }
+
+            &-title {
+                margin: 0px 0px 10px;
+            }
+
+            &-vacancies {
+                &-chosen {
+                    margin: 0px;
+                }
+
+                &-list {
+                    text-align: left;
+                }
+            }
+
             &-add {
-                right: auto;
-                left: 0px;
+                right: 50%;
+                margin-right: -106px;
                 top: 0px;
             }
         }

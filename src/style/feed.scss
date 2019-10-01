@@ -146,12 +146,16 @@
                 }
 
                 &-one-btn {
+                    display: block;
+                    width: 100%;
+                    border: 0px;
                     color: #fff;
                     background: #2259B5;
                     line-height: 48px;
                     text-align: center;
                     cursor: pointer;
                     transition: .3s;
+                    box-shadow: none;
 
                     &:hover {
                         background: lighten(#2259B5, 5%);
