@@ -183,40 +183,7 @@
     }
 }
 
-.selectize {
-    &-control {
-        height: 48px;
-    }
-
-    &-input {
-        padding: 0px 15px;
-        line-height: 46px;
-    }
-}
-
-.selectize-control.single .selectize-input:after {
-    display: block !important;
-    content: "\f078";
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 46px;
-    height: 46px;
-    line-height: 46px;
-    text-align: center;
-    color: #BFC0C5;
-    font-family: 'Font Awesome 5 Pro';
-    font-weight: 300;
-    transition: .3s;
-    border: 0px;
-    margin: 0px;
-}
-
-.selectize-control.single .selectize-input.dropdown-active:after {
-    margin: 0px;
-    border: 0px;
-    transform: rotate(180deg);
-}
+@import "parts/_selectize.scss";
 
 @media (max-width: $screen-sm) {
     .p-feed {

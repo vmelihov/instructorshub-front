@@ -71,4 +71,11 @@ jQuery(function () {
         }
     });
     //Hard Select
+
+    $(".js-showLink").on("click", function () {
+        $("#" + $(this).data("show")).show();
+    })
+    $(".js-hideLink").on("click", function () {
+        $("#" + $(this).data("hide")).hide();
+    })
 })

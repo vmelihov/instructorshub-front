@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Create jobs</title>
+    <link rel="stylesheet" href="extension/bootstrap-4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="extension/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="extension/selectize/css/selectize.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/create-vacancy.css" />
+</head>
+
+<body>
+    <div class="g-singlepage">
+        <header class="g-header" id="header">
+            <div class="container">
+                <div class="g-header__mobi-link js-activeOnOff" data-id="header">
+                    <span class="fal fa-bars"></span>
+                    <span class="fal fa-times"></span>
+                </div>
+                <div class="g-header__content">
+                    <div class="g-header__content-logo">
+                        <a href="/" class="g-header__content-logo-link"></a>
+                    </div>
+        
+                    <div class="g-header__content-menu">
+                        <div class="g-header__content-menu-item active">
+                            <a href="" class="g-header__content-menu-item-link">Home</a>
+                        </div>
+                        <div class="g-header__content-menu-item">
+                            <a href="" class="g-header__content-menu-item-link">Vacancies</a>
+                        </div>
+                        <div class="g-header__content-menu-item">
+                            <a href="" class="g-header__content-menu-item-link">Adjuncts</a>
+                        </div>
+                        <div class="g-header__content-menu-item">
+                            <a href="" class="g-header__content-menu-item-link">Chats</a>
+                        </div>
+                    </div>
+                    <div class="g-header__content-user" id="userMenu">
+                        <a href="" class="g-header__content-user-messages m-no"></a>
+                        <a href="" class="g-header__content-user-messages m-view">
+                            <span>99</span>
+                        </a>
+                        <div class="g-header__content-user-link js-activeOnOff" data-id="userMenu">
+                            <div class="g-header__content-user-link-icon fa fa-chevron-down"></div>
+                            <div class="g-header__content-user-link-ava">
+                                <div class="g-header__content-user-link-ava-nopict fa fa-user"></div>
+                                <img src="https://cdn.technicpack.net/platform2/pack-icons/827089.png?1460226445"
+                                    class="g-header__content-user-link-ava-img" alt="" />
+                            </div>
+                            <div class="g-header__content-user-link-name">
+                                <div>Vladimir M. V. T. </div>
+                                <div>Superstar</div>
+                            </div>
+                        </div>
+        
+                        <div class="g-header__content-user-menu">
+                            <div class="g-header__content-user-menu-item m-notifications">
+                                <a href="" class="g-header__content-user-menu-item-link">Notifications (99)</a>
+                            </div>
+                            <div class="g-header__content-user-menu-item">
+                                <a href="" class="g-header__content-user-menu-item-link">Recommended jobs</a>
+                            </div>
+                            <div class="g-header__content-user-menu-item">
+                                <a href="" class="g-header__content-user-menu-item-link">Home</a>
+                            </div>
+                            <div class="g-header__content-user-menu-item">
+                                <a href="" class="g-header__content-user-menu-item-link">Vacancies</a>
+                            </div>
+                            <div class="g-header__content-user-menu-item">
+                                <a href="" class="g-header__content-user-menu-item-link">Adjuncts</a>
+                            </div>
+                            <div class="g-header__content-user-menu-item">
+                                <a href="" class="g-header__content-user-menu-item-link">Chats</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="g-singlepage__content">
+            <div class="container">
+                <div class="p-cv g-content">
+                    <h1 class="p-cv__title">Create Vacancy</h1>
+
+                    <form class="p-cv__form js-form" data-validate="2">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="p-cv__form-iblock js-validateblock">
+                                    <div class="p-cv__form-block-label">Title</div>
+
+                                    <input type="text" class="p-cv__form-iblock-input js-textValidation" id="title" />
+                                    <div class="p-cv__form-iblock-error js-validateblockError">
+                                        Please enter any
+                                        words
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-cv__form-iblock js-validateblock">
+                            <div class="p-cv__form-block-label">Description</div>
+                            <textarea class="p-cv__form-iblock-textarea js-textValidation" id="description"></textarea>
+                            <div class="p-cv__form-iblock-error js-validateblockError">
+                                Please enter any
+                                words
+                            </div>
+                        </div>
+
+                        <div class="p-cv__form-block">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="p-cv__form-block-label">Select category</div>
+                                    <div class="p-cv__form-block-select">
+                                        <select class="js-selectize" id="category">
+                                            <option></option>
+                                            <option>Select category</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="p-cv__form-block-label">Select location</div>
+                                    <div class="p-cv__form-block-select">
+                                        <select class="js-selectize" id="location">
+                                            <option></option>
+                                            <option>Select location</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-cv__form-block">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="p-cv__form-block-label">Higest education level obtained </div>
+                                    <div class="p-cv__form-block-select">
+                                        <select class="js-selectize" id="edLevel">
+                                            <option></option>
+                                            <option>Select category</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-cv__form-block">
+                            <div class="row">
+                                <div class="col-sm-4 g-mb20">
+                                    <div class="p-cv__form-block-label">Teaching experience</div>
+                                    <div class="g-mb10">
+                                        <label class="ui-radio g-mr15 js-showLink" data-show="expirienceBlock">
+                                            <input type="radio" name="teachexperience" id="tExpYes" />
+                                            <span class="ui-radio__decor"></span>
+                                            <span class="ui-radio__text">YES</span>
+                                        </label>
+                                        <label class="ui-radio js-hideLink" data-hide="expirienceBlock">
+                                            <input type="radio" name="teachexperience" id="tExpNo" />
+                                            <span class="ui-radio__decor"></span>
+                                            <span class="ui-radio__text">NO</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="p-cv__form-exp" id="expirienceBlock">
+                                        <div class="p-cv__form-exp-first">
+                                            <label class="ui-checkbox">
+                                                <input type="checkbox" name="" id="online" />
+                                                <span class="ui-checkbox__decor"></span>
+                                                <span class="ui-checkbox__text">Online</span>
+                                            </label>
+                                        </div>
+                                        <label class="ui-checkbox">
+                                            <input type="checkbox" name="" id="inPerson" />
+                                            <span class="ui-checkbox__decor"></span>
+                                            <span class="ui-checkbox__text">In person</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4 g-mb20">
+                                    <div class="p-cv__form-block-label">Type of teaching</div>
+                                    <div class="g-mb10">
+                                        <label class="ui-radio">
+                                            <input type="radio" name="typeofteaching" id="fullSemester" />
+                                            <span class="ui-radio__decor"></span>
+                                            <span class="ui-radio__text">Full Semester</span>
+                                        </label>
+                                    </div>
+                                    <div class="g-mb10">
+                                        <label class="ui-radio">
+                                            <input type="radio" name="typeofteaching" id="occasionalLecturing" />
+                                            <span class="ui-radio__decor"></span>
+                                            <span class="ui-radio__text">Occasional Lecturing</span>
+                                        </label>
+                                    </div>
+                                    <label class="ui-radio">
+                                        <input type="radio" name="typeofteaching" id="either" />
+                                        <span class="ui-radio__decor"></span>
+                                        <span class="ui-radio__text">Either of the two</span>
+                                    </label>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="p-cv__form-block-label">Availability</div>
+                                    <div class="g-mb10">
+                                        <label class="ui-checkbox">
+                                            <input type="checkbox" name="" id="during" />
+                                            <span class="ui-checkbox__decor"></span>
+                                            <span class="ui-checkbox__text">During the day</span>
+                                        </label>
+                                    </div>
+                                    <div class="g-mb10">
+                                        <label class="ui-checkbox">
+                                            <input type="checkbox" name="" id="evenings" />
+                                            <span class="ui-checkbox__decor"></span>
+                                            <span class="ui-checkbox__text">Evenings only</span>
+                                        </label>
+                                    </div>
+                                    <div class="g-mb10">
+                                        <label class="ui-checkbox">
+                                            <input type="checkbox" name="" id="weekends" />
+                                            <span class="ui-checkbox__decor"></span>
+                                            <span class="ui-checkbox__text">Weekends</span>
+                                        </label>
+                                    </div>
+                                    <div class="g-mb10">
+                                        <label class="ui-checkbox">
+                                            <input type="checkbox" name="" id="evAndW" />
+                                            <span class="ui-checkbox__decor"></span>
+                                            <span class="ui-checkbox__text">Evenings and Weekends</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label class="ui-checkbox">
+                                            <input type="checkbox" name="" id="eitherOTT" />
+                                            <span class="ui-checkbox__decor"></span>
+                                            <span class="ui-checkbox__text">Either of the three</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <input type="submit" class="p-cv__form-submit js-submit" value="Create" disabled />
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="g-singlepage__footer">
+            <footer class="g-footer">
+                <div class="g-footer__text">
+                    &copy; 2019 instructorshub.com
+                </div>
+            </footer>
+        </div>
+
+        <div class="modal fade" id="vacancyModal" tabindex="-1" role="dialog" aria-labelledby="vacancyModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="p-cv__modal">
+                    <div class="p-cv__modal-title" id="modalTitle"></div>
+                    <div class="p-cv__modal-description" id="modalDescription"></div>
+                    <div class="p-cv__modal-text">
+                        <span class="p-cv__modal-text-title">
+                            Category:
+                        </span>
+                        <span class="p-cv__modal-text-param" id="modalCategory"></span>
+                    </div>
+                    <div class="p-cv__modal-text">
+                        <span class="p-cv__modal-text-title">
+                            Teaching experience:
+                        </span>
+                        <span class="p-cv__modal-text-param" id="modalTExp"></span>
+                    </div>
+                    <div class="p-cv__modal-text">
+                        <span class="p-cv__modal-text-title">
+                            Education:
+                        </span>
+                        <span class="p-cv__modal-text-param" id="modalEducation"></span>
+                    </div>
+                    <div class="p-cv__modal-text">
+                        <span class="p-cv__modal-text-title">
+                            Type of teaching:
+                        </span>
+                        <span class="p-cv__modal-text-param" id="modalTypeOfTeaching"></span>
+                    </div>
+                    <div class="p-cv__modal-text">
+                        <span class="p-cv__modal-text-title">
+                            Location:
+                        </span>
+                        <span class="p-cv__modal-text-param" id="modalLocation"></span>
+                    </div>
+                    <div class="p-cv__modal-text">
+                        <span class="p-cv__modal-text-title">
+                            University:
+                        </span>
+                        <span class="p-cv__modal-text-param" id="modalUniversity">Some univercity</span>
+                    </div>
+
+
+                    <div class="p-cv__modal-btns">
+                        <div class="p-cv__modal-btns-publish" data-dismiss="modal" aria-label="Close">Publish</div>
+                        <div class="p-cv__modal-btns-edit" data-dismiss="modal" aria-label="Close">Edit vacancy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="extension/selectize/js/standalone/selectize.min.js"></script>
+    <script src="extension/bootstrap-4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/global.js"></script>
+    <script>
+        jQuery(function ($) {
+            $('.js-selectize').selectize({
+                create: true,
+                sortField: 'text'
+            });
+
+            $(".js-submit").on("click", function () {
+                if (!$(this).prop('disabled')) {
+                    $('#vacancyModal').modal();
+
+                    $("#modalTitle").text($("#title").val());
+                    $("#modalDescription").text($("#description").val());
+                    $("#modalCategory").text($("#category").val());
+
+                    if ($("#tExpYes").prop("checked")) {
+                        var _text = "";
+
+                        if ($("#online").prop("checked")) {
+                            _text = "Online";
+                        }
+                        if ($("#inPerson").prop("checked")) {
+                            _text += "In person";
+                        }
+                        if ($("#online").prop("checked") && $("#inPerson").prop("checked")) {
+                            _text += "Online, In person";
+                        }
+                        $("#modalTExp").text(_text);
+                    }
+                    $("#modalEducation").text($("#edLevel").val());
+
+                    if ($("#fullSemester").prop("checked")) {
+                        $("#modalTypeOfTeaching").text("Full Semester");
+                    }
+                    if ($("#occasionalLecturing").prop("checked")) {
+                        $("#modalTypeOfTeaching").text("Occasional Lecturing");
+                    }
+                    if ($("#either").prop("checked")) {
+                        $("#modalTypeOfTeaching").text("Either of the two");
+                    }
+
+                    $("#modalLocation").text($("#location").val());
+                }
+                event.preventDefault();
+            });
+        });
+    </script>
+</body>
+
+</html>
