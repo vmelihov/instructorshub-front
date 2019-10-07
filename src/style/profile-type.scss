@@ -43,6 +43,8 @@
 
             &-line {
                 position: relative;
+
+                @import "parts/_selectize.scss";
             }
         }
 
