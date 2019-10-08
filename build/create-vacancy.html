@@ -28,7 +28,7 @@
                     <div class="g-header__content-logo">
                         <a href="/" class="g-header__content-logo-link"></a>
                     </div>
-        
+
                     <div class="g-header__content-menu">
                         <div class="g-header__content-menu-item active">
                             <a href="" class="g-header__content-menu-item-link">Home</a>
@@ -60,7 +60,7 @@
                                 <div>Superstar</div>
                             </div>
                         </div>
-        
+
                         <div class="g-header__content-user-menu">
                             <div class="g-header__content-user-menu-item m-notifications">
                                 <a href="" class="g-header__content-user-menu-item-link">Notifications (99)</a>
@@ -122,10 +122,9 @@
                                     <div class="p-cv__form-block-select">
                                         <select class="js-selectize" id="category">
                                             <option></option>
-                                            <option>Select category</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
+                                            <option value="1">красивое_название</option>
+                                            <option value="2">красивое_название 2</option>
+                                            <option value="3">красивое_название 3</option>
                                         </select>
                                     </div>
                                 </div>
@@ -342,7 +341,7 @@
 
                     $("#modalTitle").text($("#title").val());
                     $("#modalDescription").text($("#description").val());
-                    $("#modalCategory").text($("#category").val());
+                    $("#modalCategory").text($("#category").attr('selected', 'true').text());
 
                     if ($("#tExpYes").prop("checked")) {
                         var _text = "";
@@ -358,7 +357,7 @@
                         }
                         $("#modalTExp").text(_text);
                     }
-                    $("#modalEducation").text($("#edLevel").val());
+                    $("#modalEducation").text($("#edLevel").attr('selected', 'true').text());
 
                     if ($("#fullSemester").prop("checked")) {
                         $("#modalTypeOfTeaching").text("Full Semester");
