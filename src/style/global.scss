@@ -1034,7 +1034,7 @@ h5 {
 
                 &-controls {
                     &-one {
-                        background: none;
+                        background: none !important;
                         padding: 0px;
                         margin: 0px;
                     }
@@ -1142,6 +1142,7 @@ only screen and (min-resolution: 2dppx) {
                 &-one {
                     background-image: url("../img/icon-sign_in@2x.png");
                     background-size: auto 100%;
+                    background-repeat: no-repeat;
 
                     &:last-of-type {
                         background-image: url("../img/icon-sign_up@2x.png");
