@@ -4,6 +4,7 @@
 .p-prflinst {
     padding: 80px 0px;
 
+    /*
     &__settings {
         padding: 70px 60px 70px 160px;
         background: #F6F6F6;
@@ -118,6 +119,7 @@
             padding: 50px 65px;
         }
     }
+    */
 
     &__sform {
         max-width: 600px;
@@ -377,6 +379,7 @@
             }
         }
 
+        /*
         &-add {
             position: absolute;
             right: 0px;
@@ -400,6 +403,7 @@
                 }
             }
         }
+        */
     }
 
     &__nov {
@@ -460,9 +464,11 @@
 
 @media (max-width: $screen-sm) {
     .p-prflinst {
+        /*
         &__settings-right-add {
             display: none;
         }
+        */
 
         &__filter {
             padding: 0px;
@@ -503,17 +509,20 @@
                 }
             }
 
+            /*
             &-add {
                 display: block;
             }
+            */
         }
     }
 }
 
 @media (max-width: 740px) {
     .p-prflinst {
-        padding: 0px 0px 60px;
+        padding: 60px 0px;
 
+        /*
         &__settings {
             padding: 50px 30px;
             margin: 0px -15px 25px;
@@ -565,6 +574,7 @@
                 padding: 30px 15px;
             }
         }
+        */
 
         &__sform-block-tooltip-popup {
             left: auto;
@@ -579,7 +589,6 @@
         }
 
         &__filter {
-            padding-top: 90px;
             text-align: center;
             margin-bottom: 30px;
 
@@ -601,11 +610,13 @@
                 }
             }
 
+            /*
             &-add {
                 right: 50%;
                 margin-right: -106px;
                 top: 0px;
             }
+            */
         }
     }
 }

@@ -1,8 +1,10 @@
 jQuery(function ($) {
+    /*
     $(".js-settingsOpen").on("click", function () {
         $(this).toggleClass("active");
         $(".js-settingsContent").slideToggle();
     });
+    */
 
     if ($(window).width() < 769) {
         $(".js-vacanciesBtn").on("click", function () {
