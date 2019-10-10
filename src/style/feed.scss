@@ -12,11 +12,12 @@
 
     &__filter {
         background: #F6F6F6;
-        padding: 0px 30px;
         position: relative;
         line-height: 56px;
         margin-bottom: 30px;
+        text-align: right;
 
+        /*
         &-vacancies {
             position: relative;
             display: inline-block;
@@ -49,15 +50,16 @@
                 }
             }
         }
+        */
 
         &-sort,
         &-options {
-            position: absolute;
-            top: 0px;
+            display: inline-block;
+            text-align: left;
         }
 
         &-sort {
-            right: 260px;
+            margin-right: 30px;
 
             &-text,
             &-drop,
@@ -188,6 +190,7 @@
 @media (max-width: $screen-sm) {
     .p-feed {
         &__filter {
+            /*
             &-vacancies {
                 &-chosen {
 
@@ -221,6 +224,7 @@
                     display: block;
                 }
             }
+            */
 
             &-sort {
                 right: 100px;
@@ -252,6 +256,7 @@
             height: 56px;
             margin: 0px -15px 30px;
 
+            /*
             &-vacancies {
                 position: absolute;
                 right: 0px;
@@ -273,6 +278,7 @@
                     }
                 }
             }
+            */
 
             &-sort {
                 right: auto;

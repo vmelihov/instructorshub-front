@@ -379,12 +379,10 @@
             }
         }
 
-        /*
         &-add {
             position: absolute;
             right: 0px;
             top: -7px;
-            display: none;
 
             &-link {
                 display: block;
@@ -403,7 +401,6 @@
                 }
             }
         }
-        */
     }
 
     &__nov {
@@ -508,12 +505,6 @@
                     display: block;
                 }
             }
-
-            /*
-            &-add {
-                display: block;
-            }
-            */
         }
     }
 }
@@ -610,13 +601,13 @@
                 }
             }
 
-            /*
             &-add {
-                right: 50%;
-                margin-right: -106px;
+                position: relative;
+                width: 213px;
+                right: 0px;
+                margin: 20px auto 0px;
                 top: 0px;
             }
-            */
         }
     }
 }

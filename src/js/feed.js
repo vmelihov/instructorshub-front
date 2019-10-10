@@ -1,4 +1,5 @@
 jQuery(function ($) {
+    /*
     if ($(window).width() < 769) {
         $(".js-vacanciesBtn").on("click", function () {
             $(".js-vacanciesList").toggle();
@@ -15,14 +16,15 @@ jQuery(function ($) {
         });
     }
 
-    $(".js-openFilter").on("click", function () {
-        $(this).toggleClass("active");
-        $(".js-filterContent").slideToggle();
-    });
-
     $(".js-vacanciesList div").on("click", function () {
         $(".js-vacanciesBtnText").text($(this).text());
         $(".js-vacanciesList").toggle();
+    });
+    */
+
+    $(".js-openFilter").on("click", function () {
+        $(this).toggleClass("active");
+        $(".js-filterContent").slideToggle();
     });
 
     $(".js-sortItems div").on("click", function () {
