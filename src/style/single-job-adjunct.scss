@@ -1,21 +1,76 @@
 @import "parts/_fonts.scss";
 @import "parts/_vars.scss";
 
-.p-sj {
-    display: flex;
-    flex-flow: nowrap;
-    justify-content: baseline;
-    margin: 80px 0px;
+.p-sja {
+    padding: 50px 0px;
 
-    &__content,
-    &__aside {
-        display: inline-block;
+    &__settings {
+        padding: 70px 60px 70px 160px;
+        background: #F6F6F6;
+        position: relative;
+
+        &-ava {
+            position: absolute;
+            left: 60px;
+            top: 40px;
+
+            &-img {
+                max-width: 88px;
+                max-height: 88px;
+                border-radius: 50%;
+            }
+
+            &-status {
+                position: absolute;
+                right: 10px;
+                bottom: 3px;
+                width: 16px;
+                height: 16px;
+                border: 3px solid #fff;
+                background: #dedede;
+                border-radius: 50%;
+
+                &.m-online {
+                    background: #5ED975;
+                }
+            }
+        }
+
+        &-name {
+            font: 15px $gm;
+        }
+
+        &-status {
+            font-size: 11px;
+            color: #BFC0C5;
+        }
+
+        &-right {
+            position: absolute;
+            right: 60px;
+            top: 50px;
+            border-left: 1px solid #D6D6D8;
+            padding: 20px 0 20px 30px;
+
+            &-chat {
+                &-icon {
+                    display: inline-block;
+                    vertical-align: middle;
+                    color: #BFC0C5;
+                    margin-right: 10px;
+                }
+
+                &-link {
+                    font-size: 13px;
+                    color: #2259B5;
+                }
+            }
+        }
     }
 
     &__content {
         background: #fff;
-        padding: 50px 60px;
-        width: 66.6%;
+        padding: 50px 40px;
 
         &-title {
             font: 22px $gm;
@@ -75,52 +130,148 @@
                     color: #fff;
                     background: lighten(#2259B5, 5%);
                 }
+            }
 
-                &[disabled] {
-                    cursor: not-allowed;
-                    opacity: .3;
-
-                    &:hover,
-                    &:active {
-                        background: #2259B5;
-                    }
-                }
+            &-link {
+                display: inline-block;
+                font: 13px/40px $gm;
+                color: #2259B5;
             }
         }
     }
 
-    &__aside {
-        padding: 50px 30px;
-        width: 33.3%;
-        background: #F6F6F6;
+    &__modal {
+        background: #fff;
+        pointer-events: auto;
 
-        &-title {
-            font: 22px $gm;
-            margin-bottom: 30px;
-        }
-
-        &-adjunct {
+        &-header {
+            background: #F6F6F6;
+            padding: 0px 40px;
             position: relative;
-            min-height: 64px;
-            padding: 20px 0px 0px 76px;
-            margin-bottom: 25px;
 
-            &-ava {
-                position: absolute;
-                left: 0px;
-                top: 0px;
-                width: 64px;
-                height: 64px;
-                border-radius: 50%;
+            &-title {
+                font: 22px/56px $gm;
             }
 
-            &-name {
-                color: #30323D;
-                text-decoration: underline;
+            &-close {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                color: #BFC0C5;
+                font-size: 20px;
+                cursor: pointer;
+            }
+        }
+
+        &-content {
+            padding: 50px 40px;
+
+            &-title {
+                font: 15px $gm;
+                margin-bottom: 15px;
+            }
+
+            &-message {
+                border: 1px solid #D6D6D8;
+                margin-bottom: 40px;
+
+                &-textarea {
+                    border: 0px;
+                    resize: none;
+                    height: 250px;
+                    width: 100%;
+                    padding: 15px;
+
+                    &:hover,
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                &-attach {
+                    overflow: hidden;
+                    position: relative;
+                    height: 60px;
+                    border-top: 1px solid #D6D6D8;
+
+                    &-icon,
+                    &-text {
+                        float: left;
+
+                    }
+
+                    &-icon {
+                        color: #BFC0C5;
+                        font-size: 28px;
+                        line-height: 60px;
+                        border-right: 1px solid #D6D6D8;
+                        width: 70px;
+                        text-align: center;
+                        margin-right: 12px;
+                    }
+
+                    &-text {
+                        color: #83848B;
+                        font-size: 13px;
+                        line-height: 60px;
+                    }
+
+                    &-input {
+                        position: absolute;
+                        left: 0px;
+                        top: 0px;
+                        width: 300%;
+                        height: 200%;
+                        padding: 100% 0px 0px 100%;
+                        opacity: 0;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            &-files {
+                margin-bottom: 50px;
+
+                &-title {
+                    font: 15px $gm;
+                    margin-bottom: 15px;
+                }
+
+                &-one {
+                    display: inline-block;
+                    margin: 0px 25px 10px 0px;
+
+                    &-text,
+                    &-del {
+                        display: inline-block;
+                        vertical-align: top;
+                        line-height: 15px;
+                    }
+
+                    &-text {
+                        font-size: 13px;
+                    }
+
+                    &-del {
+                        font-size: 10px;
+                        margin-top: -4px;
+                        padding: 5px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            &-submit {
+                width: 95px;
+                height: 40px;
+                color: #fff;
+                border: 0px;
+                background: #2259B5;
+                font-size: 13px;
+                cursor: pointer;
 
                 &:hover {
-                    color: #2259B5;
-                    text-decoration: none;
+                    background: lighten(#2259B5, 5%);
                 }
             }
         }
@@ -320,33 +471,48 @@
 }
 
 @media (max-width: $screen-sm) {
-    .p-sj {
-        display: block;
+    .p-sja {
+        &__settings-right {
+            position: relative;
+            right: 0px;
+            top: 0px;
+            border: 0px;
+            padding: 5px 0px 0px;
 
-        &__content {
-            width: 100%;
-        }
-
-        &__aside {
-            width: 100%;
-
-            &-adjunct {
-                display: inline-block;
-                margin-right: 20px;
+            &-chat-icon {
+                font-size: 18px;
+                margin-right: 5px;
             }
         }
     }
 }
 
 @media (max-width: $screen-xs) {
-    .p-sj {
-        margin: 40px 0px;
+    .p-sja {
+        &__settings {
+            padding: 30px 15px 30px 115px;
+
+            &-ava {
+                left: 15px;
+                top: 5px;
+            }
+        }
 
         &__content {
             padding: 15px;
 
             &-btns-one {
-                margin: 0px 10px 10px 0px;
+                margin-right: 10px;
+            }
+        }
+
+        &__modal {
+            &-header {
+                padding-left: 15px;
+            }
+
+            &-content {
+                padding: 15px;
             }
         }
 
@@ -412,59 +578,6 @@
                     }
                 }
             }
-        }
-    }
-}
-
-.p-sja {
-    padding: 50px 0px;
-
-    &__settings {
-        padding: 70px 60px 70px 160px;
-        background: #F6F6F6;
-        position: relative;
-        margin-bottom: 60px;
-
-        &-ava {
-            position: absolute;
-            left: 60px;
-            top: 40px;
-
-            &-img {
-                max-width: 88px;
-                max-height: 88px;
-                border-radius: 50%;
-            }
-
-            &-status {
-                position: absolute;
-                right: 10px;
-                bottom: 3px;
-                width: 16px;
-                height: 16px;
-                border: 3px solid #fff;
-                background: #dedede;
-                border-radius: 50%;
-
-                &.m-online {
-                    background: #5ED975;
-                }
-            }
-        }
-
-        &-name {
-            font: 15px $gm;
-        }
-
-        &-status {
-            font-size: 11px;
-            color: #BFC0C5;
-        }
-
-        &-right {
-            position: absolute;
-            right: 60px;
-            top: 60px;
         }
     }
 }
