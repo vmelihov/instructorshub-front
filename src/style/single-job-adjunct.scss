@@ -283,47 +283,12 @@
             margin: 0px 0px 40px 60px;
         }
 
-        &__filter {
-            background: #F6F6F6;
-            padding: 0px 40px;
-            position: relative;
-
-            .list-group {
-                display: block;
-            }
-
-            &-btn {
-                display: inline-block;
-                line-height: 56px;
-                padding: 0px 20px;
-                color: #404040;
-
-                &:hover {
-                    background: #2259B5;
-                    color: #fff;
-                    text-decoration: none;
-                }
-            }
-
-            &-show {
-                position: absolute;
-                right: 50px;
-                top: 50%;
-                margin-top: -10px;
-
-                .m-mbShow {
-                    display: none;
-                }
-            }
-        }
-
         &__content {
             background: #fff;
             padding: 40px 30px;
 
             &-one {
                 max-width: 865px;
-                margin-bottom: 40px;
 
                 &-header {
                     display: flex;
@@ -396,7 +361,7 @@
 
                             &-link {
                                 color: #2259B5;
-                                text-decoration: underline;
+                                text-decoration: none !important;
 
                                 &.m-noMess {
                                     color: #83848B;
@@ -406,16 +371,13 @@
                                     color: #EB5757;
                                 }
 
-                                &:hover {
-                                    text-decoration: none;
+                                &-text{
+                                    display: inline-block;
+                                    text-decoration: underline;
                                 }
-                            }
 
-                            &-fav {
-                                cursor: pointer;
-
-                                &.fas {
-                                    color: #2259B5;
+                                &:hover &-text {
+                                    text-decoration: none;
                                 }
                             }
                         }
@@ -443,12 +405,19 @@
                 }
 
                 &-footer {
-                    margin: 15px 0px 0px 105px;
-                    font-size: 11px;
+                    margin: 25px 0px 0px 85px;
+                    font: 13px $gm;
 
-                    &-info {
+                    &-edit {
+                        display: inline-block;
+                        color: #2259B5;
+                        cursor: pointer;
+                        margin-right: 20px;
+                    }
+
+                    &-delete {
                         color: #EB5757;
-                        margin-bottom: 5px;
+                        cursor: pointer;
                     }
                 }
             }
