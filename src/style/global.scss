@@ -47,7 +47,7 @@ h5 {
 
             .fa-times {
                 display: none;
-                color: #2259B5;
+                color: #30323D;
             }
         }
 
@@ -88,6 +88,7 @@ h5 {
                         overflow: hidden;
                         font: 15px/80px $g;
                         color: #2C3C53;
+                        cursor: pointer;
 
                         &:before {
                             content: "";
@@ -113,6 +114,22 @@ h5 {
                         }
                     }
 
+                    .dropdown-item {
+                        display: block;
+                        border-bottom: 1px solid #E1E1E1;
+                        line-height: 35px;
+                        font-size: 15px;
+
+                        &:hover {
+                            background: none;
+                            text-decoration: none;
+                            color: #2259B5;
+                        }
+
+                        &:last-of-type {
+                            border: 0px;
+                        }
+                    }
                 }
             }
 
@@ -865,9 +882,10 @@ h5 {
                     position: absolute;
                     left: 20px;
                     top: 100%;
-                    background: #2259B5;
+                    background: #fff;
                     width: 185px;
                     padding: 15px 0px;
+                    border: 1px solid #E1E1E1;
 
                     &:before {
                         content: "";
@@ -876,27 +894,48 @@ h5 {
                         top: -10px;
                         border-left: 10px solid transparent;
                         border-right: 10px solid transparent;
-                        border-bottom: 10px solid #2259B5;
+                        border-bottom: 10px solid #fff;
                     }
 
                     &-item {
                         display: block;
-                        border-bottom: 1px solid #3769BE;
+                        border-bottom: 1px solid #E1E1E1;
 
                         &-link {
                             display: block;
                             padding: 10px 25px;
                             line-height: 15px;
-                            color: #fff;
 
                             &:before {
                                 display: none;
                             }
+                        }
 
-                            &:hover {
-                                background: #356BC5;
-                                color: #fff;
-                            }
+                        &:last-of-type {
+                            border: 0px;
+                        }
+
+                        .dropdown &-link:after {
+                            font-family: 'Font Awesome 5 Pro';
+                            content: "\f078";
+                            position: absolute;
+                            color: #BFC0C5;
+                            right: 10px;
+                            top: 10px;
+                        }
+
+                        .dropdown.show &-link:after {
+                            transform: rotate(180deg);
+                        }
+
+                        .dropdown-menu {
+                            position: relative !important;
+                            transform: none !important;
+                            top: 0px;
+                            left: 0px;
+                            border: 0px;
+                            background: #EDEBF1;
+                            float: none;
                         }
                     }
                 }
