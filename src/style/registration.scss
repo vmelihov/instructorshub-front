@@ -170,7 +170,8 @@
             &-error {
                 position: absolute;
                 left: 20px;
-                bottom: -20px;
+                top: 100%;
+                margin-top: 5px;
                 font-size: 15px;
                 color: #EB5757;
                 display: none;
@@ -285,7 +286,7 @@
     }
 }
 
-.checked .p-reg__form-iblock-icon.fa-check{
+.checked .p-reg__form-iblock-icon.fa-check {
     display: block;
 }
 
