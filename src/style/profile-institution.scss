@@ -4,123 +4,6 @@
 .p-prflinst {
     padding: 80px 0px;
 
-    /*
-    &__settings {
-        padding: 70px 60px 70px 160px;
-        background: #F6F6F6;
-        position: relative;
-        margin-bottom: 60px;
-
-        &-ava {
-            position: absolute;
-            left: 60px;
-            top: 40px;
-
-            &-img {
-                max-width: 88px;
-                max-height: 88px;
-                border-radius: 50%;
-            }
-
-            &-status {
-                position: absolute;
-                right: 10px;
-                bottom: 3px;
-                width: 16px;
-                height: 16px;
-                border: 3px solid #fff;
-                background: #dedede;
-                border-radius: 50%;
-
-                &.m-online {
-                    background: #5ED975;
-                }
-            }
-        }
-
-        &-name {
-            font: 15px $gm;
-        }
-
-        &-status {
-            font-size: 11px;
-            color: #BFC0C5;
-        }
-
-        &-right {
-            position: absolute;
-            right: 60px;
-            top: 60px;
-
-            &-add {
-                float: left;
-
-                &-link {
-                    display: block;
-                    width: 213px;
-                    height: 48px;
-                    text-align: center;
-                    background: #2259B5;
-                    color: #fff;
-                    line-height: 46px;
-                    cursor: pointer;
-
-                    &:hover {
-                        background: lighten(#2259B5, 5%);
-                        color: #fff;
-                        text-decoration: none;
-                    }
-                }
-            }
-
-            &-edit {
-                float: left;
-                border-left: 1px solid #D6D6D8;
-                height: 60px;
-                margin: -10px 0px 0px 40px;
-                padding: 20px 0px 0px 40px;
-
-                &-link {
-                    position: relative;
-                    padding-left: 38px;
-                    cursor: pointer;
-
-                    &-icon {
-                        position: absolute;
-                        left: 0px;
-                        top: 0px;
-                        font-size: 26px;
-                        color: #BFC0C5;
-                    }
-
-                    &-title {
-                        font: bold 12px $gm;
-                        color: #2259B5;
-                        margin-bottom: 3px;
-                    }
-
-                    &-info {
-                        font-size: 10px;
-                        color: #BFC0C5;
-                    }
-
-                    &:hover &-icon,
-                    &.active &-icon {
-                        color: #2259B5;
-                    }
-                }
-            }
-        }
-
-        &-content {
-            display: none;
-            margin: -60px 0px 60px;
-            background: #fff;
-            padding: 50px 65px;
-        }
-    }
-    */
-
     &__sform {
         max-width: 600px;
 
@@ -462,12 +345,6 @@
 
 @media (max-width: $screen-sm) {
     .p-prflinst {
-        /*
-        &__settings-right-add {
-            display: none;
-        }
-        */
-
         &__filter {
             padding: 0px;
 
@@ -513,72 +390,6 @@
 @media (max-width: 740px) {
     .p-prflinst {
         padding: 60px 0px;
-
-        /*
-        &__settings {
-            padding: 50px 30px;
-            margin: 0px -15px 25px;
-            text-align: center;
-
-            &-ava {
-                position: relative;
-                left: 0px;
-                top: 0px;
-                display: inline-block;
-                margin-bottom: 15px;
-            }
-
-            &-name {
-                font-size: 17px;
-            }
-
-            &-info {
-                font-size: 12px;
-            }
-
-            &-right {
-                right: 20px;
-                top: 20px;
-
-                &-edit {
-                    padding: 0px;
-                    border: 0px;
-                    margin: 0px;
-
-                    &-link {
-                        padding: 6px 38px 0px 0px;
-
-                        &-icon {
-                            left: auto;
-                            right: 0px;
-                        }
-
-                        &-title,
-                        &-info {
-                            display: none;
-                        }
-                    }
-                }
-            }
-
-            &-content {
-                margin: -25px -15px 25px;
-                padding: 30px 15px;
-            }
-        }
-        */
-
-        &__sform-block-tooltip-popup {
-            left: auto;
-            right: 0px;
-            margin-top: 15px;
-            width: 200px;
-
-            &:before {
-                left: auto;
-                right: 7px;
-            }
-        }
 
         &__filter {
             text-align: center;

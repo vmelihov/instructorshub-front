@@ -323,13 +323,40 @@ h5 {
     &-footer {
         background: #E3E0EA;
         color: #30323D;
-        font-size: 11px;
-        text-align: center;
-        padding: 30px 15px;
+        font-size: 13px;
+        padding: 0px 15px;
         height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-        &__text {
+        &__part {
             display: inline-block;
+
+            &-text {
+                display: inline-block;
+                vertical-align: middle;
+
+                .fal {
+                    color: #BFC0C5;
+                    vertical-align: middle;
+                    font-size: 20px;
+                }
+            }
+
+            &:first-of-type &-text {
+                margin-right: 20px;
+            }
+
+            &:last-of-type &-text {
+                margin-left: 20px;
+            }
+        }
+
+        a {
+            display: inline-block;
+            vertical-align: middle;
+            color: #30323D;
         }
     }
 
@@ -1109,6 +1136,10 @@ h5 {
                     }
                 }
             }
+        }
+
+        &-footer__part-text {
+            margin-bottom: 5px;
         }
 
         &-vlist {

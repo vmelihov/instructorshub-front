@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Profile</title>
+    <link rel="stylesheet" href="extension/bootstrap-4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="extension/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="extension/selectize/css/selectize.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/profile-edit.css" />
+</head>
+
+<body>
+    <div class="g-singlepage">
+        //= parts/_header-logged.html
+
+        <div class="g-singlepage__content">
+            <div class="container">
+                <div class="p-predit">
+                    <div class="p-predit__content">
+                        <form class="p-predit__content-sform js-form" data-validate="6">
+                            <div class="p-predit__content-sform-block">
+                                <div class="p-predit__content-sform-block-title">
+                                    Edit Userpic
+                                </div>
+                                <div class="p-predit__content-sform-block-upload">
+                                    Upload a picture
+                                </div>
+                                <div class="p-predit__content-sform-block-tooltip">
+                                    <div class="p-predit__content-sform-block-tooltip-question">?</div>
+                                    <div class="p-predit__content-sform-block-tooltip-popup">
+                                        Upload the symbol of institution to make your profile more recognizable
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-predit__content-sform-block">
+                                <div class="p-predit__content-sform-block-title">
+                                    General Settings
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="p-predit__content-sform-block-iblock js-validateblock">
+                                            <div class="p-predit__content-sform-block-iblock-label">First name
+                                            </div>
+                                            <div
+                                                class="p-predit__content-sform-block-iblock-icon fal fa-check js-validateblockOk">
+                                            </div>
+
+                                            <input type="text"
+                                                class="p-predit__content-sform-block-iblock-input js-textValidation" />
+                                            <div
+                                                class="p-predit__content-sform-block-iblock-error js-validateblockError">
+                                                Please enter any
+                                                words
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="p-predit__content-sform-block-iblock js-validateblock">
+                                            <div class="p-predit__content-sform-block-iblock-label">Last name
+                                            </div>
+                                            <div
+                                                class="p-predit__content-sform-block-iblock-icon fal fa-check js-validateblockOk">
+                                            </div>
+
+                                            <input type="text"
+                                                class="p-predit__content-sform-block-iblock-input js-textValidation" />
+                                            <div
+                                                class="p-predit__content-sform-block-iblock-error js-validateblockError">
+                                                Please enter any
+                                                words
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="p-predit__content-sform-block-iblock js-validateblock">
+                                            <div
+                                                class="p-predit__content-sform-block-iblock-icon fal fa-check js-validateblockOk">
+                                            </div>
+
+                                            <input type="email"
+                                                class="p-predit__content-sform-block-input js-mailValidation"
+                                                placeholder="Work email address" />
+                                            <div
+                                                class="p-predit__content-sform-block-iblock-error js-validateblockError">
+                                                Please enter any
+                                                words
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="p-predit__content-sform-block-iblock js-validateblock">
+                                    <div class="p-predit__content-sform-block-iblock-label">Educational institution
+                                    </div>
+                                    <div
+                                        class="p-predit__content-sform-block-iblock-icon fal fa-check js-validateblockOk">
+                                    </div>
+
+                                    <input type="text"
+                                        class="p-predit__content-sform-block-iblock-input js-textValidation" />
+                                    <div class="p-predit__content-sform-block-iblock-error js-validateblockError">
+                                        Please enter any
+                                        words
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-predit__content-sform-block">
+                                <div class="p-predit__content-sform-block-title">
+                                    Security
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div
+                                            class="p-predit__content-sform-block-iblock js-validateblock js-passParent">
+                                            <div class="js-passLine">
+                                                <div
+                                                    class="p-predit__content-sform-block-iblock-icon js-passEye fa fa-eye">
+                                                </div>
+                                                <input placeholder="Password" type="password"
+                                                    class="p-predit__content-sform-block-input js-passInput js-passValidation js-passValidation1" />
+                                            </div>
+                                            <div class="js-passLine d-none">
+                                                <div class="p-predit__content-sform-block-iblock">
+                                                    <div
+                                                        class="p-predit__content-sform-block-iblock-icon js-passEye fa fa-eye-slash">
+                                                    </div>
+                                                    <input placeholder="Password" type="text"
+                                                        class="p-predit__content-sform-block-input js-notPassInput" />
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="p-predit__content-sform-block-iblock-error js-validateblockError">
+                                                Please enter any words
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div
+                                            class="p-predit__content-sform-block-iblock js-validateblock js-passParent">
+                                            <div class="js-passLine">
+                                                <div class="p-predit__content-sform-block-iblock">
+                                                    <div
+                                                        class="p-predit__content-sform-block-iblock-icon js-passEye fa fa-eye">
+                                                    </div>
+                                                    <input placeholder="Confirm pasword" type="password"
+                                                        class="p-predit__content-sform-block-input js-passInput js-passValidation js-passValidation2" />
+                                                </div>
+                                            </div>
+                                            <div class="js-passLine d-none">
+                                                <div class="p-predit__content-sform-block-iblock">
+                                                    <div
+                                                        class="p-predit__content-sform-block-iblock-icon js-passEye fa fa-eye-slash">
+                                                    </div>
+                                                    <input placeholder="Confirm pasword" type="text"
+                                                        class="p-predit__content-sform-block-input js-notPassInput" />
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="p-predit__content-sform-block-iblock-error js-validateblockError">
+                                                Password dont match
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-predit__content-sform-block">
+                                <input type="submit" class="p-predit__content-sform-block-submit js-submit"
+                                    value="Apply changes" disabled />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="g-singlepage__footer">
+            //= parts/_footer.html
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="extension/bootstrap-4.0.0/js/popper.min.js"></script>
+    <script src="extension/bootstrap-4.0.0/js/bootstrap.min.js"></script>
+    <script src="extension/selectize/js/standalone/selectize.min.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/global.js"></script>
+</body>
+
+</html>
