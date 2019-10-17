@@ -112,7 +112,8 @@
                             </div>
                         </div>
 
-                        <div class="p-feed__filter-sort">
+                        <form class="p-feed__filter-sort">
+                            <input type="hidden" class="js-sortInput" />
                             <div class="p-feed__filter-sort-text">Sort:</div>
                             <div class="p-feed__filter-sort-drop dropdown">
                                 <div class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -125,12 +126,12 @@
                                     </div>
                                 </div>
                                 <div class="dropdown-menu js-sortItems">
-                                    <div class="dropdown-item">Fewest proposals</div>
-                                    <div class="dropdown-item">Newest</div>
-                                    <div class="dropdown-item">Relevance</div>
+                                    <div class="dropdown-item" data-form="proposals">Fewest proposals</div>
+                                    <div class="dropdown-item" data-form="newest">Newest</div>
+                                    <div class="dropdown-item" data-form="relevance">Relevance</div>
                                 </div>
                             </div>
-                        </div>
+                        </form>
 
                         <div class="p-feed__filter-options js-openFilter">
                             <span class="p-feed__filter-options-text">

@@ -28,6 +28,7 @@ jQuery(function ($) {
     $(".js-sortItems div").on("click", function () {
         $(".js-sortText").text($(this).text());
         $(".js-sortItems").toggleClass("show");
+        $(".js-sortInput").val($(this).data("form"));
     });
 
 
