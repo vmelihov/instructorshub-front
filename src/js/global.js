@@ -74,8 +74,37 @@ jQuery(function () {
 
     $(".js-showLink").on("click", function () {
         $("#" + $(this).data("show")).show();
-    })
+    });
     $(".js-hideLink").on("click", function () {
         $("#" + $(this).data("hide")).hide();
-    })
+    });
+
+    var niceScroll = $(".js-niceScroll");
+    niceScroll.niceScroll({
+        cursorborder: "",
+        background: "#f0f0f0",
+        cursorcolor: "#a6adb2",
+        autohidemode: !1,
+        cursorwidth: "4px",
+        zindex: "auto",
+    });
+
+    $(window).on("resize", function () {
+        niceScroll.getNiceScroll().resize();
+    });
+
+    $(".js-openChat").on("click", function () {
+        $(".js-chat").addClass("m-chatOpened");
+        niceScroll.getNiceScroll().resize();
+    });
+    $(".js-closeChat").on("click", function () {
+        $(".js-chat").removeClass("m-chatOpened");
+        niceScroll.getNiceScroll().resize();
+    });
+    $(".js-closeChats").on("click", function () {
+        $(".js-chat").hide();
+    });
+    $(".js-openChats").on("click", function () {
+        $(".js-chat").show();
+    });
 })

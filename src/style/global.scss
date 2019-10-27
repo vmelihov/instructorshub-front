@@ -315,6 +315,391 @@ h5 {
         }
     }
 
+    &-chat {
+        width: 90vw;
+        height: 100%;
+        background: #fff;
+        font-size: 0px;
+
+        &-wrap {
+            background: rgba(237, 235, 241, .8);
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 5000;
+        }
+
+        &__header {
+            background: #F6F6F6;
+            height: 56px;
+            line-height: 56px;
+            font-size: 15px;
+
+            &-aside {
+                width: 440px;
+                float: left;
+                padding-left: 10px;
+
+                &-back {
+                    float: left;
+                    color: #BFC0C5;
+                    margin-right: 95px;
+                    font-size: 20px;
+                    line-height: 56px;
+                    padding: 0px 10px;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #30323D;
+                    }
+                }
+
+                &-contacts {
+                    float: left;
+                }
+            }
+
+            &-main {
+                float: left;
+                position: relative;
+                width: 670px;
+                padding-left: 30px;
+                display: none;
+
+                &-profile {
+                    &-ava {
+                        display: inline-block;
+                        vertical-align: middle;
+                        position: relative;
+                        margin-right: 15px;
+
+                        &-img {
+                            display: inline-block;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                        }
+
+                        &-status {
+                            position: absolute;
+                            right: 1px;
+                            bottom: 7px;
+                            width: 11px;
+                            height: 11px;
+                            border: 2px solid #fff;
+                            background: #dedede;
+                            border-radius: 50%;
+
+                            &.m-online {
+                                background: #5ED975;
+                            }
+                        }
+                    }
+
+                    &-name {
+                        display: inline-block;
+                        vertical-align: middle;
+                        font-family: $gm;
+                        max-width: 250px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                }
+
+                &-close {
+                    position: absolute;
+                    right: 0px;
+                    top: 50%;
+                    font-size: 24px;
+                    color: #BFC0C5;
+                    margin-top: -12px;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #30323D;
+                    }
+                }
+            }
+        }
+
+        &__content {
+            clear: both;
+            border-bottom: 1px solid #EDEBF1;
+            border-right: 1px solid #EDEBF1;
+            font-size: 0px;
+            display: inline-block;
+
+            &-contacts {
+                padding: 40px 30px;
+                overflow: hidden;
+                width: 865px;
+                height: 80vh;
+                font-size: 15px;
+
+                &-one {
+                    position: relative;
+                    padding: 8px 80px 0px 105px;
+                    height: 87px;
+                    cursor: pointer;
+                    margin-bottom: 40px;
+
+                    &-ava {
+                        position: absolute;
+                        left: 0px;
+                        top: 0px;
+
+                        &-img {
+                            width: 80px;
+                            height: 80px;
+                            border-radius: 50%;
+                        }
+
+                        &-status {
+                            position: absolute;
+                            right: 5px;
+                            bottom: 3px;
+                            width: 18px;
+                            height: 18px;
+                            border: 2px solid #fff;
+                            background: #dedede;
+                            border-radius: 50%;
+
+                            &.m-online {
+                                background: #5ED975;
+                            }
+                        }
+                    }
+
+                    &-main {
+                        border-bottom: 1px solid #EDEBF1;
+                        padding-bottom: 30px;
+
+                        &-name,
+                        &-time {
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+
+                        &-name {
+                            font-family: $gm;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+
+                        &-time {
+                            color: #83848B;
+                        }
+
+                        &-text {
+                            color: #83848B;
+                            padding-top: 15px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            max-width: 100%;
+                            white-space: nowrap;
+                        }
+
+                        &-new {
+                            position: absolute;
+                            right: 0px;
+                            top: 0px;
+                            width: 25px;
+                            height: 25px;
+                            background: #2259B5;
+                            font: 13px/25px $g;
+                            color: #fff;
+                            text-align: center;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    &:hover &-main-text {
+                        color: #30323D;
+                    }
+                }
+            }
+
+            &-chat {
+                width: 50vw;
+                display: none;
+                font-size: 15px;
+
+                &-body {
+                    overflow: hidden;
+                    max-height: calc(100vh - 117px);
+                    padding: 25px 30px;
+
+                    &-author {
+                        font: 15px $gm;
+                        margin-bottom: 5px;
+                    }
+
+                    &-message {
+                        background: #F6F6F6;
+                        padding: 25px;
+                        border-radius: 0px 25px 25px 25px;
+                        margin-bottom: 15px;
+                    }
+
+                    &-answer {
+                        background: #F2FDF4;
+                        padding: 25px;
+                        border-radius: 25px 0px 25px 25px;
+                        margin: 0px 0px 15px 110px;
+                    }
+
+                    &-typing {
+                        width: 110px;
+                        height: 40px;
+                        border-radius: 0px 25px 25px 25px;
+                        background: #F6F6F6;
+                        position: relative;
+
+                        &:after {
+                            content: "";
+                            background: #BFC0C5;
+                            position: absolute;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            left: 25px;
+                            top: 15px;
+                            animation-name: typing;
+                            animation-duration: 1.5s;
+                            animation-iteration-count: infinite;
+                            box-shadow: 22px 0px 0px 0px #BFC0C5, 44px 0px 0px 0px #BFC0C5;
+                            transition: .3s;
+                        }
+                    }
+
+                    &-img {
+                        position: relative;
+                        width: 115px;
+                        margin-bottom: 15px;
+
+                        &-pict {
+                            width: 100%;
+                            border-radius: 0px 25px 25px 25px;
+                        }
+
+                        &-del {
+                            position: absolute;
+                            right: -10px;
+                            top: 0px;
+                            cursor: pointer;
+                            font-size: 10px;
+                        }
+
+                        &-loading {
+                            position: absolute;
+                            right: 10px;
+                            bottom: 10px;
+                            width: 30px;
+                            height: 30px;
+                            background: #EDEBF1;
+                            border-radius: 50%;
+                            color: #BFC0C5;
+                            text-align: center;
+                            font-size: 16px;
+                            line-height: 30px;
+
+                            animation-name: rotating;
+                            animation-duration: 3s;
+                            animation-iteration-count: infinite;
+                            transition: .3s;
+                        }
+                    }
+                }
+
+                &-send {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    border-top: 1px solid #EDEBF1;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    &-attach {
+                        display: inline-block;
+                        position: relative;
+                        overflow: hidden;
+                        width: 35px;
+                        height: 30px;
+                        margin: 0px 30px;
+
+                        &-icon {
+                            color: #BFC0C5;
+                            font-size: 28px;
+                            line-height: 30px;
+                        }
+
+                        &-input {
+                            opacity: 0;
+                            position: absolute;
+                            left: 0px;
+                            top: 0px;
+                            padding: 300%;
+                            cursor: pointer;
+                        }
+                    }
+
+                    &-message {
+                        display: inline-block;
+                        border: 0px;
+                        resize: none;
+                        padding: 10px;
+                        width: 80%;
+                    }
+
+                    &-btn {
+                        display: inline-block;
+                        background: #2259B5;
+                        color: #fff;
+                        width: 140px;
+                        min-width: 140px;
+                        line-height: 60px;
+                        text-align: center;
+                        cursor: pointer;
+
+                        &:hover {
+                            background: lighten(#2259B5, 5%);
+                        }
+                    }
+                }
+            }
+        }
+
+        .m-chatOpened &__header {
+            &-main {
+                display: block;
+            }
+        }
+
+        .m-chatOpened &__content {
+            &-contacts {
+                display: inline-block;
+                vertical-align: top;
+                width: 440px;
+
+                &-one {
+                    &-main {
+                        &-name {
+                            max-width: 130px;
+                        }
+                    }
+                }
+            }
+
+            &-chat {
+                display: inline-block;
+                vertical-align: bottom;
+            }
+        }
+    }
+
     &-content {
         padding-top: 30px;
         padding-bottom: 30px;
@@ -618,6 +1003,48 @@ h5 {
         }
     }
 }
+
+@keyframes typing {
+    0% {
+        background: #BFC0C5;
+        box-shadow: 22px 0px 0px 0px #BFC0C5, 44px 0px 0px 0px #BFC0C5;
+    }
+
+    25% {
+        background: #a5a6aa;
+        box-shadow: 22px 0px 0px 0px #BFC0C5, 44px 0px 0px 0px #BFC0C5;
+    }
+
+    50% {
+        background: #BFC0C5;
+        box-shadow: 22px 0px 0px 0px #a5a6aa, 44px 0px 0px 0px #BFC0C5;
+    }
+
+    75% {
+        background: #BFC0C5;
+        box-shadow: 22px 0px 0px 0px #BFC0C5, 44px 0px 0px 0px #a5a6aa;
+    }
+
+    100% {
+        background: #BFC0C5;
+        box-shadow: 22px 0px 0px 0px #BFC0C5, 44px 0px 0px 0px #BFC0C5;
+    }
+}
+
+@keyframes rotating {
+    0% {
+        transform: none;
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 .btn {
     &-primary {
@@ -1018,14 +1445,115 @@ h5 {
     }
 }
 
+@media (max-width: 1200px) {
+    .g {
+        &-chat {
+            &__header {
+                &-aside {
+                    width: 190px;
+
+                    &-back {
+                        margin-right: 30px;
+                    }
+                }
+
+                &-main {
+                    width: calc(100% - 220px);
+                    padding-left: 15px;
+                }
+            }
+
+            &__content {
+                &-contacts {
+                    padding: 20px 15px;
+
+                    &-one {
+                        padding: 0px 0px 0 76px;
+                        margin-bottom: 20px;
+
+                        &-ava-img {
+                            width: 65px;
+                            height: 65px;
+                        }
+
+                        &-main {
+                            padding-bottom: 20px;
+
+                            &-text {
+                                padding-top: 5px;
+                            }
+                        }
+                    }
+                }
+
+                &-chat {
+                    width: 60vw;
+                }
+
+                .m-chatOpened &-contacts {
+                    width: 270px;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: $screen-md) {
-    .g-header__content-user {
-        &-messages {
-            right: 80px;
+    .g {
+        &-header__content-user {
+            &-messages {
+                right: 80px;
+            }
+
+            &-link-name {
+                display: none;
+            }
         }
 
-        &-link-name {
-            display: none;
+        &-chat {
+            &-wrap .nicescroll-rails-hr {
+                display: none !important;
+            }
+
+            &__header {
+                &-aside {
+                    width: 30px;
+
+                    &-back {
+                        margin: 0px;
+                    }
+
+                    &-contacts {
+                        display: none;
+                    }
+                }
+
+                &-main {
+                    width: calc(100% - 45px);
+                }
+            }
+
+            &__content {
+                height: calc(100% - 56px);
+
+                &-contacts {
+                    width: 80%;
+                }
+
+                &-chat {
+                    width: 100%;
+
+                    &-body-answer {
+                        margin-left: 70px;
+                    }
+                }
+
+                .m-chatOpened &-contacts {
+                    width: 0px;
+                    padding: 0px;
+                    height: calc(100vh - 56px);
+                }
+            }
         }
     }
 }
@@ -1140,6 +1668,67 @@ h5 {
 
         &-footer__part-text {
             margin-bottom: 5px;
+        }
+
+        &-chat {
+            width: 100%;
+
+            &__header-main-profile-name {
+                max-width: 150px;
+            }
+
+            &__content {
+                display: block;
+
+                &-contacts {
+                    width: 100%;
+
+                    &-one {
+                        padding-right: 30px;
+
+                        &-main-name {
+                            max-width: 100%;
+                        }
+                    }
+                }
+
+                &-chat {
+                    &-body {
+                        padding: 15px;
+                        max-height: calc(100vh - 160px);
+
+                        &-answer {
+                            margin-left: 30px;
+                        }
+                    }
+
+                    &-send {
+                        display: block;
+                        position: relative;
+                        padding-top: 56px;
+                        font-size: 0px;
+
+                        &-message {
+                            position: absolute;
+                            left: 0px;
+                            top: 0px;
+                            width: 100%;
+                            font-size: 15px;
+                        }
+
+                        &-attach {
+                            vertical-align: middle;
+                            margin: 0px calc(100% - 190px) 0px 15px;
+                        }
+
+                        &-btn {
+                            line-height: 40px;
+                            vertical-align: middle;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
         }
 
         &-vlist {
