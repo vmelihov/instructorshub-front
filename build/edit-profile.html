@@ -473,10 +473,11 @@
                                     </div>
                                 </div>
 
-                                <div class="p-predit__content-sform-block-iblock js-validateblock">
+                                <div class="p-predit__content-sform-block-iblock">
                                     <div class="p-predit__content-sform-block-iblock-label">Educational institution
                                     </div>
-                                    <div
+                                    <!--
+                                         <div
                                         class="p-predit__content-sform-block-iblock-icon fal fa-check js-validateblockOk">
                                     </div>
 
@@ -486,6 +487,14 @@
                                         Please enter any
                                         words
                                     </div>
+                                    -->
+                                    <select class="js-selectize" id="edInst">
+                                        <option></option>
+                                        <option>Select category</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
                                 </div>
                             </div>
 
@@ -584,7 +593,7 @@
             </footer>
         </div>
     </div>
-    
+
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="extension/bootstrap-4.0.0/js/popper.min.js"></script>
     <script src="extension/bootstrap-4.0.0/js/bootstrap.min.js"></script>
@@ -593,6 +602,15 @@
     
     <script src="js/validation.js"></script>
     <script src="js/global.js"></script>
+
+    <script>
+        jQuery(function ($) {
+            $('.js-selectize').selectize({
+                create: true,
+                sortField: 'text'
+            });
+        });
+    </script>
 </body>
 
 </html>

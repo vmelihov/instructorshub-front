@@ -100,10 +100,11 @@
                                     </div>
                                 </div>
 
-                                <div class="p-predit__content-sform-block-iblock js-validateblock">
+                                <div class="p-predit__content-sform-block-iblock">
                                     <div class="p-predit__content-sform-block-iblock-label">Educational institution
                                     </div>
-                                    <div
+                                    <!--
+                                         <div
                                         class="p-predit__content-sform-block-iblock-icon fal fa-check js-validateblockOk">
                                     </div>
 
@@ -113,6 +114,14 @@
                                         Please enter any
                                         words
                                     </div>
+                                    -->
+                                    <select class="js-selectize" id="edInst">
+                                        <option></option>
+                                        <option>Select category</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
                                 </div>
                             </div>
 
@@ -193,8 +202,17 @@
             //= parts/_footer.html
         </div>
     </div>
-    
+
     //= parts/_global-scripts.html
+
+    <script>
+        jQuery(function ($) {
+            $('.js-selectize').selectize({
+                create: true,
+                sortField: 'text'
+            });
+        });
+    </script>
 </body>
 
 </html>
