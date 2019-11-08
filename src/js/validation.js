@@ -1,36 +1,36 @@
 jQuery(function ($) {
-    var form = $(".js-form"),
-        fieldsNum = form.data("validate"),
-        okFieldsNum = 0,
-
-        isEmail = function (email) {
+    var isEmail = function (email) {
             var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
             return regex.test(email);
         },
         checkForm = function (_boolean, _parent) {
+            var _form = _parent.closest(".js-form");
+
             if (_boolean) {
                 _parent.removeClass("error");
 
                 if (!_parent.hasClass("checked")) {
                     _parent.addClass("checked");
-                    okFieldsNum++;
+                    _form.data("ok", _form.data("ok") + 1);
                 }
             } else {
                 _parent.addClass("error");
 
                 if (_parent.hasClass("checked")) {
                     _parent.removeClass("checked");
-                    okFieldsNum--;
+                    _form.data("ok", _form.data("ok") - 1);
                 }
             }
 
             //console.log(okFieldsNum + " " + fieldsNum);
-            if (okFieldsNum == fieldsNum) {
-                form.find(".js-submit").removeAttr("disabled");
+            if (_form.data("ok") == _form.data("validate")) {
+                _form.find(".js-submit").removeAttr("disabled");
             } else {
-                form.find(".js-submit").attr("disabled", "disabled");
+                _form.find(".js-submit").attr("disabled", "disabled");
             }
         };
+
+    $(".js-form").attr("data-ok", 0);
 
     $(".js-mailValidation").focusout(function () {
         var _this = $(this),

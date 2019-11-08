@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Edit Profile Adjunct</title>
+    <link rel="stylesheet" href="extension/bootstrap-4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="extension/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="extension/selectize/css/selectize.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/profile-edit-adjunct.css" />
+</head>
+
+<body>
+    <div class="g-singlepage">
+        //= parts/_header-logged.html
+
+        <div class="g-singlepage__content">
+            <div class="container">
+                <div class="p-epa">
+                    <div class="p-epa__menu-chosen js-tabLinkChosen">
+                        General Settings
+                    </div>
+                    <div class="p-epa__menu js-tabMenu">
+                        <div class="p-epa__menu-link js-tabLink active" data-tab="general">
+                            General Settings
+                        </div>
+                        <div class="p-epa__menu-link js-tabLink" data-tab="information">
+                            Information
+                        </div>
+                        <div class="p-epa__menu-link js-tabLink" data-tab="security">
+                            Security
+                        </div>
+                    </div>
+
+                    <div class="p-epa__tab js-tab active" id="general">
+                        <div class="p-epa__tab-title">General Settings</div>
+
+                        <form>
+                            <div class="p-epa__tab-block">
+                                <div class="p-epa__tab-block-label">
+                                    Edit category faculty
+                                </div>
+
+                                <div class="ui-hardselect js-hardSelect">
+                                    <div class="ui-hardselect__select js-hardSelectS">
+                                        <div class="ui-hardselect__select-btn js-hardSelectBtn">
+                                            <div class="ui-hardselect__select-btn-text">
+                                                Select location
+                                            </div>
+                                            <div class="ui-hardselect__select-btn-icon fal fa-chevron-down">
+                                            </div>
+                                        </div>
+
+                                        <div class="ui-hardselect__select-drdn">
+                                            <ul>
+                                                <li data-name="agr">
+                                                    <div class="ui-hardselect__select-drdn-title">
+                                                        Agriculture
+                                                    </div>
+
+                                                    <ul>
+                                                        <li data-name="aerEng2">
+                                                            Aerospace Engineering 2
+                                                        </li>
+                                                        <li data-name="agrEng2">
+                                                            Agricadfsdfultural Enginesering
+                                                        </li>
+                                                        <li data-name="bioEng2">
+                                                            Biolodsfgical Engineering
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li data-name="bus">
+                                                    <div class="ui-hardselect__select-drdn-title">
+                                                        Business
+                                                    </div>
+                                                </li>
+                                                <li data-name="com">
+                                                    <div class="ui-hardselect__select-drdn-title">
+                                                        Communications
+                                                    </div>
+                                                </li>
+                                                <li data-name="eng">
+                                                    <div class="ui-hardselect__select-drdn-title">
+                                                        Engineering
+                                                    </div>
+
+                                                    <ul>
+                                                        <li data-name="aerEng">
+                                                            Aerospace Engineering
+                                                        </li>
+                                                        <li data-name="agrEng">
+                                                            Agricultural Engineering
+                                                        </li>
+                                                        <li data-name="bioEng">
+                                                            Biological Engineering
+                                                        </li>
+                                                        <li data-name="cheEng">
+                                                            Chemical Engineering
+                                                        </li>
+                                                        <li data-name="civEnv">
+                                                            Civil and Environmental Engineering
+                                                        </li>
+                                                        <li data-name="comEng">
+                                                            Computer Engineering
+                                                        </li>
+                                                        <li data-name="eleEng">
+                                                            Electrical Engineering
+                                                        </li>
+                                                        <li data-name="indManEnd">
+                                                            Industrial and Manufacturing Engineering
+                                                        </li>
+                                                        <li data-name="mecEng">
+                                                            Mechanical Engineering
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li data-name="finAppArt">
+                                                    <div class="ui-hardselect__select-drdn-title">
+                                                        Fine and Applied Arts
+                                                    </div>
+                                                </li>
+                                                <li data-name="hea">
+                                                    <div class="ui-hardselect__select-drdn-title">
+                                                        Health
+                                                    </div>
+                                                </li>
+                                                <li data-name="lawLegStu">
+                                                    <div class="ui-hardselect__select-drdn-title">
+                                                        Law and Legal Studies
+                                                    </div>
+                                                </li>
+                                                <li data-name="LibArt">
+                                                    <div class="ui-hardselect__select-drdn-title">
+                                                        Liberal Arts
+                                                    </div>
+                                                </li>
+                                                <li data-name="lawLegStu">
+                                                    <div class="ui-hardselect__select-drdn-title">
+                                                        Law and Legal Studies
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="ui-hardselect__body js-hardSelectBody"></div>
+                                    <input type="hidden" class="js-hardSelectInput" />
+                                </div>
+                            </div>
+
+                            <div class="p-epa__tab-block">
+                                <div class="p-epa__tab-block-label">
+                                    Do you have teaching experience?
+                                </div>
+                                <div class="g-mb20">
+                                    <label class="ui-radio g-mr15 js-showLink" data-show="expirienceBlock">
+                                        <input type="radio" name="exp" />
+                                        <span class="ui-radio__decor"></span>
+                                        <span class="ui-radio__text">Yes</span>
+                                    </label>
+                                    <label class="ui-radio js-hideLink" data-hide="expirienceBlock">
+                                        <input type="radio" name="exp" />
+                                        <span class="ui-radio__decor"></span>
+                                        <span class="ui-radio__text">No</span>
+                                    </label>
+                                </div>
+
+                                <div class="p-epa__tab-block-exp" id="expirienceBlock">
+                                    <div class="g-mb20">
+                                        <label class="ui-checkbox g-mr15">
+                                            <input type="checkbox" name="" />
+                                            <span class="ui-checkbox__decor"></span>
+                                            <span class="ui-checkbox__text">Online</span>
+                                        </label>
+
+                                        <label class="ui-checkbox">
+                                            <input type="checkbox" name="" />
+                                            <span class="ui-checkbox__decor"></span>
+                                            <span class="ui-checkbox__text">In Person</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-epa__tab-block">
+                                <div class="p-epa__tab-block-label">
+                                    Highest education level obtained
+                                </div>
+
+                                <div class="p-epa__tab-block-tooltip-line">
+                                    <select class="js-selectize">
+                                        <option></option>
+                                        <option>One or more years of college credit, no degree</option>
+                                        <option>Alabama, Auburn-Opelika AL Metro</option>
+                                        <option>Alabama, Birmingham-Hoover AL Metro</option>
+                                    </select>
+
+                                    <div class="p-epa__tab-block-tooltip g-mt10" data-toggle="tooltip"
+                                        title="Select «Both» to get more proposals for work">?</div>
+                                </div>
+                            </div>
+
+                            <div class="p-epa__tab-block">
+                                <div class="p-epa__tab-block-label">
+                                    What format are you open to teaching in?
+                                </div>
+
+                                <div class="g-mb20">
+                                    <label class="ui-checkbox g-mr15">
+                                        <input type="checkbox" name="" />
+                                        <span class="ui-checkbox__decor"></span>
+                                        <span class="ui-checkbox__text">Online</span>
+                                    </label>
+
+                                    <label class="ui-checkbox g-mr15 js-showLink" data-show="formatToTeaching">
+                                        <input type="checkbox" name="" />
+                                        <span class="ui-checkbox__decor"></span>
+                                        <span class="ui-checkbox__text">In Person</span>
+                                    </label>
+
+                                    <label class="ui-checkbox js-showLink" data-show="formatToTeaching">
+                                        <input type="checkbox" name="" />
+                                        <span class="ui-checkbox__decor"></span>
+                                        <span class="ui-checkbox__text">Both</span>
+                                    </label>
+                                </div>
+
+                                <div class="p-profile__hidden" id="formatToTeaching">
+                                    <div class="g-selectize">
+                                        <div class="g-selectize-label">Select location</div>
+
+                                        <select class="js-selectize">
+                                            <option></option>
+                                            <option>Alabama, Anniston-Oxford-Jacksonville AL Metro</option>
+                                            <option>Alabama, Auburn-Opelika AL Metro</option>
+                                            <option>Alabama, Birmingham-Hoover AL Metro</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-epa__tab-block">
+                                <div class="p-epa__tab-block-label">
+                                    Type of teaching
+                                </div>
+
+                                <div class="g-mb15">
+                                    <label class="ui-radio">
+                                        <input type="radio" name="teachingtype" />
+                                        <span class="ui-radio__decor"></span>
+                                        <span class="ui-radio__text">Full Semester</span>
+                                    </label>
+                                </div>
+                                <div class="g-mb15">
+                                    <label class="ui-radio">
+                                        <input type="radio" name="teachingtype" />
+                                        <span class="ui-radio__decor"></span>
+                                        <span class="ui-radio__text">Occasional Lecturing</span>
+                                    </label>
+                                </div>
+                                <label class="ui-radio">
+                                    <input type="radio" name="teachingtype" />
+                                    <span class="ui-radio__decor"></span>
+                                    <span class="ui-radio__text">Either of the two</span>
+                                </label>
+                            </div>
+
+                            <div class="p-epa__tab-block">
+                                <div class="p-epa__tab-block-label">
+                                    What is your availability?
+                                </div>
+
+                                <div class="g-mb20">
+                                    <label class="ui-checkbox">
+                                        <input type="checkbox" name="" />
+                                        <span class="ui-checkbox__decor"></span>
+                                        <span class="ui-checkbox__text">During the day</span>
+                                    </label>
+                                </div>
+                                <div class="g-mb20">
+                                    <label class="ui-checkbox">
+                                        <input type="checkbox" name="" />
+                                        <span class="ui-checkbox__decor"></span>
+                                        <span class="ui-checkbox__text">Evenings only</span>
+                                    </label>
+                                </div>
+                                <div class="g-mb20">
+                                    <label class="ui-checkbox">
+                                        <input type="checkbox" name="" />
+                                        <span class="ui-checkbox__decor"></span>
+                                        <span class="ui-checkbox__text">Weekends</span>
+                                    </label>
+                                </div>
+                                <div class="g-mb20">
+                                    <label class="ui-checkbox">
+                                        <input type="checkbox" name="" />
+                                        <span class="ui-checkbox__decor"></span>
+                                        <span class="ui-checkbox__text">Evenings and Weekends</span>
+                                    </label>
+                                </div>
+                                <div class="g-mb20">
+                                    <label class="ui-checkbox">
+                                        <input type="checkbox" name="" />
+                                        <span class="ui-checkbox__decor"></span>
+                                        <span class="ui-checkbox__text">Either of the three</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <input type="submit" class="p-epa__tab-submit" value="Apply changes" />
+                        </form>
+                    </div>
+
+                    <div class="p-epa__tab js-tab" id="information">
+                        <div class="p-epa__tab-title">Information</div>
+
+                        <form class="js-form" data-validate="4">
+                            <div class="p-epa__tab-block m-ava">
+                                <div class="p-epa__tab-block-ava">
+                                    <img class="p-epa__tab-block-ava-img"
+                                        src="https://cdn.technicpack.net/platform2/pack-icons/827089.png?1460226445"
+                                        alt="" />
+                                </div>
+                                <div class="p-epa__tab-block-label">
+                                    Edit Userpic
+                                </div>
+                                <div class="p-epa__tab-block-upload">
+                                    Upload a picture
+                                    <input type="file" value="" class="p-epa__tab-block-upload-input" />
+                                </div>
+                            </div>
+
+                            <div class="p-epa__tab-block">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="p-epa__tab-iblock js-validateblock">
+                                            <div class="p-epa__tab-iblock-label">First name</div>
+                                            <div class="p-epa__tab-iblock-icon fal fa-check js-validateblockOk">
+                                            </div>
+
+                                            <input type="text" class="p-epa__tab-iblock-input js-textValidation" />
+                                            <div class="p-epa__tab-iblock-error js-validateblockError">
+                                                Please enter any
+                                                words
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="p-epa__tab-iblock js-validateblock">
+                                            <div class="p-epa__tab-iblock-label">Last name</div>
+                                            <div class="p-epa__tab-iblock-icon fal fa-check js-validateblockOk">
+                                            </div>
+
+                                            <input type="text" class="p-epa__tab-iblock-input js-textValidation" />
+                                            <div class="p-epa__tab-iblock-error js-validateblockError">
+                                                Please enter any
+                                                words
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="p-epa__tab-iblock js-validateblock">
+                                            <div class="p-epa__tab-iblock-icon fal fa-check js-validateblockOk">
+                                            </div>
+
+                                            <input type="email" class="p-epa__tab-block-input js-mailValidation"
+                                                placeholder="Work email address" />
+                                            <div class="p-epa__tab-iblock-error js-validateblockError">
+                                                Please enter any
+                                                words
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="p-epa__tab-iblock js-validateblock">
+                                            <div class="p-epa__tab-iblock-icon fal fa-check js-validateblockOk">
+                                            </div>
+
+                                            <input type="email" class="p-epa__tab-block-input js-textValidation"
+                                                placeholder="Cellphone" />
+                                            <div class="p-epa__tab-iblock-error js-validateblockError">
+                                                Please enter any
+                                                words
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="p-epa__tab-iblock">
+                                    <div class="p-epa__tab-iblock-label">Select location</div>
+                                    <select class="js-selectize" id="location">
+                                        <option></option>
+                                        <option>Select location</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="p-epa__tab-block">
+                                <div class="p-epa__tab-block-label">
+                                    About You
+                                </div>
+
+                                <textarea class="p-epa__tab-block-textarea"></textarea>
+                            </div>
+
+                            <div class="p-epa__tab-iblock">
+                                <div class="p-epa__tab-iblock-label">
+                                    Your LinkedIn Profile
+                                </div>
+
+                                <input type="text" class="p-epa__tab-iblock-input" value="http://link.com" />
+                            </div>
+
+                            <div class="p-epa__tab-iblock">
+                                <div class="p-epa__tab-iblock-label">
+                                    Your Facebook Profile
+                                </div>
+
+                                <input type="text" class="p-epa__tab-iblock-input" />
+                            </div>
+
+                            <div class="p-epa__tab-iblock">
+                                <div class="p-epa__tab-iblock-label">
+                                    Your Whatsapp Number
+                                </div>
+
+                                <input type="text" class="p-epa__tab-iblock-input" />
+                            </div>
+
+                            <div class="p-epa__tab-block">
+                                <div class="p-epa__tab-block-label">
+                                    Certifficates and Diplomas
+                                </div>
+                                <div class="p-epa__tab-block-upload">
+                                    Upload Documents
+                                    <input type="file" value="" class="p-epa__tab-block-upload-input" />
+                                </div>
+                            </div>
+
+                            <div class="p-epa__tab-block">
+                                <div class="p-epa__tab-block-sertificate">
+                                    <div class="p-epa__tab-block-sertificate-del fal fa-times"></div>
+                                    <img src="https://diplomaclassics.com/images/Entities/document/v2/HarvLeadershipWestHoriz_H_original.png"
+                                        alt="" class="p-epa__tab-block-sertificate-img" />
+                                    <div class="p-epa__tab-block-sertificate-name">Harward_Diploma_Setificate.jpg</div>
+                                </div>
+
+                                <div class="p-epa__tab-block-sertificate">
+                                    <div class="p-epa__tab-block-sertificate-del fal fa-times"></div>
+                                    <img src="https://diplomaclassics.com/images/Entities/document/v2/HarvLeadershipWestHoriz_H_original.png"
+                                        alt="" class="p-epa__tab-block-sertificate-img" />
+                                    <div class="p-epa__tab-block-sertificate-name">Harward_Diploma_Setificate.jpg</div>
+                                </div>
+                            </div>
+
+                            <input type="submit" class="p-epa__tab-submit js-submit" value="Apply changes" disabled />
+                        </form>
+                    </div>
+
+                    <div class="p-epa__tab js-tab" id="security">
+                        <div class="p-epa__tab-title">Password Changing</div>
+
+                        <form class="js-form" data-validate="3">
+                            <div class="p-epa__tab-iblock js-validateblock js-passParent">
+                                <div class="js-passLine">
+                                    <div class="p-epa__tab-iblock-icon js-passEye fa fa-eye">
+                                    </div>
+                                    <input placeholder="Old Password" type="password"
+                                        class="p-epa__tab-block-input js-passInput js-textValidation" />
+                                </div>
+                                <div class="js-passLine d-none">
+                                    <div class="p-epa__tab-iblock">
+                                        <div class="p-epa__tab-iblock-icon js-passEye fa fa-eye-slash">
+                                        </div>
+                                        <input placeholder="Old Password" type="text"
+                                            class="p-epa__tab-block-input js-notPassInput" />
+                                    </div>
+                                </div>
+
+                                <div class="p-epa__tab-iblock-error js-validateblockError">
+                                    Please enter any words
+                                </div>
+                            </div>
+
+                            <div class="p-epa__tab-iblock js-validateblock js-passParent">
+                                <div class="js-passLine">
+                                    <div class="p-epa__tab-iblock-icon js-passEye fa fa-eye">
+                                    </div>
+                                    <input placeholder="New Password" type="password"
+                                        class="p-epa__tab-block-input js-passInput js-passValidation js-passValidation1" />
+                                </div>
+                                <div class="js-passLine d-none">
+                                    <div class="p-epa__tab-iblock">
+                                        <div class="p-epa__tab-iblock-icon js-passEye fa fa-eye-slash">
+                                        </div>
+                                        <input placeholder="New Password" type="text"
+                                            class="p-epa__tab-block-input js-notPassInput" />
+                                    </div>
+                                </div>
+
+                                <div class="p-epa__tab-iblock-error js-validateblockError">
+                                    Please enter any words
+                                </div>
+                            </div>
+
+                            <div class="p-epa__tab-iblock js-validateblock js-passParent">
+                                <div class="js-passLine">
+                                    <div class="p-epa__tab-iblock">
+                                        <div class="p-epa__tab-iblock-icon js-passEye fa fa-eye">
+                                        </div>
+                                        <input placeholder="Confirm pasword" type="password"
+                                            class="p-epa__tab-block-input js-passInput js-passValidation js-passValidation2" />
+                                    </div>
+                                </div>
+                                <div class="js-passLine d-none">
+                                    <div class="p-epa__tab-iblock">
+                                        <div class="p-epa__tab-iblock-icon js-passEye fa fa-eye-slash">
+                                        </div>
+                                        <input placeholder="Confirm pasword" type="text"
+                                            class="p-epa__tab-block-input js-notPassInput" />
+                                    </div>
+                                </div>
+
+                                <div class="p-epa__tab-iblock-error js-validateblockError">
+                                    Password dont match
+                                </div>
+                            </div>
+
+                            <input type="submit" class="p-epa__tab-submit js-submit" value="Apply changes" disabled />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="g-singlepage__footer">
+            //= parts/_footer.html
+        </div>
+    </div>
+
+    //= parts/_global-scripts.html
+
+    <script>
+        jQuery(function ($) {
+            $('.js-selectize').selectize({
+                create: true,
+                sortField: 'text'
+            });
+
+            $('[data-toggle="tooltip"]').tooltip();
+
+            var tabLink = $(".js-tabLink"),
+                tab = $(".js-tab"),
+                tabMenu = $(".js-tabMenu"),
+                chosen = $(".js-tabLinkChosen");
+            tabLink.on("click", function () {
+                var _this = $(this);
+                tabLink.removeClass("active");
+                _this.addClass("active");
+
+                tab.removeClass("active");
+                $("#" + _this.data("tab")).addClass("active");
+
+                if ($(window).width() < 768) {
+                    chosen.text(_this.text()).toggleClass("active");
+                    tabMenu.slideToggle();
+                }
+            });
+
+            chosen.on("click", function () {
+                tabMenu.slideToggle();
+                chosen.toggleClass("active");
+            });
+        });
+    </script>
+</body>
+
+</html>
