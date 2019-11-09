@@ -159,6 +159,37 @@
                 font-size: 13px;
                 margin-right: 30px;
             }
+
+            &-settings {
+                display: block;
+                padding-left: 40px;
+                position: relative;
+
+                &-icon {
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    color: #BFC0C5;
+                    font-size: 26px;
+                }
+
+                &-text {
+                    color: #2259B5;
+                    font-weight: bold;
+                    text-decoration: underline;
+                }
+
+                &-info {
+                    color: #83848B;
+                    font-size: 13px;
+                    display: block;
+                }
+
+                &:hover,
+                &:hover &-text {
+                    text-decoration: none;
+                }
+            }
         }
     }
 
@@ -251,5 +282,81 @@
     &__modal-img {
         max-width: 90vw;
         max-height: 90vw;
+    }
+}
+
+@media (max-width: 1024px) {
+    .p-pa {
+        &__header {
+            &-block {
+                &.m-tel {
+                    padding: 10px 10px 10px 40px;
+                    background-position: 10px center;
+                }
+
+                &.m-social {
+                    padding: 10px 15px;
+                }
+
+                &.m-links {
+                    padding: 10px 0px 10px 40px;
+                    background-position: 10px center;
+                }
+
+                &-status {
+                    position: absolute;
+                    left: -30px;
+                    top: -40px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-sm) {
+    .p-pa {
+        &__header {
+            position: relative;
+
+            &-block {
+                &.m-settings {
+                    position: absolute;
+                    right: 0px;
+                    top: 15px;
+                }
+
+                &-settings {
+
+                    &-text,
+                    &-info {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .p-pa {
+        &__header {
+            padding: 40px 15px;
+
+            &-block {
+                &-status {
+                    left: -15px;
+                }
+
+                &.m-tel,
+                &.m-social {
+                    display: none;
+                }
+            }
+        }
+
+        &__content {
+            padding: 20px 15px;
+        }
     }
 }
