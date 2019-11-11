@@ -439,6 +439,7 @@ h5 {
                 width: 865px;
                 height: 80vh;
                 font-size: 15px;
+                box-shadow: 1px 0px 0px 0px #EDEBF1;
 
                 &-one {
                     position: relative;
@@ -528,6 +529,8 @@ h5 {
                 width: 50vw;
                 display: none;
                 font-size: 15px;
+                box-shadow: -1px 0px 0px 0px #EDEBF1;
+                margin-left: 1px;
 
                 &-body {
                     overflow: hidden;
@@ -1543,6 +1546,7 @@ h5 {
 
                 &-chat {
                     width: 100%;
+                    margin: 0px;
 
                     &-body-answer {
                         margin-left: 70px;
