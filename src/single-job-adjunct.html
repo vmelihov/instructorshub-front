@@ -111,61 +111,6 @@
                     </div>
                 </div>
 
-                <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="p-sja__modal">
-                            <div class="p-sja__modal-header">
-                                <div class="p-sja__modal-header-title">
-                                    Your Proposal
-                                </div>
-                                <div class="p-sja__modal-header-close fal fa-times" data-dismiss="modal"
-                                    aria-label="Close"></div>
-                            </div>
-                            <div class="p-sja__modal-content">
-                                <form>
-                                    <div class="p-sja__modal-content-title">
-                                        Cover Letter
-                                    </div>
-                                    <div class="p-sja__modal-content-message">
-                                        <textarea class="p-sja__modal-content-message-textarea"></textarea>
-                                        <div class="p-sja__modal-content-message-attach">
-                                            <div class="p-sja__modal-content-message-attach-icon fal fa-paperclip">
-                                            </div>
-                                            <div class="p-sja__modal-content-message-attach-text">
-                                                You also can attach up to 10 files
-                                            </div>
-                                            <input type="file" value=""
-                                                class="p-sja__modal-content-message-attach-input" />
-                                        </div>
-                                    </div>
-
-                                    <div class="p-sja__modal-content-files">
-                                        <div class="p-sja__modal-content-files-title">
-                                            Attached Files:
-                                        </div>
-
-                                        <span class="p-sja__modal-content-files-one">
-                                            <span class="p-sja__modal-content-files-one-text">
-                                                Harvard_Diploma.jpg
-                                            </span>
-                                            <span class="p-sja__modal-content-files-one-del fal fa-times"></span>
-                                        </span>
-                                        <span class="p-sja__modal-content-files-one">
-                                            <span class="p-sja__modal-content-files-one-text">
-                                                Portfolio.pdf
-                                            </span>
-                                            <span class="p-sja__modal-content-files-one-del fal fa-times"></span>
-                                        </span>
-                                    </div>
-
-                                    <input type="submit" class="p-sja__modal-content-submit" value="Publish" />
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="p-sja-proposals">
                     <div class="p-sja-proposals__title">
                         Your Proposal
@@ -195,7 +140,8 @@
                                     <div class="p-sja-proposals__content-one-header-right-item">
                                         <a href="" class="p-sja-proposals__content-one-header-right-item-link">
                                             <span class="fal fa-envelope"></span>
-                                            <span class="p-sja-proposals__content-one-header-right-item-link-text">1 new message</span>
+                                            <span class="p-sja-proposals__content-one-header-right-item-link-text">1 new
+                                                message</span>
                                         </a>
                                     </div>
                                 </div>
@@ -214,7 +160,7 @@
                             </div>
 
                             <div class="p-sja-proposals__content-one-footer">
-                                <span class="p-sja-proposals__content-one-footer-edit">
+                                <span class="p-sja-proposals__content-one-footer-edit" data-toggle="modal" data-target="#edit">
                                     Edit Proposal
                                 </span>
                                 <span class="p-sja-proposals__content-one-footer-delete">
@@ -231,7 +177,111 @@
             //= parts/_footer.html
         </div>
     </div>
-    
+
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="p-sja__modal">
+                <div class="p-sja__modal-header">
+                    <div class="p-sja__modal-header-title">
+                        Your Proposal
+                    </div>
+                    <div class="p-sja__modal-header-close fal fa-times" data-dismiss="modal" aria-label="Close"></div>
+                </div>
+                <div class="p-sja__modal-content">
+                    <form>
+                        <div class="p-sja__modal-content-title">
+                            Cover Letter
+                        </div>
+                        <div class="p-sja__modal-content-message">
+                            <textarea class="p-sja__modal-content-message-textarea"></textarea>
+                            <div class="p-sja__modal-content-message-attach">
+                                <div class="p-sja__modal-content-message-attach-icon fal fa-paperclip">
+                                </div>
+                                <div class="p-sja__modal-content-message-attach-text">
+                                    You also can attach up to 10 files
+                                </div>
+                                <input type="file" value="" class="p-sja__modal-content-message-attach-input" />
+                            </div>
+                        </div>
+
+                        <div class="p-sja__modal-content-files">
+                            <div class="p-sja__modal-content-files-title">
+                                Attached Files:
+                            </div>
+
+                            <span class="p-sja__modal-content-files-one">
+                                <span class="p-sja__modal-content-files-one-text">
+                                    Harvard_Diploma.jpg
+                                </span>
+                                <span class="p-sja__modal-content-files-one-del fal fa-times"></span>
+                            </span>
+                            <span class="p-sja__modal-content-files-one">
+                                <span class="p-sja__modal-content-files-one-text">
+                                    Portfolio.pdf
+                                </span>
+                                <span class="p-sja__modal-content-files-one-del fal fa-times"></span>
+                            </span>
+                        </div>
+
+                        <input type="submit" class="p-sja__modal-content-submit" value="Publish" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="editLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="p-sja__modal">
+                <div class="p-sja__modal-header">
+                    <div class="p-sja__modal-header-title">
+                        Edit Proposal
+                    </div>
+                    <div class="p-sja__modal-header-close fal fa-times" data-dismiss="modal" aria-label="Close"></div>
+                </div>
+                <div class="p-sja__modal-content">
+                    <form>
+                        <div class="p-sja__modal-content-title">
+                            Cover Letter
+                        </div>
+                        <div class="p-sja__modal-content-message">
+                            <textarea class="p-sja__modal-content-message-textarea"></textarea>
+                            <div class="p-sja__modal-content-message-attach">
+                                <div class="p-sja__modal-content-message-attach-icon fal fa-paperclip">
+                                </div>
+                                <div class="p-sja__modal-content-message-attach-text">
+                                    You also can attach up to 10 files
+                                </div>
+                                <input type="file" value="" class="p-sja__modal-content-message-attach-input" />
+                            </div>
+                        </div>
+
+                        <div class="p-sja__modal-content-files">
+                            <div class="p-sja__modal-content-files-title">
+                                Attached Files:
+                            </div>
+
+                            <span class="p-sja__modal-content-files-one">
+                                <span class="p-sja__modal-content-files-one-text">
+                                    Harvard_Diploma.jpg
+                                </span>
+                                <span class="p-sja__modal-content-files-one-del fal fa-times"></span>
+                            </span>
+                            <span class="p-sja__modal-content-files-one">
+                                <span class="p-sja__modal-content-files-one-text">
+                                    Portfolio.pdf
+                                </span>
+                                <span class="p-sja__modal-content-files-one-del fal fa-times"></span>
+                            </span>
+                        </div>
+
+                        <input type="submit" class="p-sja__modal-content-submit" value="Edit" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     //= parts/_global-scripts.html
     <script>
         jQuery(function () {

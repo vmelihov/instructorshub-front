@@ -321,6 +321,7 @@ h5 {
         height: 100%;
         background: #fff;
         font-size: 0px;
+        margin-left: 10vw;
 
         &-wrap {
             background: rgba(237, 235, 241, .8);
@@ -1677,6 +1678,7 @@ h5 {
 
         &-chat {
             width: 100%;
+            margin: 0px;
 
             &__header-main-profile-name {
                 max-width: 150px;
