@@ -1,0 +1,366 @@
+@import "parts/_vars.scss";
+
+.p-main {
+    &__header {
+        background: linear-gradient(rgba(38, 60, 120, 0.45) 0%, rgba(38, 60, 120, 0.45) 100%),
+            url("../img/main/bg-header.jpg") center center no-repeat;
+        background-size: cover;
+        padding: 140px 0px 110px;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 90px;
+
+        &-title {
+            max-width: 760px;
+            margin: 0px auto 100px;
+            font: 40px/1.35 $g;
+        }
+
+        &-btns {
+            &-one {
+                display: inline-block;
+                margin: 0px 20px;
+
+                &-link {
+                    display: block;
+                    background: #2259B5;
+                    color: #fff;
+                    font: 15px/48px $g;
+                    padding: 0px 30px;
+
+                    &:hover {
+                        color: #fff;
+                        text-decoration: none;
+                        background: lighten(#2259B5, 5%);
+                    }
+                }
+            }
+        }
+    }
+
+    &__cats {
+        text-align: center;
+        padding-bottom: 90px;
+
+        &-title {
+            font: 28px $g;
+            margin-bottom: 55px;
+        }
+
+        &-links {
+            font-size: 0px;
+
+            &-one {
+                display: inline-block;
+                width: 25%;
+                background: #E3E0EA;
+                color: #30323D;
+                border: 1px solid #EDEBF1;
+                padding: 110px 0px 30px;
+                font-size: 15px;
+                position: relative;
+                transition: .3s;
+
+                &:hover {
+                    background: #2259B5;
+                    color: #fff;
+                    text-decoration: none;
+                }
+
+                &-icon {
+                    position: absolute;
+                    left: 50%;
+                    top: 35px;
+                    width: 60px;
+                    fill: #2259B5;
+                    margin-left: -30px;
+                    transition: .3s;
+                }
+
+                &:hover &-icon {
+                    fill: #E3E0EA;
+                }
+            }
+        }
+    }
+
+    &__instructors {
+        background: #fff;
+        padding: 65px 0px 55px;
+
+        &-title {
+            font: 28px $g;
+            margin-bottom: 65px;
+            text-align: center;
+        }
+
+        &-list {
+            font-size: 0px;
+            margin-bottom: 50px;
+
+            &-one {
+                display: inline-block;
+                width: 30.3%;
+                margin: 0px 3% 50px 0px;
+                font-size: 13px;
+                position: relative;
+                padding: 10px 0px 0px 105px;
+                color: #30323D;
+
+                &:nth-child(n3+3) {
+                    margin-right: 0px;
+                }
+
+                &-ava {
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+
+                    &-img {
+                        width: 88px;
+                        height: 88px;
+                        border-radius: 50%;
+                    }
+
+                    &-status {
+                        position: absolute;
+                        right: 8px;
+                        bottom: 2px;
+                        width: 16px;
+                        height: 16px;
+                        border: 3px solid #fff;
+                        background: #dedede;
+                        border-radius: 50%;
+
+                        &.m-online {
+                            background: #5ED975;
+                        }
+                    }
+                }
+
+                &-name {
+                    font-weight: bold;
+                    color: #333;
+                    margin-bottom: 2px;
+                    max-width: 150px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+
+                &-place {
+                    color: #83848B;
+                    margin-bottom: 5px;
+                }
+
+                &-cat {
+                    color: #30323D;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                }
+
+                &:hover &-name {
+                    color: #2259B5;
+                }
+            }
+        }
+
+        &-links {
+            text-align: center;
+
+            &-one {
+                display: inline-block;
+                margin: 0px 20px;
+
+                &-all {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    &__how {
+        text-align: center;
+        padding: 90px 0px;
+
+        &-title {
+            font: 28px $g;
+            margin-bottom: 55px;
+        }
+
+        &-block {
+            max-width: 320px;
+            margin: auto;
+            background-position: center 0px;
+            background-repeat: no-repeat;
+            padding-top: 120px;
+
+            &-title {
+                color: #2259B5;
+                font-family: $gm;
+                margin-bottom: 25px;
+            }
+
+            &.m-post {
+                background-image: url("../img/main/bg-post.jpg");
+            }
+
+            &.m-wait {
+                background-image: url("../img/main/bg-wait.jpg");
+            }
+
+            &.m-discuss {
+                background-image: url("../img/main/bg-discuss.jpg");
+            }
+        }
+    }
+
+    &__vacancies {
+        margin-bottom: 90px;
+
+        &-title {
+            font: 28px $g;
+            margin-bottom: 55px;
+            text-align: center;
+        }
+
+        &-links {
+            text-align: center;
+
+            &-one {
+                display: inline-block;
+                margin: 0px 20px;
+
+                &-all {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    &__top {
+        text-align: center;
+        margin-bottom: 120px;
+
+        &-title {
+            font: 28px $g;
+            margin-bottom: 55px;
+        }
+
+        &-list {
+            font-size: 0px;
+
+            &-one {
+                display: inline-block;
+                vertical-align: top;
+                margin: 0px 2% 2% 0px;
+                width: 15%;
+                background: #E3E0EA;
+                padding-top: 30px;
+                min-height: 105px;
+
+                &:nth-child(6n+6) {
+                    margin-right: 0px;
+                }
+
+                &.m-mt45 {
+                    padding-top: 45px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-sm) {
+    .p-main {
+        &__cats-links-one {
+            width: 33.3%;
+        }
+
+        &__instructors-list-one {
+            width: 45%;
+            margin-right: 10%;
+
+            &:nth-child(2n+2) {
+                margin-right: 0px;
+            }
+        }
+
+        &__top-list-one {
+            width: 30.3%;
+            margin-right: 3%;
+
+            &:nth-child(6n+6) {
+                margin-right: 3%;
+            }
+
+            &:nth-child(3n+3) {
+                margin-right: 0%;
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-xs) {
+    .p-main {
+        &__header {
+            padding: 100px 15px 50px;
+
+            &-title {
+                font-size: 28px;
+            }
+
+            &-btns-one {
+                width: 240px;
+                margin: 0px 0px 10px;
+            }
+        }
+
+        &__cats-links-one {
+            width: 50%;
+        }
+
+        &__instructors {
+            &-list {
+                margin: 0px;
+
+                &-one {
+                    width: 100%;
+                    margin-right: 0px;
+                }
+            }
+
+            &-links-one {
+                margin-bottom: 5px;
+            }
+        }
+
+        &__how {
+            padding: 40px 0px;
+
+            &-block {
+                margin-bottom: 40px;
+            }
+        }
+
+        &__top {
+            margin-bottom: 50px;
+
+            &-list-one {
+                width: 47%;
+                margin: 0px 6% 4% 0px;
+
+                &:nth-child(3n+3) {
+                    margin-right: 6%;
+                }
+
+                &:nth-child(6n+6),
+                &:nth-child(2n+2) {
+                    margin-right: 0%;
+                }
+            }
+        }
+    }
+}
